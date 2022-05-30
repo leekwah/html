@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.animation-ex3</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .wrap {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #aaa;
+            position: relative;
+            transform: translate(50%, 50%);
+        }
+
+        .move {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            animation: colormove 5s infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes colormove {
+            from {
+                background-color: red;
+                left: -5px;
+                top: -5px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 295px;
+                top: -5px;
+            }
+
+            50% {
+                background-color: green;
+                left: 295px;
+                top: 295px;
+            }
+
+            75% {
+                background-color: blue;
+                left: -5px;
+                top: 295px;
+            }
+
+            to {
+                background-color: red;
+                left: -5px;
+                top: -5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="move"></div>
+    </div>
+</body>
+
+</html>

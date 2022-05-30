@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-ex2</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .loading {
+            width: 20px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: calc(50% - 50px);
+            /* cal은 top의 50%의 50px만큼 뺀 값으로 계산하겠다는 뜻이다. */
+            /* left 50%와 top 50%를 하게 되면, 왼쪽 모서리가 정 중앙에 위치하게 된다. */
+            /* 그러므로, translate로 중앙점으로 옮기게 한다. */
+            /* 픽셀을 적어도 되지만, 반지름과 반지름은 50%로 하면 된다. */
+            transform: translate(-50%, -50%);
+            animation: loading 1s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .circle2 {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-top: 60px;
+            background-color: white;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+</body>
+
+</html>

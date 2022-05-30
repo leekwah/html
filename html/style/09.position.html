@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            left: 10px;
+            top: 10px;
+            z-index: 100;
+            /* z-index를 100으로 설정하면, red가 제일 위로 올라오게 된다. 
+            x,y,z의 z값을 입력해준다고 생각하면 된다. (3차원) 양수로 크면 클 수록 앞으로 올라오게 된다. 0이 기본 */
+        }
+
+        .green {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+            z-index: 10;
+        }
+
+        .blue {
+            background-color: blue;
+            left: 90px;
+            top: 90px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14.animation-iteration-count</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: tan;
+            position: relative;
+            animation: move 5s linear;
+        }
+
+        #box1 {
+            animation-delay: 1s;
+            animation-direction: reverse;
+            /* 반복횟수를 지정하는 것 */
+            animation-iteration-count: 2;
+        }
+
+        #box2 {
+            animation-delay: 2s;
+            animation-direction: alternate;
+        }
+
+        @keyframes lmove {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            100% {
+                left: 0;
+            }
+
+        }
+        @keyframes rmove {
+            0% {
+                left: 400px;
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            100% {
+                left: 400px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> -->
+
+    
+
+    <style>
+        /* 1번째 방법은 font-family로 기본 폰트를 사용하면 된다. */
+        /* 구글에서 제공하는 웹폰트를 이용할 수도 있다. */
+        /* 2번째 방법 import로 가져오는 방법은 아래와 같다. (NOTO SANS KR을 한 것 ) */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+        /* Roboto Condensed을 적용한 것 */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+        /* 폰트 관련 속성은 '상속' 된다. (부모에 하나 지정해두면, 계속 이어진다.) */
+        .arial {
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-family: 'Lobster', cursive; */
+            font-family: OTEnjoystoriesBA;
+        }
+
+        /* sans는 gothic을 의미함. stroke에 장식이 없는 것 */
+
+        .roman {
+            /* font-family: 'Times New Roman', Times, serif; */
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* serif는 stroke에 장식이 있는 것, 여러개 단어로 이루어져있는 것은 ''로 묶어줌 ex 위의 Times New Roman */
+
+        /* 3번째 방법 font-face로 사용하는 방법 */
+        @font-face {
+            font-family: 'OTEnjoystoriesBA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .big {
+            font-size: 2em;
+            font-weight: 500;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        a,
+        a:visited {
+            color: #333;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">Lorem ipsum dolor sit amet.</div>
+    <br>
+    <a href="http://www.naver.com" target="_blank">바로가기</a>
+    <!-- <h1 class="arial">tvN 즐거운 이야기체</h1> -->
+    <!-- <p class="roman">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusantium error dolor ipsum, illo sunt dolorum sequi asperiores possimus ut, nostrum numquam iure atque ecessitatibus reiciendis consectetur sint officia inventore. -->
+    <!-- <br> -->
+    <!-- <span style="border: 1px solid red">span test</span> -->
+    <!-- </p> -->
+    <!-- 모든 국민은 학문과 예술의 자유를 가진다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다. 국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야 한다. 농업생산성의 제고와 농지의
+    합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다. 헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. 모든 국민은 학문과
+    예술의 자유를 가진다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다. 국무총리는 국무위원의 해임을 대통령에게 건의할 수
+    있다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다. 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야 한다. 농업생산성의 제고와 농지의 합리적인 이용을
+    위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다. 헌법재판소의 장은 국회의 동의를 얻어 재판관중에서 대통령이 임명한다. -->
+</body>
+
+</html>

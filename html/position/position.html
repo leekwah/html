@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 42px;
+        }
+
+        .staticPosition {
+            height: 400px;
+            background-color: gray;
+        }
+
+        .relativePosition {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        /* .absoultePosition {
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            width: 100%;
+            height: 300px;
+            background-color: violet;
+        } */
+        .absoultePosition {
+            position: absolute;
+            top: 100px;
+            /* left: 300px; */
+            /* width: 100%; */
+            height: 100px;
+            background-color: violet;
+        }
+
+        .a_position1 {
+            left: 100px;
+        }
+
+        .a_position2 {
+            left: 300px;
+        }
+
+        .a_position3 {
+            left: 500px;
+        }
+
+        .fixedPosition {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 120px;
+            height: 120px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="staticPosition">static</div>
+    <div class="relativePosition">relative
+        <div class="absoultePosition a_position1">absoulte</div>
+        <div class="absoultePosition a_position2">absoulte</div>
+        <div class="absoultePosition a_position3">absoulte</div>
+    </div>
+    <!-- <div class="absoultePosition">absoulte</div> -->
+    <div class="fixedPosition">fixed</div>
+</body>
+<br>
+<br>
+<div>
+    <a href="../index.html">메인페이지로 가기</a>
+</div>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.transition1</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lavender;
+            /* transition: 어떤 값을 변경할 건지, 걸리는시간 */
+            /* div에 넣어야지 커지고 줄어드는 것 전부 다 적용됨 */
+            /* div:hover에 넣으면, hover에서 사라지는 순간 바로 원상태 복구 */
+            transition: width 2s;
+        }
+
+        div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>마우스를 올리면 박스가 커져요.</div>
+</body>
+
+</html>

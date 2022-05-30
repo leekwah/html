@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+</head>
+<h1>여름방학 특강 신청</h1>
+
+<body>
+    <fieldset>
+        <legend>수강 과목</legend>
+        <ul>
+            <li><label for="speaking_easy">영어회화(초급)</label> <input type="text" value="오전 9:00~11:00"></li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>신청자</legend>
+        <ul>
+            <li>이름 <input type="text" required> </li>
+            <li>학번 <input type="text" required> </li>
+            <li>학과
+                <select>
+                    <option>컴퓨터공학과</option>
+                    <option>화학공학과</option>
+                    <option>전자공학과</option>
+                </select>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>교재 주문</legend>
+        <ul>
+            <li>교재 <input type="number" value="1"></li>
+            <li>워크시트 <input type="number" value="1"></li>
+            <li>단체주문 <input type="number" value="10"></li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <input type="submit" value="신청하기"> <input type="reset" value="다시쓰기">
+    </fieldset>
+</body>
+<a href="index.html">메인페이지로 가기</a>
+
+</html>

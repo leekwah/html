@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.skew</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lightcyan;
+            margin: 50px;
+        }
+
+        #box1 {
+            transform: skewX(50deg);
+        }
+
+        #box2 {
+            transform: skewY(-30deg);
+        }
+
+        #box3 {
+            transform: skew(20deg, 10deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>기본 박스</div>
+    <div id="box1">박스 1</div>
+    <div id="box2">박스 2</div>
+    <div id="box3">박스 3</div>
+</body>
+
+</html>

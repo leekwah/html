@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. visibility</title>
+    <style>
+        body {
+            background-image: url(images/back2.jpg);
+        }
+
+        #box {
+            /* visibility: hidden; */
+            background-color: rgba(255, 0, 0, 0.2);
+            color: white;
+            /* opacity: 0.2; */
+        }
+
+        /* visibility는 자신의 자리를 확보한다는 점에서 display와 다르다. 
+        배경 투명도를 하고 싶을 때는 rgba를 써서 해야되고, 전부 투명하게 하고 싶을 때는 opacity를 쓰면 된다.
+        */
+    </style>
+</head>
+
+<body>
+    <span>DISPLAY</span>
+    <div id="box">
+        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+    </div>
+    <span>DISPLAY</span>
+</body>
+
+</html>

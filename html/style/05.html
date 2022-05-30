@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box</title>
+    <style>
+        div {
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            border: 10px solid black
+        }
+
+        /* 전체너비 = width + 2 X (margin + padding + border) */
+        /* 전체높이 = height + 2 X (margin + padding + border) */
+        div:first-child {
+            background-color: red;
+            box-sizing: content-box;
+        }
+
+        div:last-child {
+            background-color: orange;
+            box-sizing: border-box;
+        }
+
+        /* div:first-child를 하면 첫번째 div가 선택되고, div:last-chiild는 마지막 div가 선택된다. */
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. id selector</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        #header {
+            width: 800px;
+            margin: 0 auto;
+            background-color: bisque;
+        }
+
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 랩 영역 시작 */
+
+        #aside {
+            float: left;
+            width: 200px;
+            height: 600px;
+            background-color: lightpink;
+        }
+
+        #content {
+            float: right;
+            width: 500px;
+            height: 600px;
+            background-color: lightyellow;
+        }
+
+        /* 랩 영역 끝 */
+
+        #footer {
+            clear: both;
+            width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+    </style>
+
+<body>
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>Aside</h1>
+        </div>
+        <div id="content">
+            <h1>Content</h1>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+<br>
+<a href="../index.html">메인페이지로 가기</a>
+
+</html>
