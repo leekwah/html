@@ -1,0 +1,253 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h1.shadow {
+    text-shadow: 5px 5px 0 #fabc01, -1px -1px 0 #fabc01;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+/* headedr */
+
+header {
+    background: linear-gradient(to bottom, #ffffff, #ffffff 220px, #fabc01 220px, #fabc01);
+    text-align: center;
+    padding-top: 10px;
+    
+}
+header ul {
+    width: 1200px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+header ul li {
+    float: left;
+    width: 20%;
+}
+
+header ul li a, a:visited {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #000000;
+    border-right: 1px solid #000000;
+    background-color: #fabc01;
+}
+
+header ul li:nth-of-type(5) a {
+    border-right: 0;
+}
+
+header ul li a:hover {
+    color: #e5293b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* visual area */
+
+.visual_area{
+    height: 700px;
+    background-image: url(../images/main.jpg);
+    text-align: center;
+    position: relative;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+.visual_area div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.visual_area h1 {
+    margin: 0 auto;
+    color: #ffffff;
+    text-shadow: 5px 5px 0 #fabc01, -1px -1px 0 #fabc01;
+    font-size: 70px;
+    font-family: 'Limelight', cursive;
+}
+.visual_area p {
+    padding: 15px 0;
+}
+
+.visual_area p mark {
+    color: #000000;
+    background-color: #fabc01;
+    font-style: italic;
+}
+
+/* intro */
+.intro {
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+}
+.intro>div img{
+    float: left;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.intro>div ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.intro>div ul li span {
+    font-weight: bold;
+    display: inline-block;
+    width: 175px;
+    line-height: 1.2;
+}
+
+
+.intro>div p {
+    line-height: 1.5;
+}
+
+/* portfolio */
+.portfolio {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+ul.port_wrap {
+    overflow: hidden;
+    background-color: #fabc01;
+}
+
+ul.port_wrap li {
+    float: left;
+    width: 30%;
+    height: 560px;
+    margin-right: 5%;
+    box-sizing: border-box;
+    border: 0;
+    transition: all 0.75s;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-position: center;
+}
+
+ul.port_wrap li:nth-of-type(1) {
+    background-image: url(../images/001.jpg);
+}
+ul.port_wrap li:nth-of-type(2) {
+    background-image: url(../images/002.jpg);
+}
+ul.port_wrap li:nth-of-type(3) {
+    margin: 0;
+    background-image: url(../images/003.jpg);
+}
+
+ul.port_wrap li:hover {
+    background-size : auto 150%
+}
+
+.portfolio ul li .div_black {
+    height: 560px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    position: relative;
+}
+.portfolio ul li .div_black strong {
+    position: absolute;
+    color: #ffffff;
+    top: 400px;
+    font-size: 50px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.75s;
+    font-weight: bold;
+}
+.portfolio ul li:hover .div_black strong {
+    left: 20px;
+    opacity: 1;
+}
+
+.portfolio ul li .div_black span {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    top: 460px;
+    left: 24px;
+    transition: all 0.5s;
+    transition-delay: 0.25s;
+    background-color: #ffffff;
+}
+.portfolio ul li:hover .div_black span {
+    width: calc(100% - 48px);
+    opacity: 1;
+}
+.portfolio ul li p {
+    display: block;
+    position: absolute;
+    color: #ffffff;
+    top: 480px;
+    left: 24px;
+    opacity: 0;
+}
+.portfolio ul li:hover p {
+    opacity: 1;
+    transition: all 0.75s;
+    transition-delay: 0.5s;
+}
+
+/* video */
+
+.video {
+    height: 968px;
+}
+
+.video>div{
+    height: 768px;
+    background-color: #173980;
+}
+
+.video>div .video_wrap{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+/* footer */
+footer {
+    height: 200px;
+    background-color: #fabc01;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+footer ul.footer_menu {
+    border-bottom: 1px solid #173980;
+}
+
+footer ul.footer_menu li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+footer p {
+    margin-top: 30px;
+}
