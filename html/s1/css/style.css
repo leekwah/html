@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 /* 공통 */
+    /* :root와 cost let 같은 것은 전역 변수를 선언하는 것이다 */
+:root {
+--dblue: #143395
+}}
+
 * {
     box-sizing: border-box;
 }
@@ -116,7 +121,7 @@ header ul.main_gnb li {
 .visual_area .title_wrap p {
     margin: 40px 0;
     font-size: 58px;
-    color: #143395;
+    color: var(--dblue);
     line-height: 1.2;
 }
 .visual_area .title_wrap p span {
@@ -136,8 +141,244 @@ header ul.main_gnb li {
     vertical-align: middle;
 }
 .visual_area .title_wrap ul li span {
-    color: #143395;
+    color: var(--dblue);
 }
 .visual_area .title_wrap ul span em{
     color: #ff0000;
+}
+
+/* 컨텐츠 영역 */
+.con_area {
+    margin-bottom: 165px;
+}
+
+.con_area .news {
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.con_area .news h2 {
+    font-size: 55px;
+    color: var(--dblue);
+    margin-bottom: 40px;
+}
+
+.con_area .news ul li {
+    margin-bottom: 22px;
+}
+
+.con_area ul.con_box {
+    float: right;
+    width: 720px;
+}
+
+.con_area ul.con_box li {
+    float: left;
+    width: 33.33333%;
+    height: 86px;
+    margin-bottom: 28px;
+}
+
+.con_area ul.con_box li img {
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* 기업서비스 */
+.service_corp {
+    margin-bottom: 225px;
+}
+.service_corp ul li {
+    float: left;
+    position: relative;
+    width: 320px;
+    height: 395px;
+    background-color: #293896;
+    margin-right: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.service_corp ul li img {
+    transition: all 0.7s ;
+}
+
+    /* width로 늘리면, 꼭지점이 늘어나버림, 그렇기에 transform으로 늘려야함 */
+.service_corp ul li:hover img {
+    transform: scale(1.1);
+}
+
+    /* 사이 공간 때문에 떨어진 맨 밑에 있는 그림을 위로 올리기 위해서 margin을 0으로 설정한다.*/
+.service_corp ul li:last-child {
+    margin: 0;
+}
+
+    /* absoulte로 선언하는 순간, width, height가 0으로 된다. */
+.service_corp ul li > div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 0 #000000;
+}
+.service_corp ul li:first-child>div {
+    top: 60px;
+    left: 40px;
+    text-shadow: none;
+}
+
+    /* strong은원래 볼드처리해주는 것임. 하지만, 여기서는 인라인 계열로 폰트를 지정할 때 사용함 */
+.service_corp ul li > div strong {
+    font-size: 40px;
+    font-weight: 500
+}
+
+.service_corp ul li > div p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 16px;
+}
+.service_corp ul li:first-child > div strong {
+    font-size: 48px;
+    font-weight: 500
+}
+
+.service_corp ul li:first-child > div p {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 118px;
+    line-height: 1.8;
+}
+.service_corp ul li:hover div {
+    color: aquamarine
+}
+
+/* 매장 서비스 */
+.service_shop {
+    margin-bottom: 270px;
+    font-weight: 400;
+    text-align: center;
+}
+.service_shop h2 {
+    font-size: 60px;
+    color: var(--dblue);
+    margin-bottom: 65px;
+}
+.service_shop p {
+    font-size: 26px;
+    margin-bottom: 87px;
+}
+.service_shop ul {
+    width: 1352px;
+    margin: 0 auto;
+}
+.service_shop ul li {
+    float: left;
+    width: 360px;
+    height: 360px;
+    line-height: 360px;
+    margin-right: 136px;
+    border-radius: 50%;
+}
+.service_shop ul li:nth-of-type(1) {
+    background-color: #ff0000;
+}
+.service_shop ul li:nth-of-type(2) {
+    background-color: #3155a6;
+}
+.service_shop ul li:nth-of-type(3) {
+    background-color: #ffc709;
+    margin: 0;
+}
+.service_shop ul li dl {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.service_shop ul li dl dt {
+    font-size: 36px;
+}
+.service_shop ul li dl dd {
+    font-size: 20px;
+}
+
+/* 바로가기 */
+.shortcuts {
+    line-height: 1.2;
+    text-align: center;
+}
+.shortcuts ul li {
+    float: left;
+    position: relative;
+    width: 628px;
+    height: 316px;
+    margin: 0 144px 103px 0;
+}
+.shortcuts ul li:nth-of-type(even) {
+    margin: 0 0 103px 0;
+}
+
+.shortcuts ul li:nth-of-type(1) {
+    background: url(../images/img_short01.png);
+}
+.shortcuts ul li:nth-of-type(2) {
+    background: url(../images/img_short02.png);
+}
+.shortcuts ul li:nth-of-type(3) {
+    background: url(../images/img_short03.png);
+}
+.shortcuts ul li:nth-of-type(4) {
+    background: url(../images/img_short04.png);
+}
+.shortcuts ul li> div {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.shortcuts ul li:first-child> div {
+    left: auto;
+    top: auto;
+    right: 30px;
+    bottom: 27px;
+    transform: translateY(0);
+    text-align: left;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #000000;
+}
+.shortcuts ul li > div strong {
+    font-size: 36px;
+}
+.shortcuts ul li > div p {
+    font-size: 20px;
+}
+
+/* 푸터 */
+footer {
+    font-size: 20px;
+    text-align: center;
+}
+    /*찾아보기 - justify-content는 아이템 정렬하는 방식이다. flex옆에 있는 버튼을 눌리면, 개발자 도구에서 바로 바꿀 수 있다. 균등하게 레이아웃을 정렬할 수 있게 한다.*/
+footer ul.banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+footer > div:nth-of-type(1) {
+    height: 74px;
+    line-height: 74px;
+    background-color: #cccccc;
+}
+    /* li를 inline-block으로 설정한 뒤에, padding을 가로밀어주면, 가로메뉴처럼 정렬이 된다. */
+footer > div ul li {
+    display: inline-block;
+    padding: 0 5px;
+}
+footer > div:nth-of-type(2) {
+    padding: 63px 0;
+    line-height: 1.8;
+    color: #888888;
 }
