@@ -409,7 +409,7 @@ footer > div:nth-of-type(2) {
  }
 
 .s1_cs ul li {
-    display: inline-block;
+    display: block;
     width:45%;
     float:left;
     margin-right: 10%;
