@@ -281,17 +281,20 @@ header ul.main_gnb li {
     line-height: 360px;
     margin-right: 136px;
     border-radius: 50%;
+    cursor: pointer;
 }
+
 .service_shop ul li:nth-of-type(1) {
-    background-color: #ff0000;
+    background: url(../images/service_shop_01.jpg) center;
 }
 .service_shop ul li:nth-of-type(2) {
-    background-color: #3155a6;
+    background: url(../images/service_shop_02.jpg) center;
 }
 .service_shop ul li:nth-of-type(3) {
-    background-color: #ffc709;
-    margin: 0;
-}
+        background: url(../images/service_shop_03.jpg) center;
+        margin: 0;
+    }
+
 .service_shop ul li dl {
     display: inline-block;
     vertical-align: middle;
@@ -299,10 +302,14 @@ header ul.main_gnb li {
     color: #ffffff;
 }
 .service_shop ul li dl dt {
-    font-size: 36px;
+    color: #ffffff;
+    font-size: 40px;
+    text-shadow: 2px 2px 0 black;
 }
 .service_shop ul li dl dd {
+    color: #ffffff;
     font-size: 20px;
+    text-shadow: 2px 1px 0 black;
 }
 
 /* 바로가기 */
@@ -381,4 +388,82 @@ footer > div:nth-of-type(2) {
     padding: 63px 0;
     line-height: 1.8;
     color: #888888;
+}
+
+/* S1_CS */
+
+.footer_bottom {
+    background: #222222;
+    color: #ffffff;
+}
+.footer_bottom .s1_cs{
+    letter-spacing: -2px;
+    padding: 78px;
+    box-sizing: border-box;
+    height: 300px;
+    line-height: 1.8;
+}
+
+.s1_cs ul {
+    position:relative;
+ }
+
+.s1_cs ul li {
+    display: inline-block;
+    width:45%;
+    float:left;
+    margin-right: 10%;
+
+}
+.s1_cs ul li:nth-of-type(2) {
+    margin-right: 0%;
+}
+
+.s1_cs ul li strong {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.s1_cs ul li em {
+    font-size: 23px;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+.s1_cs ul li:nth-of-type(1) p{
+    padding-top: 20px;
+    display: block;
+}
+.s1_cs ul li:nth-of-type(2) p{
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 50px;
+    color: #888888;
+    font-weight: 700;
+}
+
+.s1_cs ul li input {
+    height: 60px;
+    width: 175px;
+    margin-left: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    border-radius: 5%;
+}
+.s1_cs ul li .button .gray {
+    margin-left: 0;
+    background-color: #888888;
+    border: #888888;
+}
+.s1_cs ul li .button .blue {
+    background-color: #293896;
+    border: #293896;
+}
+.s1_cs ul li:hover .button input {
+    cursor: pointer;
 }
