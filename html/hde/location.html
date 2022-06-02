@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        .location_info {
+            min-width: 1200px;
+            background-color: #9cc15c;
+            height: 700px;
+            position: relative;
+        }
+        .location_info > img {
+            position: absolute;
+            top: 0;
+            /* 부모의 50%까지 나의 50%에 가있는 것? */
+            right: 50%;
+        }
+        .location_info > div {
+            position: absolute;
+            /* 완전 중앙으로 하지 않는다. */
+            left: 56%;
+            top: 160px;
+        }
+        .location_info > div strong {
+            font-size: 40px;
+            /* strong은 inline계열이기 때문에, margin을 주기 위해서 block으로 처리한다. */
+            display: block;
+            margin-bottom: 20px;
+        }
+        /* 이렇게 할 경우에는 맨 위의 span만 잡히게 된다. */
+        .location_info > div > span {
+            color: #ffffff;
+            display: inline-block;
+            margin-bottom: 45px;
+        }
+        .location_info > div p {
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+        .location_info > div ul {
+            /* 밑에있는 a를 밀어내기 위해서 margin-bottom을 준다. */
+            margin-bottom: 80px;
+        }
+        .location_info > div ul li {
+            color: #ffffff;
+            margin: 7px 0;
+        }
+        .location_info > div ul li span {
+            display: inline-block;
+            width: 110px;
+        }
+        .location_info > div a {
+            /* 일단 모양을 만들어야 하기 때문에 inline-block */
+            display: inline-block;
+            background-color: #414042;
+            color: #ffffff;
+            text-decoration: none;
+            /* padding으로 모양을 만들어준다. */
+            padding: 15px 40px;
+        }
+        </style>
+</head>
+<body>
+    <div class="location_info">
+        <img src="images/index_bg.jpg" alt="">
+        <div>
+            <strong>오시는 길</strong>
+            <span>Dircetion</span>
+            <p>부산광역시 사상구 새벽로 131, 1동 101호</p>
+            <ul>
+                <li>
+                    <!-- span을 넣었다는 것은 크기를 조절하겠다는 것 -->
+                    <span>Tel.</span>051-333-1234
+                </li>
+                <li>
+                    <span>Fax.</span>051-334-5678
+                </li>
+                <li>
+                    <span>E-mail.</span>hde@hde.co.kr
+                </li>
+            </ul>
+            <a href="">지도 자세히 보기</a>
+        </div>
+    </div>
+</body>
+</html>

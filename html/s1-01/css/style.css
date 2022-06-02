@@ -390,7 +390,7 @@ footer > div:nth-of-type(2) {
     color: #888888;
 }
 
-/* S1_CS */
+/* 문의하세요 */
 
 .footer_bottom {
     background: #222222;
@@ -468,3 +468,84 @@ footer > div:nth-of-type(2) {
     cursor: pointer;
 }
 
+
+/* 비디오 */
+
+.video_wrap {
+    margin-bottom: 270px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.video_wrap h2 {
+    font-size: 60px;
+    color: var(--dblue);
+    margin-bottom: 65px;
+}
+.video_wrap .video {
+    width: 1400px;
+    margin: 0 auto 270px;
+}
+
+/* 도와줘요 에스원 */
+
+.help_s1 {
+    margin-bottom: 350px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.help_s1 ul {
+    position: relative;
+}
+
+.help_s1 ul li {
+    display: block;
+    width: 45%;
+    margin: auto 5%;
+    float:left;
+    height: 300px;
+    line-height: 1.8;
+    transition: all 0.5s
+}
+.help_s1 li:nth-of-type(1) {
+    color: #ffffff;
+    background: url(../images/img_main_banner01.png) right no-repeat #999999;
+}
+.help_s1 li:nth-of-type(2) {
+    color: #ffffff;
+    background: url(../images/img_main_banner02.png) left no-repeat #999999;
+    margin: 0;
+}
+.help_s1 .help li p {
+    margin: 50px 0 20px 0;
+    font-size: 35px;
+    text-shadow: 2px 1px 0 #000000;
+}
+.help_s1 .help li span {
+    font-size: 15px;
+    text-shadow: 2px 1px 0 #000000;
+}
+
+.help_s1 ul li:nth-of-type(1):hover {
+    background: url(../images/img_main_banner01_ov.png) right no-repeat #293896;
+}
+
+.help_s1 ul li:nth-of-type(2):hover {
+    background: url(../images/img_main_banner02_ov.png) left no-repeat #293896;
+}
+
+.help_s1 ul li:hover {
+    cursor: pointer;
+    color: #000000;
+    text-shadow: 2px 1px 0 #ffffff;
+}
+.help_s1 ul li:hover p {
+    color: #222222;
+    text-shadow: 2px 1px 0 #c7dbfc;
+}
+.help_s1 ul li:hover p+span {
+    color: #222222;
+    text-shadow: 2px 1px 0 #c7dbfc;
+}
