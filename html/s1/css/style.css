@@ -83,21 +83,158 @@ header .cons_form {
     font-weight: bold;
     background-color: #ffffff;
 }
+
 /* GNB */
 header .gnb_logo {
     float: left;
+    margin-top: 25px;
 }
 header ul.main_gnb {
     float: right;
     line-height: 118px;
     font-size: 24px;
     font-weight: 700;
+    margin-top: 25px;
 }
 
-header ul.main_gnb li {
+header ul.main_gnb .tab_content li {
     display: inline-block;
     /* 오른쪽으로 정렬이 되어야하기 때문에, margin-left를 준다. */
     margin-left: 20px;
+}
+
+.tab_content {
+    text-align: center;
+}
+
+.tab_content input[type="radio"] {
+    display: none;
+}
+.tab_content label {
+    display: block;
+    /* background-color: #cccccc; */
+    color: #999999;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+/* radio가 체크되면, 하는 행동 */
+input[type="radio"]:checked+label {
+    /* background-color: red; */
+    color: #293896;
+}
+/* 튀어나오는 것들을 없애기 위해서는 height를 안잡아주면 된다. 하지만 안잡으면, 너무 작기 때문에, min-height를 적는다.*/
+.tab_content .conbox{
+    /* height: 200px; */
+    /* 유동적일 때는 min-height */
+    min-height: 100px; 
+    position: absolute;
+    z-index: 1;
+    /* background-color: #aaaaaa; */
+    transition: all 0.5s;
+    display: none;
+    color: red;
+}
+/* 체크됐을 때, 각각의 class와 radio의 id를 같이 연동시켜서 (~ 사용) */
+.main_gnb input[id="tab01"]:checked~.con1 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+input[id="tab02"]:checked~.con2 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+input[id="tab03"]:checked~.conbox {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+.tab_content input[id="tab04"]:checked~.con4 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+input[id="tab05"]:checked~.con5 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+.tab_content input[id="tab06"]:checked~.con6 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+input[id="tab07"]:checked~.con7 {
+    display: block;
+    background-color: rgb(41, 56, 150, 0.5);
+    margin-top: 3px;
+}
+
+/* 메달 */
+
+input[id="popup"] {
+    display: none;
+}
+.pop {
+    margin-top: 25px;
+    height: 56px;
+}
+input[id="popup"] + label {
+    position: absolute;
+    left: 50%;
+    transition: all 0.7s;
+}
+input[id="popup"]+label {
+    display: inline-block;
+    padding: 20px;
+    background-color: #00a9ac;
+    color: white;
+    cursor: pointer;
+}
+input[id="popup"]+label+div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+input[id="popup"]+label+div>div {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/main_logo.png) center 100% no-repeat;
+    z-index: 2;
+}
+input[id="popup"]+label+div>div>label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #00a9ac;
+    border-radius: 100%;
+    cursor: pointer;
+}
+input[id="popup"]+label+div>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(199, 219, 242, 0.75);
+    z-index: 1;
+}
+input[id="popup"] + label + div {
+    opacity: 0;
+    display: none;
+}
+input[id="popup"]:checked + label + div {
+    opacity: 1;
+    display: block;
 }
 
 /* 비주얼영역 */
