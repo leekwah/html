@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .inform_area {
+            background-color: #414042;
+            padding: 50px 0 45px;
+            line-height: 1.6;
+            /* 이건 중앙으로 오게 만드는 것 */
+            text-align: center;
+        }
+        /* >를 꼭 넣어야함 */
+        .inform_area ul.gnb_depth1 > li {
+            display: inline-block;
+            /* text-align이 left로 들어가야지, 글자들이 왼쪽으로 정렬됨 */
+            text-align: left;
+            /* 모든 것들이 위로 올라오게 만드는 것 */
+            vertical-align: top;
+            /* margin을 통해서 서로 떼기 */
+            margin: 0 30px;
+            /* line을 줘야하지만, padding을 주지 않으면 딱 붙어버림 그래서 padding을 먼저 준다.*/
+            padding: 15px;
+            border-left: 1px solid #646464;
+        }
+            /* class를 걸어놓은 a  (맨 위의 타이틀 같은 것들) */
+        .depth1_links {
+            display: block;
+            margin-bottom: 30px;
+            color: #88ce0f;
+        }
+        /* gnb_depth2의 a */
+        .gnb_depth2 a {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="inform_area">
+        <!-- depth1은 맨 처음 도출되는 메뉴라는 뜻 -->
+        <ul class="gnb_depth1">
+            <li class="depth10">
+                <a href="" class="depth1_links">기업소개</a>
+                <ul class="gnb_depth2">
+                    <li><a href="">CEO 인사말</a></li>
+                    <li><a href="">기업소개</a></li>
+                    <li><a href="">오시는 길</a></li>
+                </ul>
+            </li>
+            <li class="depth10">
+                <a href="" class="depth1_links">사업분야</a>
+                <ul class="gnb_depth2">
+                    <li><a href="">사업분야</a></li>
+                </ul>
+            </li>
+            <li class="depth10">
+                <a href="" class="depth1_links">대기오염방지시설</a>
+                <ul class="gnb_depth2">
+                    <li><a href="">세정집진시설</a></li>
+                    <li><a href="">여과집진시설</a></li>
+                    <li><a href="">송풍기</a></li>
+                    <li><a href="">흡착탑</a></li>
+                </ul>
+            </li>
+            <li class="depth10">
+                <a href="" class="depth1_links">오염방지시설</a>
+                <ul class="gnb_depth2">
+                    <li><a href="">오폐수처리시설</a></li>
+                </ul>
+            </li>
+            <li class="depth10">
+                <a href="" class="depth1_links">커뮤니티</a>
+                <ul class="gnb_depth2">
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">갤러리</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
