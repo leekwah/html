@@ -1,1 +1,277 @@
 @charset "UTF-8";
+a {
+    text-decoration: none;
+}
+
+/* 헤더 */
+#main_header a {
+    color: #333333;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+#main_header {
+    border: 1px solid #aaaaaa;
+}
+#main_header .gnb_box {
+    width: 1200px;
+    height: 78px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main_header ul.gnb_depth1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#main_header ul.gnb_depth1 li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#main_header ul.gnb_depth1 .depth1_links {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 78px;
+}
+
+    /*after를 이용해서 hover를 하면, 초록띠가 나오게 하는 작업 */
+#main_header ul.gnb_depth1 .depth1_links::after {
+    content: "";
+    display:block;
+    height:5px;
+    background-color: yellowgreen;
+    /* 밑으로 내려가있기 때문에, margin-top으로 올린다. */
+    margin-top: -5px;
+    display: none;
+}
+    /* li에 hover를 하는 것이기에 중간에 hover 추가 */
+#main_header ul.gnb_depth1 li:hover .depth1_links::after {
+    display: block;
+}
+
+/* 비주얼 영역 */
+.visual_area {
+    height: 738px;
+    /* background: url(../images/slide/main_slide1.jpg) center top no-repeat; */
+    position: relative;
+}
+.visual_area li {
+    height: 738px;
+}
+.visual_area li.slide-one {
+    background: url(../images/slide/main_slide1.jpg);
+}
+.visual_area li.slide-two {
+    background: url(../images/slide/main_slide2.jpg);
+    color: #ffffff;
+}
+.visual_area li.slide-three {
+    background: url(../images/slide/main_slide3.jpg);
+    color: #ffffff;
+}
+
+.visual_area p {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    /* Y축은 조정할 필요가 없어서, X축만 조정한다. */
+    transform: translateX(-50%);
+    line-height: 1.9;
+    font-weight: bold;
+    text-align: center;
+    /* color: #333333; */
+}
+/* bx controls */
+    /* 먼저 prev와 next의 위치를 지정해야함 visual area에 relative를 넣었기에, absoulte가 가능*/
+.bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 40px;
+    height: 76px;
+    opacity: 0.4;
+    /* hover하면 opaicity를 올릴거기에 transition을 준다. */
+    transition: all 0.3s;
+    /* prev와 next와 같은 글자는 날려버려야하기에 text-indent로 써야함. source에는 남아있지만, 왼쪽으로 -9999px로 날리는 것임 */
+    /* +로 하면 옆에 스크롤이 생기기 때문에 무조건 -로 해야한다. */
+    text-indent: -9999px;
+}
+.bx-controls-direction a:hover {
+    opacity: 0.9;
+}
+.bx-controls-direction .bx-prev {
+    background: url(../images/main_arrow_left.png);
+    /* 위에서 absoulte와 top을 잡았기에, left와 right만 잡으면 된다. */
+    left: 50px;
+}
+
+.bx-controls-direction .bx-next {
+    background: url(../images/main_arrow_right.png);
+    right: 50px;
+}
+.bx-pager {
+    /* 사진 위로 올린다. */
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+    /* bx-pager 안에 div에 a가 있는 구조를 기억해야함 */
+.bx-pager div {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.bx-pager div a {
+    /* 모양을 주는 것은 block이라고 생각하면 편하다. */
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #aaaaaa;
+    /* 50%로 하게 되면, 늘어나게 되었을 때, 타원형이 된다. */
+    border-radius: 4px;
+    /* text-indent와 비슷하게 쓰는 방법 */
+    font-size: 0;
+}
+
+    /* 현재 보고 있는 페이지 색상 설정 */
+    /* index의 시작은 0부터 시작이다. */
+    /* class active를 넣으면, 바뀌는 걸 알 수 있다. */
+.bx-pager div a.active {
+    background-color: #ffffff;
+    /* width를 40px로 늘렸기에 위에 border-radius를 50%로 하면 안되는 것이다. */
+    width: 40px;
+    transition: all 0.3s;
+}
+
+/* 콘텐츠 영역 */ 
+.contents {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+.contents_list {
+    /* 테이블은 자식의 크기만큼 지정된다. */
+    display: table;
+    width: 100%;
+}
+.contents_list li {
+    display: table-cell;
+    text-align: center;
+}
+.contents_list li strong {
+    display: block;
+    font-size: 2em;
+    margin: 20px 0;
+}
+.contents_list li p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* 로케이션 영역 */
+.location_info {
+    min-width: 1200px;
+    background-color: #9cc15c;
+    height: 700px;
+    position: relative;
+}
+.location_info > img {
+    position: absolute;
+    top: 0;
+    /* 나의 오른쪽이 부모의 50%에 가있는 것 right:75%의 경우엔, 1/4부분에 있다. */
+    right: 50%;
+}
+.location_info > div {
+    position: absolute;
+    /* 완전 중앙으로 하지 않는다. */
+    left: 56%;
+    top: 160px;
+}
+.location_info > div strong {
+    font-size: 40px;
+    /* strong은 inline계열이기 때문에, margin을 주기 위해서 block으로 처리한다. */
+    display: block;
+    margin-bottom: 20px;
+}
+    /* 이렇게 할 경우에는 맨 위의 span만 잡히게 된다. */
+.location_info > div > span {
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 45px;
+}
+.location_info > div p {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+.location_info > div ul {
+    /* 밑에있는 a를 밀어내기 위해서 margin-bottom을 준다. */
+    margin-bottom: 80px;
+}
+.location_info > div ul li {
+    color: #ffffff;
+    margin: 7px 0;
+}
+.location_info > div ul li span {
+    display: inline-block;
+    width: 110px;
+}
+.location_info > div a {
+    /* 일단 모양을 만들어야 하기 때문에 inline-block */
+    display: inline-block;
+    background-color: #414042;
+    color: #ffffff;
+    text-decoration: none;
+    /* padding으로 모양을 만들어준다. */
+    padding: 15px 40px;
+}
+
+/* 인포메이션 영역 */
+.inform_area {
+    background-color: #414042;
+    padding: 50px 0 45px;
+    line-height: 1.6;
+    /* 이건 중앙으로 오게 만드는 것 */
+    text-align: center;
+}
+    /* >를 꼭 넣어야함 */
+.inform_area ul.gnb_depth1 > li {
+    display: inline-block;
+    /* text-align이 left로 들어가야지, 글자들이 왼쪽으로 정렬됨 */
+    text-align: left;
+    /* 모든 것들이 위로 올라오게 만드는 것 */
+    vertical-align: top;
+    /* margin을 통해서 서로 떼기 */
+    margin: 0 30px;
+    /* line을 줘야하지만, padding을 주지 않으면 딱 붙어버림 그래서 padding을 먼저 준다.*/
+    padding: 15px;
+    border-left: 1px solid #646464;
+}
+    /* class를 걸어놓은 a  (맨 위의 타이틀 같은 것들) */
+.depth1_links {
+    display: block;
+    margin-bottom: 30px;
+    color: #88ce0f;
+}
+    /* gnb_depth2의 a */
+.gnb_depth2 a {
+    color: #ffffff;
+}
+
+/* 푸터 */
+footer {
+    color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #646464;
+    padding: 30px;
+    line-height: 1.5;
+    background-color: #414042;
+}

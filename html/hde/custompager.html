@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charportfolio에 bxSlider 적용.cssset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom pager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- min 버전은 사용이 되지만, 수정하기 힘들다. -->
+    <!-- 라이브러리를 중복해서 넣으면 안된다. -->
+    <style>
+        .wrap {
+            width: 320px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="bxslider">
+            <li>
+                <img src="http://via.placeholder.com/300/ff0000/ffffff/?text=slide1" alt="">
+            </li>
+            <li>
+                <img src="http://via.placeholder.com/300/00ff00/ffffff/?text=slide2" alt="">
+            </li>
+            <li>
+                <img src="http://via.placeholder.com/300/0000ff/ffffff/?text=slide3" alt="">
+            </li>
+        </ul>
+        <div id="bx-pager">
+            <a href="" data-slide-index="0">
+                <img src="http://via.placeholder.com/100/ff0000/ffffff/?text=slide1" alt="">
+            </a>
+            <a href="" data-slide-index="1">
+                <img src="http://via.placeholder.com/100/00ff00/ffffff/?text=slide2" alt="">
+            </a>
+            <a href="" data-slide-index="2">
+                <img src="http://via.placeholder.com/100/0000ff/ffffff/?text=slide3" alt="">
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+        auto:true,
+        // pause: 2000,
+        controls: false,
+        // 내가 이름을 짓는 것이다.
+        pagerCustom: "#bx-pager"
+
+      });
+    });
+  </script>
+</html>
