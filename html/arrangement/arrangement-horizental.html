@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수평정렬</title>
+    <style>
+        h1 {
+            width: 960px; margin: 0 auto; padding: 25px; background-color: orange; color: white; border: 1px solid black; border-left: 10px solid black; box-sizing: border-box;
+        }
+        h2 {
+            padding: 8px 24; margin-bottom: 20px; color: #222; text-decoration: underline;
+        }
+        h3 {
+            padding: 8px; margin-bottom: 20px; color: #222; text-decoration: underline;
+        }
+        .container {
+            width: 960px; padding: 0 15px; margin: 0 auto; border: 1px solid gray; box-sizing: border-box;
+        }
+        h3.block {
+            color: tomato;
+        }
+        h3.inline {
+            color: teal;
+        }
+        hr {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>정렬</h1>
+    <div class="container">
+        <h2>수평으로 정렬</h2>
+        <h3 class="block">블록일 경우</h3>
+        <p>- float: left; 적용 (부모 요소에 overflow: hidden; 적용)</p>
+        <div style="overflow: hidden;">
+            <!-- 3개가 수평으로 나란히 정렬된다. -->
+            <div style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+            <div style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+            <div style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+        </div>
+        <ul style="overflow: hidden;">
+            <!-- li도 마찬가지로 3개가 수평으로 나란히 정렬된다. -->
+            <li style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+            <li style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+            <li style="float: left; width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+        </ul>
+        <p>- position: absoulte;로 정렬(부모 요소에 position: relative; 적용)</p>
+        <div style="position: relative; height: 60px; margin: 5px; background-color: #dedede;">
+            <!-- absoulte는 margin과 관계 없음 -->
+            <div style="position: absolute; left: 0; width: 100px; height: 50px; background-color: skyblue;"></div>
+            <div style="position: absolute; left: 110px; width: 100px; height: 50px; background-color: skyblue;"></div>
+            <div style="position: absolute; left: 220px; width: 100px; height: 50px; background-color: skyblue;"></div>
+        </div>
+        <!-- li여도 마찬가지로 적용된다. -->
+        <ul style="position: relative; height: 60px; margin: 5px; background-color: #dedede;">
+            <li style="position: absolute; left: 0; width: 100px; height: 50px; background-color: skyblue;"></li>
+            <li style="position: absolute; left: 110px; width: 100px; height: 50px; background-color: skyblue;"></li>
+            <li style="position: absolute; left: 220px; width: 100px; height: 50px; background-color: skyblue;"></li>
+        </ul>
+        <p>- display: inline; 혹은 inline-block으로 속성 변경.</p>
+        <h4>display: inline; 가로, 세로 사이즈 적용 안됨. margin, padding은 좌우만 적용 가능.</h4>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <h4>margin을 빼도, display: inline;은 공백이 생긴다.</h4>
+        <p>해결 방법은 font size를 0으로 하고, 안에 자식들 크기를 따로 지정해주면 된다.</p>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <div style="display: inline; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <h4>li일 경우</h4>
+        <ul>
+            <li style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+            <li style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+            <li style="display: inline; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+        </ul>
+        <h4>display: inline-block;</h4>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</div>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <div style="display: inline-block; width: 100px; height: 50px; background-color: skyblue;">display: inline;</div>
+        <h4>li일 경우</h4>
+        <ul>
+            <li style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+            <li style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+            <li style="display: inline-block; width: 100px; height: 50px; background-color: skyblue; margin: 5px;">display: inline;</li>
+        </ul>
+        <p>- 부모 요소에 display: flex; 속성 부여 기본 flex 방향이 가로방향이기 때문에, 수직일 경우에만 flex-direction을 적용하는 것이다.</p>
+        <div style="display: flex;">
+            <div style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+            <div style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+            <div style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></div>
+        </div>
+        <ul style="display: flex;">
+            <li style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+            <li style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+            <li style="width: 100px; height: 50px; background-color: skyblue; margin: 5px;"></li>
+        </ul>
+        <hr>
+        <h3>인라인일 경우</h3>
+        <p>- *기본 속성으로 수평 정렬 된다.</p>
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+</body>
+</html>
