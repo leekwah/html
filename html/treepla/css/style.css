@@ -65,7 +65,7 @@ header .header_menu .bottom_menu li:hover a {
 
 #main .leaf_top {
     position: absolute;
-    top: -36px;
+    top: -30px;
 }
 
 #main .leaf_bottom {
@@ -129,8 +129,8 @@ header .header_menu .bottom_menu li:hover a {
     line-height: 27px;
     margin: 36px 0 90px;
 }
-    /* width의 크기가 조금 부족해도, silder를 적용할 것이기에 괜찮다. 그리고 slider 때문에 overflow: hidden을 적용한다.*/
-#shop .silder {
+    /* width의 크기가 조금 부족해도, slider를 적용할 것이기에 괜찮다. 그리고 slider 때문에 overflow: hidden을 적용한다.*/
+#shop .slider {
     width: 1510px;
     height: 470px;
     overflow: hidden;
