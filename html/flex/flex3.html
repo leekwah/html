@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex3</title>
+    <style>
+        /* 대표속성 : flex-wrap  */
+        .flex_container {
+            width: 500px;
+            height: 300px;
+            padding: 5px;
+            border: 1px solid green;
+            display: flex;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+        }
+        .flex_item {
+            width: 100px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+        <div class="flex_item">4</div>
+        <div class="flex_item">5</div>
+        <div class="flex_item">6</div>
+    </div>
+</body>
+</html>
