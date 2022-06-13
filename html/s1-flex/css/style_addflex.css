@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*공통 사용*/
+* {box-sizing: border-box;}
+a { color: #333; text-decoration: none; line-height: 1; }
+a:hover, a:focus, a:active { text-decoration: none; }
+a:visited { color: #333; }
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.inner {   
+    width: 1400px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+}
+
+/*헤더*/
+
+header .cons {
+    height: 298px;
+    background-color: #293896;
+    display: flex;
+    align-items: center;
+}
+header .cons .inner {
+    display: flex; /*NEW*/
+    justify-content: space-between;
+}
+header .cons .title { 
+    /*float: left;*/
+    height: 196px; /*NEW*/
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 53px;
+    font-weight: 700;
+    color: white;
+    line-height: 60px;
+    /*padding-top: 56px;*/
+    /*letter-spacing: -3px;*/
+    letter-spacing: -4px;
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between; /*❤❤❤❤ 타이틀 내부에서 큰글자를 span으로 감쌈.*/
+}
+
+header .cons .title p {
+    font-size: 72px;
+    /*margin-top: 33px;*/
+}
+header .cons .cons_form {
+    /*float: right;*/
+    /*width: 710px;*/
+    display: flex;
+    align-items: center;
+    /*margin-top: 75px;*/
+}
+header .cons .cons_form form {
+    width: 710px;
+    display: flex;
+    justify-content: space-between;
+}
+.cons_form form > div {
+    width: 463px;
+    /*float: left;*/
+    display: flex; /*NEW*/
+    flex-wrap: wrap; /*NEW*/
+    justify-content: space-between;
+    /*플렉스 아이템의 역할*/
+    /*align-self: center;*/
+}
+.cons_form form > div input {
+    /*float: left;*/
+    height: 60px;
+    /*padding-left: 15px;*/
+    /*margin: 0 21px 25px 0;*/
+    margin-bottom: 23px; /*NEW*/
+    border: 1px solid #333;
+    background-color: white;
+    font-size: 24px;
+    color: #666;
+}
+.cons_form form > div input:nth-of-type(1) {
+    width: 155px;
+}
+.cons_form form > div input:nth-of-type(2) {
+    width: 284px;
+}
+.cons_form form > div input:nth-of-type(3) {
+    width: 463px;
+    margin: 0;
+}
+.cons_form form > input {
+    /*float: right;*/
+    width: 218px;
+    height: 144px;
+    margin: 0;
+    font-size: 36px;
+    color: #293896;
+    font-weight: bold;
+    background-color: white;
+}
+/* GNB */
+header .inner {
+    display: flex; /*NEW*/
+    justify-content: space-between; /*NEW*/
+}
+/*header .gnb_logo {
+    float: left;
+}*/
+header ul.main_gnb {
+    /*float: right;*/
+    width: 820px; /*NEW*/
+    display: flex; /*NEW*/
+    justify-content: space-between; /*NEW*/
+    line-height: 118px;
+    font-size: 24px;
+    font-weight: 600;
+}
+header ul.main_gnb li {
+    /*display: inline-block;*/
+    /*margin-left: 20px;*/
+}
+
+
+
+/* 메인이미지 */ /*플렉스 無*/
+.visual_area {
+    position: relative;
+    min-width: 1400px;
+    height: 850px;
+    background: #c7dbf2 url(../images/img_mainbg.png) left center no-repeat;
+    margin-bottom: 97px;
+}
+.visual_area .title_wrap {
+    position: absolute;
+    top: 94px;
+    left: calc(50% + 14px);
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+.visual_area .title_wrap p {
+    margin: 40px 0;
+    font-size: 58px;
+    color: #143395;
+    line-height: 1.1;
+}
+.visual_area .title_wrap p span {
+    color: #ff0000;
+}
+.visual_area .title_wrap ul {
+    font-size: 30px;
+    color: #222;
+    line-height: 57px;
+}
+.visual_area .title_wrap ul li {
+    margin-bottom: 30px;
+}
+.visual_area .title_wrap ul li:first-child {
+    margin-bottom: 24px;
+}
+.visual_area .title_wrap ul li img {
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.visual_area .title_wrap ul li span {
+    color: #143395
+}
+.visual_area .title_wrap ul li span em {
+    color: #f00;
+}
+
+/* 컨텐츠 */
+/* 컨텐츠 영역 */
+.con_area {
+    margin-bottom: 165px; 
+    display: flex;
+    justify-content: space-between;
+
+}
+/* 뉴스 */
+.con_area .news {
+    /*float: left;*/
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+.con_area .news h2 {
+    font-size: 55px;
+    color: #143395;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+}
+.con_area .news ul li {
+    margin-bottom: 27px;
+}
+/* 컨텐츠 박스 */
+.con_area ul.con_box {
+    /*float: right;*/
+    display: flex; /*NEW*/
+    justify-content: space-between; /*NEW*/
+    flex-wrap: wrap; /*NEW*/
+    width: 720px;
+    margin-top: 5px;
+}
+.con_area ul.con_box li {
+    /*float: left;*/
+    /*width: 33.3333%;*/
+    width: 30%;
+    height: 86px;
+    /*line-height: 86px;*/
+    margin-bottom: 29px;
+    display: flex; /*NEW*/
+    align-items: center; /*NEW*/
+}
+.con_area ul.con_box li img {
+    /*vertical-align: middle;*/
+    margin-right: 15px;
+}
+
+
+
+
+
+/* 기업영역 */
+.service_corp {
+    margin-bottom: 225px;
+}
+.service_corp ul {
+    display: flex; /*NEW*/
+    justify-content: space-between; /*NEW*/
+}
+.service_corp ul li {
+    position: relative;
+    /*float: left;*/
+    width: 320px;
+    height: 395px;
+    background: #293896;
+    /*margin-right: 40px;*/
+
+    /* 이미지트랜지션 */
+    overflow: hidden;
+    cursor: pointer;
+}
+.service_corp ul li img {
+    transition: all .7s;
+}
+.service_corp ul li:hover img {
+    transform: scale(1.1);
+}
+.service_corp ul li:hover > div {
+    color: #00aaad;
+}
+/*.service_corp ul li:last-child {
+    margin: 0;
+}*/
+.service_corp ul li > div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: white;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 0 black;
+}
+.service_corp ul li:first-child > div {
+    top: 60px;
+    left: 40px;
+    text-shadow: none; /* 세트니깐 none */
+}
+.service_corp ul li > div strong {
+    font-size: 40px;
+    font-weight: 500;
+}
+.service_corp ul li:first-child > div strong {
+    font-size: 48px;
+}
+.service_corp ul li > div p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 16px;
+}
+.service_corp ul li:first-child > div p {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 118px;
+    line-height: 1.8;
+}
+
+
+
+
+/* 매장 영역 */
+.service_shop {
+    margin-bottom: 270px;
+    /*font-family: "Noto Sans KR", sans-serif;*/
+    font-weight: 500; /* 미디움 통일 */
+    text-align: center;
+}
+.service_shop h2 {
+    font-size: 60px;
+    color: #143395;
+    margin-bottom: 65px;
+}
+.service_shop p {
+    font-size: 26px;
+    margin-bottom: 87px;
+}
+.service_shop ul {
+    width: 1352px;
+    margin: 0 auto;
+    /*NEW*/ 
+    /*공통 inner에서 overflow: hidden; 삭제 = 높이 없어짐 극복*/
+    display: flex;
+    justify-content: space-between;
+}
+.service_shop ul li {
+    /*float: left;*/
+    width: 360px;
+    height: 360px;
+    /*line-height: 360px;
+    margin-right: 136px;*/
+    border-radius: 50%;
+
+    /*NEW*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service_shop ul li:nth-of-type(1) {
+    background-color: #f00;
+}
+.service_shop ul li:nth-of-type(2) {
+    background-color: #3155a6;
+}
+.service_shop ul li:nth-of-type(3) {
+    background-color: #ffc709;
+    
+}
+.service_shop ul li dl {
+    /*display: inline-block;
+    vertical-align: middle;*/
+    line-height: 1.5;
+    color: white;
+}
+.service_shop ul li dl dt {
+    font-size: 36px;
+}
+.service_shop ul li dl dd {
+    font-size: 20px;
+}
+
+
+/* 바로가기 */
+.shortcuts {
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+.shortcuts ul {
+    /*NEW*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shortcuts ul li {
+    position: relative;
+    /*float: left;*/
+    width: 628px;
+    height: 316px;
+    /*margin: 0 144px 112px 0;*/
+    /*NEW*/
+    margin-bottom: 112px;
+}
+/*.shortcuts ul li:nth-of-type(even) {
+    margin: 0 0 112px 0;
+}*/
+.shortcuts ul li:nth-of-type(1) {
+    background: url(../images/img_short01.png);
+}
+.shortcuts ul li:nth-of-type(2) {
+    background: url(../images/img_short02.png);
+}
+.shortcuts ul li:nth-of-type(3) {
+    background: url(../images/img_short03.png);
+}
+.shortcuts ul li:nth-of-type(4) {
+    background: url(../images/img_short04.png);
+}
+.shortcuts ul li > div {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shortcuts ul li:first-child > div {
+    position: absolute;
+    left: auto; /* 위에서 전체 div의 위치를 삭제 */
+    top: auto; /* 위에서 전체 div의 위치를 삭제 */
+    right: 37px;
+    bottom: 30px;
+    transform: translateY(0);
+    text-align: left;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+}
+.shortcuts ul li > div strong {
+    font-size: 36px;
+}
+.shortcuts ul li > div p {
+    font-size: 20px;
+}
+/* 푸터 */
+/* 배너 */
+footer {
+    font-size: 20px;
+    text-align: center;
+}
+footer ul.banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+footer  > div:nth-of-type(1) { /* first-child로 안잡힘 설명 */
+    height: 79px;
+    line-height: 79px;
+    background-color: #ccc;
+}
+/*footer  > div ul {
+    text-align: center;
+}*/
+footer  > div ul {
+    /*NEW*/
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*footer  > div ul li {
+    display: inline-block;
+    padding: 0 5px;
+}*/
+footer > div ul li a {
+    color: #666;
+}
+footer  > div:nth-of-type(2) {
+    /*padding: 63px 0;*/
+    line-height: 1.8;
+    color: #888;
+    /*NEW*/
+    height: 234px;
+    display: flex;
+    justify-content: center; /*플렉스 내부에서 text-align: center;안됨*/
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
