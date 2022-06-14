@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+/* font-family: 'Limelight', cursive; */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Limelight', cursive;
+    text-align: center;
+    font-size: 7em;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: 'Limelight', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+/* navigation */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 12px;
+    /* nav가 div뒤에 있기 때문에, z-index로 올려준다. */
+    z-index: 10;
+}
+nav a, a:visited {
+    color: #D45959;
+}
+nav ul {
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+}
+nav ul img {
+    vertical-align: middle;
+}
+nav li {
+    display: inline-block;
+    width: 130px;
+    margin: 0 20px;
+}
+#topMenu > .active a {
+    color: #BF4B60;
+    text-shadow: 1px 1px 2px #000000;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.cover {
+    background-color: #B8BBBF;
+    color: #BF4B60;
+}
+.bg1 {
+    background-color: #3E4C59;
+}
+.bg2 {
+    background-color: #594045;
+}
+.bg3 {
+    background-color: #D45959;
+}
+
+.div1 {
+    width: 1140px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* about me */
+.bg1 h2 {
+    margin-bottom: 75px;
+}
+.bg1 .div1 {
+    line-height: 1.5;
+}
+.bg1 .photo {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+.bg1 .p-info {
+    float: left;
+    width: 810px;
+}
+.bg1 .p-info > ul {
+    margin-bottom: 22px;
+}
+.bg1 .skill strong, .bg1 .license strong {
+    display: block;
+    width: 110px;
+    float: left;
+}
+.bg1 .skill ul, .bg1 .license ul {
+    float: left;
+}
+.skill img {
+    margin-right: 10px;
+}
+.license {
+    float: right;
+}
+
+/* works */
+.bg2 h2 {
+    margin-bottom: 25px;
+}
+.bg2 .slider_box {
+    height: 605px;
+}
+.bg2 .slider_box a {
+    display: block;
+}
+.bg2 .slider_box .slider_txt p {
+    font-size: 0.85em;
+    padding-top: 5px;
+}
+.bg2 .slider_box .slider_txt h3 {
+    font-size: 1.6em;
+    padding-top: 8px;
+}
+.bg2 .bx-controls-direction {
+    position: absolute;
+    top: 50%;
+    width: 1140px;
+}
+.bg2 .bx-controls-direction a {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 76px;
+    text-indent: -99999px;
+    opacity: 0.4;
+    transition: all 0.3s;
+    transform: translateY(-50%);
+}
+.bg2 .bx-controls-direction a:hover {
+    opacity: 0.9;
+}
+.bg2 .bx-controls-direction .bx-prev {
+    left: -75px;
+    background: url(../images/main_arrow_left.png);
+}
+.bg2 .bx-controls-direction .bx-next {
+    right: -75px;
+    background: url(../images/main_arrow_right.png);
+}
+.bg2 .bx-pager {
+    width: 1140px;
+    position: absolute;
+    bottom: 85px;
+    text-align: center;
+}
+.bg2 .bx-pager div {
+    display: inline-block;
+    margin: 0 5px;
+}
+.bg2 .bx-pager div a {
+    display: block;
+    background-color: #B8BBBF;
+    width: 8px;
+    height: 8px;
+    font-size: 0;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.bg2 .bx-pager div a.active {
+    background-color: #727D8C;
+    width: 42px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* contact me */
+    /* fp-auto-height 적용시 크기 조절 방법
+.bg3 {
+    text-align: center;
+}
+.bg3 .div1 {
+    height: 700px;
+} */
+.bg3 {
+    height: auto !important;
+    text-align: center;
+}
+    /* 추가한 것 */
+.bg3 .fp-tableCell {
+    height: 450px !important
+}
+.bg3 ul li {
+    display: inline-block;
+    margin: 116px 10px 0;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.bg3 ul li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bg3 ul li img:last-of-type {
+    display: none;
+}
+.bg3 ul li:hover img:last-of-type {
+    display: inline;
+}
+.bg3 p:first-of-type {
+    font-size: 1.2em;
+    margin-top: 50px;
+}
