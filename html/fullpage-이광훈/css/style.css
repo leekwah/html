@@ -71,14 +71,12 @@ header #topMenu li {
 }
 
 .bg2 .container2 {
-    /* background-color: red; */
     width: 1500px;
     height: 100%;
     margin: 0 auto;
     color: #ffffff;
 }
 .bg2_textimage {
-    /* background-color: aqua; */
     z-index: 1;
     position: relative;
     height: 300px;
@@ -115,7 +113,6 @@ header #topMenu li {
 }
 .profile_describ p:nth-of-type(2) {
     margin-top: 20px;
-    color: #bdb76b;
     font-size: 16px;
     font-weight: 100;
 }
