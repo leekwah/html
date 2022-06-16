@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fancybox</title>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <!-- 외워두는 게 편하다. code.jquery.com은 무조건 하나만 있어야한다. -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <style>
+        fieldset {width: 640px; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>이미지만 보기</legend>
+        <!-- 이미지를 불러올 때 img를 불러왔지만, a 태그로 불러온다. 그리고 a 태그 뒤에 'data-fancybox'를 넣어주면 fancybox가 적용된다. -->
+        <a data-fancybox href="_images/portfolio01.jpg">이미지 보기</a>
+    </fieldset>
+    <fieldset>
+        <legend>이미지-캡션 추가</legend>
+        <!-- 설명(캡션)을 추가하는 방법은 a 태그 뒤에 data-caption을 넣어준다. -->
+        <a data-fancybox data-caption="대학교 리뉴얼 : 한예종" href="images/portfolio01.jpg">이미지 보기</a>
+    </fieldset>
+    <fieldset>
+        <legend>갤러리 형태</legend>
+        <!-- 속성값에 gallery를 넣어야한다. -->
+        <a data-fancybox="gallery" data-caption="캡션 01" href="_images/portfolio01.jpg">이미지 보기</a>
+        <a data-fancybox="gallery" data-caption="캡션 02" href="_images/portfolio01.jpg">이미지 보기</a>
+        <a data-fancybox="gallery" data-caption="캡션 03" href="_images/portfolio01.jpg">이미지 보기</a>
+        <a data-fancybox="gallery" data-caption="캡션 04" href="_images/portfolio01.jpg">이미지 보기</a>
+    </fieldset>
+
+    <fieldset>
+        <legend>동영상</legend>
+        <a data-fancybox href="https://youtu.be/6fuIV3geDMk">Youtube Video</a>
+        <br>
+        <!-- data-width와 data-height로 너비와 높이를 조절한다. (가로세로 비율 조절 필수) -->
+        <a data-fancybox data-width="640" data-height="360" href="_images/video.mp4">MP4 Video</a>
+        <br>
+        <!-- 비디오 태그로 하는 방법  -->
+        <video width="640" height="320" controls id="myvideo">
+            <!-- type는 넣어야한다.  -->
+            <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.mp4" type="video/mp4">
+            <source src="https://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm">
+        </video>
+    </fieldset>
+</body>
+</html>

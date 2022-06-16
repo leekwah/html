@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive layout 1</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        #wrap {width: 1140px; margin: 0 auto;}
+        /* header는 #wrap안에서 width가 100% */
+        header {width: 100%; height: 150px; background-color: #eb798c;}
+        aside {float: left; width: 35%; height: 700px; background-color: #e5536c;}
+        section {float: left; width: 65%; height: 700px; background-color: #d41434;}
+        /* footer는 float 때문에, header 바로 밑에 존재하게 된다. 그래서 clear: both로 내려준다. */
+        footer {width: 100%; height: 150px; background-color: #900d23; clear: both;}
+
+        @media (max-width: 1280px) {
+            #wrap {width: 95%;}
+        }
+        @media (max-width: 768px) {
+            #wrap {width: 100%;}
+        }
+        @media (max-width: 540px) {
+            /* 위에 width를 재정립 했기 때문에, 밑에도 width %를 재정립하는 것이다. */
+            header {height: 200px;}
+            aside {float:none; width: 100%; height: 200px;}
+            section {float:none; width: 100%; height: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>

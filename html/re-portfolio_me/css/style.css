@@ -1,0 +1,94 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* body */
+body {font-family: 'Noto Sans KR', sans-serif; font-weight: 100; background-color: #ffffff;}
+a {color: inherit; text-decoration: none;}
+h1 {font-size: 2em; font-weight: bold;}
+h2 {font-size: 1.875em; font-weight: bold;}
+h3 {font-size: 1.25em; font-weight: bold;}
+
+/* wrap */
+#wrap {width: 1140px; margin: 0 auto;}
+header {width: 100%; padding: 50px 0; text-align: center; color: #ffffff;}
+header a {color: #000000;}
+    /* overflow: hidden을 해야지, 넘치는 애들이 보이지 않음 -> 하지만, 사진이 중앙으로 작아지지는 않는다. */
+    /* 만약에 overflow: hidden을 하지 않으면, absoulte한 것 처럼 밑에 있는 ul들이 위로 올라온다.*/
+header .photo {width: 250px; height: 250px; border-radius: 50%; margin: 0 auto; overflow: hidden; border: 12px solid rgba(0, 0, 0, .3);}
+    /* 사진이 .photo크기에 맞게 하려면, img의 width를 100%으로 맞추면 된다. */
+header .photo img {width: 100%;}
+header ul {margin: 20px 0; line-height: 1.5;}
+header ul li {font-size: 22px; margin: 0 5px;}
+header ul li span {font-weight: bold; background-color: #FEBE10; color: #ffffff;}
+header dl {width: 380px; margin: 0 auto 100px; line-height: 1.5;}
+header dl dt {font-size: 28px; font-weight: bold;}
+    /* dd를 float: left시키면, 가로로 정렬된다. 이후에 text-align: left로 글자를 맞춘다.*/
+header dl dd {font-size: 20px; width: 50%; float: left; text-align: left;}
+    /* check 이미지와 dd 사이의 거리를 약간 띄운다. */
+header dl dd img {margin-right: 5px;}
+    /* a를 inline-block으로 바꾼 뒤에 width를 주면 밑으로 떨어진다. 이후에 height 등을 주면서 버튼식으로 모양을 만든다. */
+    /* boxshadow의 blur는 마이너스 값이 없다. 상하 좌우로 효과를 줄 경우에는 양수로 넣고, 쉼표를 적고 난 뒤에 음수로도 적는다. */
+
+/* portfolio */
+#portfolio_wrap {width: 100%; border-radius: 50px; overflow: hidden; background-color: #00529F;}
+    /* overflow hidden을 선언하면 새로운 body를 생성한다고 생각하면 된다. */
+    /* 그렇기 때문에, 높이를 제대로 인식해서 위에 여백이 사라진다. */
+#portfolio_wrap .main_visual {height: 350px; margin-bottom: 50px; background: url(../images/main_image.jpg) center top no-repeat; overflow: hidden;}
+    /* overflow: hidden대신에 marign-top: -20px을 해도 된다. */
+/* #portfolio_wrap .main_visual {height: 250px; margin-bottom: 50px; background: url(../images/main_image.jpg) center top no-repeat; margin-top: -20px;} */
+#portfolio_wrap .main_visual h2, h3 {text-align: center; margin: 20px 0;}
+#portfolio_wrap .main_visual h2 {font-size: 40px; padding-top: 50px; text-shadow: 1px 1px 1px #FEBE10;}
+#portfolio_wrap .main_visual h3 {font-weight: lighter; letter-spacing: 3.3px;}
+#portfolio_wrap .main_visual mark {background-color: #FEBE10; font-style: italic;}
+
+.video_wrap {display: flex; flex-wrap: wrap; justify-content: space-around;}
+.video_wrap div {width: 43%; border-radius: 30px; margin: 15px 0; background-color: #ffffff; overflow: hidden; transition: 0.5s;}
+.video_wrap div:hover {box-shadow: 0 0 20px rgba(0, 0, 0, .3);}
+.video_wrap a {display: block; width: 100%;}
+    /* html에서 img의 width를 조절한 것은, 이미지가 너무 커서 내용을 잘 알아 볼 수가 없었기 때문에 조절한 것이다. */
+.video_wrap div img {width: 100%;}
+.video_wrap dl {padding: 20px; text-align: center;}
+.video_wrap dl dt {font-size: 25px; font-weight: bold; margin-bottom: 10px;}
+.video_wrap em {display: block; padding-bottom: 10px;}
+
+/* footer */
+footer {height: 200px; line-height: 100px; margin: 25px 0 12px; background-color: #eeeeee; border-radius: 50px; text-align: center;}
+footer p {color: #333333; font-size: 18px;}
+footer img {margin: 0 5px;}
+
+/* 화면너비 961-1240px */
+@media (max-width: 1240px) {
+    #wrap {width: 96%;}
+    .video_wrap div {width: 300px; height: 300px; border-radius: 150px;}
+    .video_wrap em {display: none;}
+}
+
+/* 541~960px 컨텐츠들이 겹치기 직전 */
+@media (max-width: 960px) {
+    #wrap {width: 100%;}
+    #portfolio_wrap {border-radius: 0;}
+    #portfolio_wrap .main_visual {height: 80px; margin-bottom: 20px;}
+    #portfolio_wrap .main_visual h2 {padding-top: 0px;}
+    #portfolio_wrap .main_visual h3 {display: none;}
+    .video_wrap div {width: 48%; border-radius: 20px;}
+    .video_wrap div p {height: 182px; overflow: hidden;}
+    .video_wrap dt {margin-top: 15px;}
+    footer {height: 100px; margin: 1px 0 12px; border-radius: 0;}
+    footer p:nth-of-type(2) {line-height: 100px;}
+    footer p:nth-of-type(2) img {vertical-align: middle;}
+}
+
+/* 0~540px 컨텐츠들이 겹치기 직전 */
+@media (max-width: 540px) {
+    header {padding-bottom: 12px;}
+    header .photo {margin: 100px auto 20px;}
+    header ul {position: absolute; top: 15px; left: 50%; transform: translateX(-50%);}
+    header ul li {font-size: 28px; font-weight: 500;}
+    header ul li:nth-of-type(2) {font-size: 22px;}
+    .video_wrap div {width: 100%; height: 200px; margin: 5px 0; border-radius: 0; position: relative;}
+    .video_wrap div p {height: 200px;}
+    .video_wrap div p img {width: auto; height: 200px;}
+    .video_wrap dl {width: 30%; height: 200px; position: absolute; top: 0; right: 0; background-color: #ffffff; padding: 0;}
+    .video_wrap dl dt {margin-top: 55px;}
+    .video_wrap em {display: block;}
+}
