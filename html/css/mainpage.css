@@ -19,7 +19,7 @@ a, a:visited {
     color: #000000;
 }
 .container {
-    width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 .menu_container {
@@ -53,8 +53,8 @@ header nav ul {
     line-height: 100px;
 }
 header nav ul li {
-    font-size: 1.2rem;
-    margin: 0 50px;
+    font-size: 25px;
+    margin: 0 25px;
 }
 header nav ul li:hover a {
     color: #000000;
@@ -64,16 +64,15 @@ header nav ul li:hover a {
 }
 
 .sessions {
-    display: flex;
-    flex-direction: row;
-    width: 1800px;
-    height: 750px;
-    margin-top: 150px;
+    width: 95%;
+    height: 95%;
+    margin: 2.5%;
     color: #ffffff;
     align-items: flex-start;
     justify-content: space-around;
     line-height: 1.5;
 }
+
 .sessions span {
     font-style: italic;
     font-size: 1.5em;
@@ -82,8 +81,29 @@ header nav ul li:hover a {
     text-align: center;
     z-index: 100;
     letter-spacing: 1px;
+    width: 50%;
 }
+
+.sessions ul {
+    left: 50%;
+    transform: translateX(25%);
+    width: 50%;
+    font-size: 30px;
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.sessions ul li {
+    width: 100%;
+    z-index: 100;
+    text-align: left;
+}
+
 .sessions p {
+    width: 50%;
+    /* left: 50%; */
     font-family: 'Donoun-Medium';
     font-style: italic;
     font-size: 1em;
@@ -96,19 +116,23 @@ header nav ul li:hover a {
     padding-bottom: 25px;
     border-bottom: 1px solid #000000;
 }
-.sessions ul li {
+
+.sessions ul li.holiday {
     font-family: 'Donoun-Medium';
     font-style: italic;
-    font-size: 1em;
+    font-size: 0.75em;
     z-index: 100;
     color: #ff0000;
 }
 .sessions ul li a {
     font-style: italic;
-    font-size: 1em;
+    font-size: 0.75em;
     z-index: 100;
 }
 .sessions ul li a:hover {
+    text-decoration: underline;
+}
+.sessions ul li a:active {
     text-decoration: underline;
 }
 
@@ -119,7 +143,7 @@ footer div {
     text-align: center;
     line-height: 300px;
     height: 300px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'LeferiPoint-WhiteObliqueA';
     font-style: italic;
 }
@@ -128,53 +152,68 @@ footer h3 {
     font-weight: bold;
 }
 
-/* font color */
+/* span + p font color */
+.bg1 .sessions span, .bg1 .sessions p, .bg5 .sessions span, .bg5 .sessions p {color: #00529F;}
+.bg2 .sessions span, .bg2 .sessions p, .bg6 .sessions span, .bg6 .sessions span {color: #ffffff;}
+.bg3 .sessions span, .bg3 .sessions p {color: #EE324E;}
+.bg4 .sessions span, .bg4 .sessions p {color: #FEBE10;}
 
-.bg1 .sessions span{
-    color: #00529F;
-}
-.bg1 .sessions p {
-    color: #00529F;
-}
-.bg2 .sessions span {
-    color: #ffffff;
-}
-.bg2 .sessions p {
-    color: #ffffff;
-}
-.bg3 .sessions span {
-    color: #EE324E;
-}
-.bg3 .sessions p {
-    color: #EE324E;
-}
-.bg4 .sessions span {
-    color: #FEBE10;
-}
-.bg4 .sessions p {
-    color: #FEBE10;
-}
-.bg5 .sessions span {
-    color: #00529F;
-}
-.bg5 .sessions p {
-    color: #00529F;
-}
+.bg1 .sessions ul li a, .bg5 .sessions ul li a {color: #EE324E;}
+.bg2 .sessions ul li a, .bg6 .sessions ul li a {color: #FEBE10;}
+.bg3 .sessions ul li a {color: #00529F;}
+.bg4 .sessions ul li a {color: #ffffff;}
 
-.bg1 .sessions ul li a {
-    color: #EE324E;
+/* controls */
+.fp-controlArrow.fp-prev {
+    position: absolute;
+    left: 5%;
+    border: none;
+    width: 50px;
+    height: 101px;
+    background: url(../images/prev.png) no-repeat;
+    cursor: pointer;
+    top: 50%;
 }
-.bg2 .sessions ul li a {
-    color: #FEBE10;
+.fp-controlArrow.fp-next {
+    position: absolute;
+    right: 5%;
+    border: none;
+    width: 50px;
+    height: 101px;
+    background: url(../images/next.png) no-repeat;
+    cursor: pointer;
+    top: 50%;
 }
 
-.bg3 .sessions ul li a {
-    color: #00529F;
-}
-.bg4 .sessions ul li a {
-    color: #ffffff;
+/* responsive */
+@media (max-width: 1240px) {
+    .sessions ul span {font-size: 1.5em;}
+    .sessions ul p {font-size: 1em;}
+    .sessions ul li {font-size: 0.75em;}
+    .sessions ul li span + p {font-size: 0.75em;}
+    .slide ul {margin-top: 350px; width: 100%; top: 50%; text-align: center;}
 }
 
-.bg5 .sessions ul li a {
-    color: #EE324E;
-}
+@media (max-width: 960px) {
+    .nav {width: 100%;}
+    header .logo img {position: relative;}
+    header .logo {display: block; position: relative; left: 50%; transform: translateX(-50%);}
+    header nav ul {justify-content: space-around; height: 50px; line-height: 50px; border-top: 1px solid #000000;}
+    header nav ul li {margin: 0 20px;}
+    .menu_container ul {width: 100%; position: relative;}
+    .menu_container ul li {font-size: 0.75em;; display: block; margin: 0 20px;}
+    .sessions ul li {font-size: 0.75em; width: 100%;}
+    .slide ul {margin-top: 450px; width: 100%; top: 50%; text-align: center;}
+} 
+
+@media (max-width: 540px) {
+    header {border-bottom: 1px solid #000000;}
+    .logo {display: block; position: relative; left: 50%; transform: translateX(-50%);}
+    .sessions {width: 100%;}
+    header nav ul {display: none;}
+    .slide ul {width: 100%; margin-top: 300px; text-align: center;}
+    .sessions ul li {font-size: 1em; width: 100%;}
+    .fp-controlArrow.fp-next {right: 7.5%;}
+    .fp-controlArrow.fp-prev {left: 7.5%;}
+} 
+
