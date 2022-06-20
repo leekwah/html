@@ -38,6 +38,13 @@ header ul li {
     width: 20%;
 }
 
+nav {text-align: center; background-color: #fabc01;}
+nav > ul > li {display: inline-block; position: relative;}
+nav > ul > li > a {display: block; position: relative;}
+nav > ul li:hover > a, nav ul > li:active > a {color: #e5293b}
+nav li ul {display: none; position: absolute;}
+nav li li a:hover, nav li li a:focus {background-color: #ffffff;}
+
 header ul li a, a:visited {
     display: block;
     height: 50px;
