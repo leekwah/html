@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gnb menu jquery</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+        nav {text-align: center; background-color: #999999;}
+        nav > ul > li {display:inline-block; position: relative;}
+        nav > ul li > a {display: block; padding: 0 32px; line-height: 40px; font-size: 0.875em;font-weight: 600; color: #ffffff;}
+        nav > ul li:hover > a, nav ul > li:active > a {color: #ffff00;}
+        nav li ul {display: none; position: absolute; width: 100%; box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);}
+        nav li li a {display:block; line-height: 38px; text-align: center; font-weight: 400; font-size: 0.875em; background-color: #ffffff; color: #666666; transition: all 0.3s;}
+        nav li li a:hover, nav li li a:focus {background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="">1depth</a>
+                <ul>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                    <li>
+                        <a href="">2depth</a>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        $(function(){
+            // $()은 선택자를 잡는 것
+            $("nav > ul > li").hover(
+                function(){
+                    // this는  nav>ul>li를 의미한다. // ul을 찾는다. 라는 의미다.
+                    $(this).find("ul").stop().slideDown(300);
+                }, 
+                function(){
+                    // slideUp도 된다. 
+                    $(this).find("ul").stop().slideUp(300);
+                }
+            );
+        });
+
+    </script>
+</body>
+</html>
