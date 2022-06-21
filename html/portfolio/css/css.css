@@ -25,8 +25,8 @@ header {
     background: linear-gradient(to bottom, #ffffff, #ffffff 220px, #fabc01 220px, #fabc01);
     text-align: center;
     padding-top: 10px;
-    
 }
+
 header ul {
     width: 1200px;
     margin: 10px auto 0;
@@ -38,12 +38,6 @@ header ul li {
     width: 20%;
 }
 
-nav {text-align: center; background-color: #fabc01;}
-nav > ul > li {display: inline-block; position: relative;}
-nav > ul > li > a {display: block; position: relative;}
-nav > ul li:hover > a, nav ul > li:active > a {color: #e5293b}
-nav li ul {display: none; position: absolute;}
-nav li li a:hover, nav li li a:focus {background-color: #ffffff;}
 
 header ul li a, a:visited {
     display: block;
@@ -60,8 +54,49 @@ header ul li:nth-of-type(5) a {
 
 header ul li a:hover {
     color: #e5293b;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
+}
+
+/* sidebar */
+.open {
+    z-index: 1;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    background-color: #fabc01;
+    text-align: center;
+    line-height: 50px;
+}
+.container {
+    position: relative;
+    height: 100%;
+}
+.container .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding-top: 150px;
+    background-color: rgba(23, 57, 128, 0.75);
+    z-index: 1;
+    transition: all 0.3s;
+}
+.sidebar h1 {
+    color: #ffffff;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 /* visual area */

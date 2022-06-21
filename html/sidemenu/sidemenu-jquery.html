@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidemenu jquery</title>
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        * {margin: 0; padding: 0;}
+        li {list-style: none;}
+        a {color: #ffffff; text-decoration: none;}
+        .wrap {max-width: 1000px; height: 1024px; background-color: #f5f5f5; margin: 0 auto; position: relative; overflow: hidden;}
+        h1 {text-align: center}
+        .wrap nav {width: 90%; height: 100%; background-color: rgba(0, 0, 0, 0.75); position: absolute; left: -100%; top: 0;}
+        .open {position: absolute; right: 20px; top: 20px; cursor: pointer; font-size: 30px; color: #ffffff; width: 50px; height: 50px; background-color: #ff6347; text-align: center; line-height: 50px;}
+        /* .close는 nav 안에 있는 것이다. */
+        .close {position: absolute; top: 20px; right: 20px; color: #ff6347; cursor: pointer;;}
+        .wrap nav ul li {line-height: 80px; border-bottom: 1px dotted #cccccc; padding-left: 30px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>logo</h1>
+        <div class="open">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <h2>사용자 화면</h2>
+            <div class="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+                <li><a href="">menu5</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.open').click(function(){
+                $('nav').animate({'left' : 0}, 500);
+            });
+            $('.close').click(function(){
+                // 0이 아닌 값이 들어올 때는 '' 사이에 들어오게 해야한다.
+                $('nav').animate({'left' : '-100%'}, 500);
+            });
+        });
+    </script>
+</body>
+</html>

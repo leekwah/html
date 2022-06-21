@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <style>
+            * {margin: 0; padding: 0;}
+            li {list-style: none;}
+            .inner {width: 1200px; margin: 0 auto;}
+            img {width: 100%;}
+            #container {padding-top: 1000px;}
+            #best {height: 1000px; background: #f9f9f9; padding: 100px 0; overflow: hidden;}
+            .title h3 {font-size: 112px; padding-bottom: 50px; font-weight: 700;}
+            .title p {line-height: 1.5;}
+            #best .inner {padding: 30px 50px; height: 800px; position: relative;}
+            #best .title {padding-top: 120px;}
+            #best .bestproduct > div {position: absolute; transition: 1s; /* opacity: 0; */}
+            #best .bestproduct div:nth-child(1) {/* top: 30px; right: -50px; */ top: 30px; right: 50px;}
+            #best .bestproduct div:nth-child(2) {/* top: 490px; left: 770px; */ top: 390px; left: 770px;}
+            #best .bestproduct div:nth-child(3) {/* top: 465px; left: 200px; */ top: 465px; left: 300px;}
+            #best.view .bestproduct div {opacity: 1;}
+            #best.view .bestproduct div:nth-child(1) {top: 30px; right: 50px; z-index: 50; transition: 2s;}
+            #best.view .bestproduct div:nth-child(2) {top: 390px; left: 770px; transition: 2s 0.5s;}
+            #best.view .bestproduct div:nth-child(3) {top: 465px; left: 300px; transition: 2s 1s;}
+        </style>
+    </head>
+
+    <body>
+
+        <div id="container">
+            <!--베스트 애니메이션 s-->
+            <div id="best">
+                <div class="inner">
+                    <div class="title">
+                        <h3>BEST</h3>
+                        <p>고객님들이 가장 많이 찾으시는 상품입니다.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit<br>
+                            Mauris sapien sapien, scelerisque quis nunc ut.</p>
+                    </div>
+
+                    <div class="bestproduct">
+                        <div data-aos="fade-up">
+                            <a href="#">
+                                <img src="images/best01.png" alt="베스트상품배경">
+                            </a>
+                        </div>
+                        <div data-aos="fade-left">
+                            <a href="#">
+                                <img src="images/best02.png" alt="베스트상품배경">
+                            </a>
+                        </div>
+                        <div data-aos="zoom-in-right">
+                            <a href="#">
+                                <img src="images/best03.png" alt="베스트상품배경">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            AOS.init({
+                easing: 'ease-out-back', duration: 1000
+            });
+        </script>
+
+        <!--베스트 애니메이션 e-->
+        <!-- <script> $(document).ready(function() { $(window).on("scroll", function() {
+        var sctop = $(this).scrollTop(); if (sctop > 300) { $("#best").addClass("view");
+        } else { $("#best").removeClass("view"); } }); }); </script> -->
+    </body>
+
+</html>

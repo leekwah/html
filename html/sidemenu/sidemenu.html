@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side menu</title>
+    <style>
+        /* html, body {height: 100%;} */
+
+        * {margin: 0; padding: 0}
+        h1 {text-align: center;}
+        /* 체크박스가 일단 안보이게 설정한다. */
+        input[id="menuicon"] {display: none;}
+        
+        header {background-color: #aaaaaa;}
+        header > div {position: relative; width: 1200px; height: 80px; margin: 0 auto;}
+        
+        /* 메뉴버튼 사이즈를 block으로 설정 후 만들어야한다. */
+        .menubtn {display: block; width: 50px; height: 50px; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;}
+        .menubtn span {display: block; position: absolute; width: 80%; height: 4px; border-radius: 2px; background-color: #222222; transition: all 0.3s;}
+        .menubtn span:nth-child(1) {top: 20%; left: 50%; transform: translateX(-50%);}
+        .menubtn span:nth-child(2) {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .menubtn span:nth-child(3) {bottom: 20%; left: 50%; transform: translateX(-50%);}
+
+        .container {position: relative; height: 100%;}
+        .container .contents {width: 1200px; height: 100%; margin: 0 auto; background-color: #f1f1f1;}
+        .container .sidebar {position: fixed; top: 0; right: -300px; width: 300px; height: 100%; padding-top: 150px; background-color: #666666; z-index: 1; transition: all 0.3s;}
+
+        input[id="menuicon"]:checked ~ .container .sidebar {right: 0;}
+
+        /* 버튼 변화 */
+            /* 햄버거 버튼이 더 위에 와야하기 때문에 z-index를 기존에 줬던 1보다 크게 준다. */
+        input[id="menuicon"]:checked ~ header .menubtn {z-index: 2;}
+        input[id="menuicon"]:checked ~ header .menubtn span {background-color: #ffffff;}
+        input[id="menuicon"]:checked ~ header .menubtn span:nth-child(1) {top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(135deg);}
+        input[id="menuicon"]:checked ~ header .menubtn span:nth-child(2) {opacity: 0;}
+        input[id="menuicon"]:checked ~ header .menubtn span:nth-child(3) {bottom: 50%; left: 50%; transform: translate(-50%, 50%) rotate(-135deg);}
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menuicon">
+    <header>
+        <div>
+            <h1>네비게이션 영역</h1>
+            <label for="menuicon" class="menubtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+    <div class="container">
+        <div class="contents">
+            <h1>콘텐츠 영역</h1>
+        </div>
+        <div class="sidebar">
+            <h1>사이드바 영역</h1>
+        </div>
+    </div>
+
+    
+</body>
+</html>
