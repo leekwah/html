@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bx-ani</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- slider는 bx의 부모 -->
+        <div class="slider">
+            <div class="ani">
+                <div>
+                    <p>'최고의 기술과 서비스'</p>
+                    <div class="img">
+                        <img src="images/text1.png" alt="">
+                        <img src="images/text2.png" alt="">
+                    </div>
+                    <span>고객의 니즈를 정확히 파악한 후 웹디자인 전문가들의 손을 통해 완성됩니다.</span>
+                    <a href="">자세히 보기</a>
+                </div>
+                <img src="images/html5.png" alt="">
+            </div>
+            <div class="ani">
+                <div>
+                    <p>'최고의 기술과 서비스'</p>
+                    <div class="img">
+                        <img src="images/text1.png" alt="">
+                        <img src="images/text2.png" alt="">
+                    </div>
+                    <span>고객의 니즈를 정확히 파악한 후 웹디자인 전문가들의 손을 통해 완성됩니다.</span>
+                    <a href="">자세히 보기</a>
+                </div>
+                <img src="images/html5.png" alt="">
+            </div>
+            <div class="ani">
+                <div>
+                    <p>'최고의 기술과 서비스'</p>
+                    <div class="img">
+                        <img src="images/text1.png" alt="">
+                        <img src="images/text2.png" alt="">
+                    </div>
+                    <span>고객의 니즈를 정확히 파악한 후 웹디자인 전문가들의 손을 통해 완성됩니다.</span>
+                    <a href="">자세히 보기</a>
+                </div>
+                <img src="images/html5.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider({
+            auto: true,
+            pause: 3000
+          });
+        });
+      </script>
+    
+</body>
+</html>
