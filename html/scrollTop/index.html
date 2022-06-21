@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scroll</title>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <style>
+            #best {
+
+                height: 1500px;
+                width: 100%;
+                background-color: #e1dbdb;
+                margin-top: 500px;
+            }
+            .inner {
+                width: 1500px;
+                margin: 0 auto;
+            }
+            .images_wrap > div {
+                position: absolute;
+            }
+            .title {
+                position: absolute;
+                padding: 300px;
+            }
+            .title h1 {
+                color: #375a56;
+                font-size: 100px;
+            }
+            .title p {
+                line-height: 1.5;
+            }
+            .images_wrap div:nth-child(1) {
+                right: 200px;
+                top: 750px;
+                opacity: 0;
+                transition: 2s;
+            }
+            .images_wrap .on:nth-child(1) {
+                right: 355px;
+                top: 755px;
+                transition: 2s;
+            }
+            .images_wrap div:nth-child(2) {
+                right: 525px;
+                top: 1250px;
+                opacity: 0;
+                transition: 2s 0.5s;
+            }
+            .images_wrap .on:nth-child(2) {
+                right: 525px;
+                top: 1150px;
+                opacity: 0;
+                z-index: 1;
+                transition: 2s 0.5s;
+            }
+            .images_wrap div:nth-child(3) {
+                left: 400px;
+                top: 1200px;
+                opacity: 0;
+                transition: 2s 1s;
+            }
+            .images_wrap .on:nth-child(3) {
+                left: 500px;
+                top: 1200px;
+                transition: 2s 1s;
+            }
+            
+            .on {
+                animation: ani 7.5s ease forwards;
+            }
+            @keyframes ani {
+                0% {}
+                100% {
+                    opacity: 1;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="inner" id="best">
+                <div class="title">
+                    <h1>BEST</h1>
+                    <p>고객님들이 가장 많이 찾으시는 상품입니다.<br>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+                        Mauris sapien sapien, scelerisque quis nunc ut.
+                    </p>
+                </div>
+
+                <div class="images_wrap">
+                    <div>
+                        <a href="">
+                            <img src="images/best01.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/best02.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <img src="images/best03.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       $(document).ready(function(){
+            $(window).on("scroll", function(){
+                var sctop = $(this).scrollTop();
+                console.log(sctop)
+                if (sctop > 300) {
+                    $('.images_wrap > div').addClass('on')
+                } else {
+                    $('.images_wrap > div').removeClass('on')
+                }
+            });
+        });
+    </script>
+</body>
+</html>
