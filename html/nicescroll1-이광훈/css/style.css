@@ -1,23 +1,24 @@
 @charset "utf-8";
-/* page */
-#page {position: absolute; width: 100%; height: 100%;}
-#page .one {position: absolute; width: 100%; height: 100%; background: url(../images/bg1.jpg) center center; left: 0%;}
-#page .two {position: absolute; width: 100%; height: 100%; background: url(../images/bg2.jpg) center center; left: 100%;}
-#page .three {position: absolute; width: 100%; height: 100%; background: url(../images/bg3.jpg) center center; left: 200%;}
-#page .four {position: absolute; width: 100%; height: 100%; background: url(../images/bg4.jpg) center center; left: 300%;}
-#page .five {position: absolute; width: 100%; height: 100%; background: url(../images/bg5.jpg) center center; left: 400%;}
-/* nav */
-#nav {position: fixed; top: 53px; left: 70px; width: 150px; background-color: rgba(0, 0, 0, 0.75);}
-#nav > a img {width: 150px; padding: 10px 0;}
-#nav li {height: 50px; line-height: 50px; padding-left: 15px; border-bottom: 1px solid #ffffff;}
-#nav li a {display: block; text-decoration: none; font-size: 18px; font-weight: bold; color: #ffffff;}
-#nav li:first-child {border-top: 1px solid #ffffff;}
-#nav li:last-child {border: 0;}
-/* home(bg1) */
-.bg1 {width: 1300px;}
-.bg1 .title h1 {position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 100px; font-weight: bold; animation: flip 2s ease-in-out infinite; font-}
-.bg1 .title p {position: absolute; left: 50%; top: 60%; transform: translate(-50%, -60%); font-size: 32px; font-weight: bold;}
 
+/* page */
+#page {position: absolute; width: 100%; height: 100%; }
+#page .one {position: absolute; width: 100%; height: 100%; background: url(../images/bg1.jpg) center center no-repeat; left: 0%;}
+#page .two {position: absolute; width: 100%; height: 100%; background: url(../images/bg2.jpg) center center no-repeat; left: 100%;}
+#page .three {position: absolute; width: 100%; height: 100%; background: url(../images/bg3.jpg) center center no-repeat; left: 200%;}
+#page .four {position: absolute; width: 100%; height: 100%; background: url(../images/bg4.jpg) center center no-repeat; left: 300%;}
+#page .five {position: absolute; width: 100%; height: 100%; background: url(../images/bg5.jpg) center center no-repeat; left: 400%;}
+/* inner */
+.inner {min-width: 1920px; min-height: 1080px;}
+/* nav */
+#nav {position: fixed; top: 25px; left: 50%; transform: translateX(-50%);}
+#nav ul {display: flex; flex-direction: row; justify-content: space-between; width: 800px;}
+#nav > a {text-decoration: none; font-weight: bold; color: #ffffff; font-size: 50px; text-align: center; background-color: rgba(0, 0, 0, 0.75); display:inline-block; width: 800px; padding: 10px 0; border-bottom: 1px solid #ffffff;}
+#nav li {width: 20%; height: 50px; line-height: 50px; padding: 0 2.5%; background-color: rgba(0, 0, 0, 0.75); text-align: center; box-sizing: border-box;}
+#nav li a {display: block; text-decoration: none; font-size: 18px; font-weight: bold; color: #ffffff;}
+/* home(bg1) */
+.bg1 {width: 1920px;}
+.bg1 .title h1 {position:absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 100px; font-weight: bold; animation: flip 2s ease-in-out infinite; text-align: center; line-height: 100px; height: 100px;}
+.bg1 .title p {position: absolute; left: 50%; top: 60%; transform: translate(-50%, -60%); font-size: 32px; font-weight: bold;}
 /* bg2(profile) */
 .bg2 {position: absolute; left: 150%; top: 50%; transform: translate(-50%, -50%);}
 .bg2 .profile {width: 1300px; display: flex; justify-content: space-between;}
@@ -27,7 +28,6 @@
 .bg2 .profile_content strong {font-size: 75px;}
 .bg2 .profile_content p {font-size: 50px;}
 .bg2 .profile_content span {font-size: 25px;}
-
 /* bg3(work) */
 .bg3 {position: absolute; left: 250%; top: 50%; transform: translate(-50%, -50%);}
 .bg3 .title_wrap h1 {font-size: 100px; width: 1300px; margin-bottom: 50px; text-align: center; color: #000000; font-weight: bold;;}
@@ -43,32 +43,38 @@
 .bg3 .bx-controls-direction a.bx-next {position:absolute; right: 0; background: url(../images/bx-next.png)}
 .bg3 .bx-pager {position: absolute; top: 600px; left: 50%; transform: translateX(-50%); text-align: center;}
 .bg3 .bx-pager .bx-pager-item {display: inline-block;}
-.bg3 .bx-pager .bx-pager-item a {display: block; width: 12px; height: 12px; border-radius: 6px; margin: 0 6px; background-color: #ffffff; text-indent: -9999px; transition: all 0.7s;}
+.bg3 .bx-pager .bx-pager-item a {display: block; width: 12px; height: 12px; border-radius: 6px; margin: 0 6px; background-color: #ffffff; text-indent: -999999px; transition: all 0.7s;}
 .bg3 .bx-pager .bx-pager-item a.active {background-color: #000000; width: 36px;}
 
 /* bg4(video) */
-.bg4 {position: absolute; left: 350%; top: 50%; transform: translate(-50%, -50%); opacity:1; transition: 1s;}
-.bg4 .video_wrap h1 {text-align: center; font-size: 100px; color: #ffffff; font-weight: bold;; margin-bottom: 50px;}
-.bg4 .video_wrap h1 span {font-size: 50px;}
+.bg4 {position: absolute; left: 350%; top: 50%; transform: translate(-50%, -50%);}
+.bg4 h1 {text-align: center; font-size: 100px; color: #ffffff; font-weight: bold;; margin-bottom: 50px;}
+.bg4 span {font-size: 50px;}
+.bg4 .video_wrap {position: absolute; left: 350%; top: 50%; transform: translate(-50%, -50%); opacity:1; transition: 1s; animation: flip 2s timing-function 2s iteration-count linear fill-mode;}
 @keyframes flip {
-    0% {transform: translate(-50%, -50%) scaleX(-1);}
-    33% {transform: translate(-50%, -50%) scaleX(0);}
-    66% {transform: translate(-50%, -50%) scaleX(1);}
-    100% {transform: translate(-50%, -50%);}
+    0% {transform: translate(-50%, -50%) scaleX(1) scaleY(1);}
+    10% {transform: translate(-50%, -50%) scaleX(1) scaleY(-1);}
+    30% {transform: translate(-50%, -50%) scaleX(-1) scaleY(-1);}
+    40% {transform: translate(-50%, -50%) scaleX(-1) scaleY(1);}
+    50% {transform: translate(-50%, -50%) scaleX(1) scaleY(1);}
+    60% {transform: translate(-50%, -50%) scaleX(-1) scaleY(1);}
+    70% {transform: translate(-50%, -50%) scaleX(-1) scaleY(-1);}
+    80% {transform: translate(-50%, -50%) scaleX(1) scaleY(-1);}
+    90% {transform: translate(-50%, -50%) scaleX(1) scaleY(1);}
+    100% {transform: translate(-50%, -50%) scaleX(1) scaleY(1); background-color: rgba(0, 0, 0, 0.7); color:#ffffff;}
 }
 
 /* bg5 */
 .bg5 {position: absolute; left: 450%; top: 50%; transform: translate(-50%, -50%); height: 800px;}
-
 .bg5 .contact_wrap h1 {font-size: 100px; font-weight: bold; color: #ffffff; margin-bottom: 50px;}
-.bg5 .slider .ani {display: flex; justify-content: space-between; height: 600px; align-items: center;}
-.bg5 .slider .ani div p {width: 95%;height: 150px; font-size: 30px; color: #ffffff; z-index: 999; text-align: center; font-weight: bold; background-color: rgba(0, 0, 0, 0.7); line-height: 75px;}
+.bg5 .slider .ani {display: flex; justify-content: space-between; height: 700px; align-items: flex-start;}
+.bg5 .slider .ani div p {width: 100%; height: 100px; font-size: 30px; color: #ffffff; z-index: 999; text-align: center; font-weight: bold; background-color: rgba(0, 0, 0, 0.7); line-height: 100px;}
 .bg5 .bx-controls-direction {position: absolute; width: 1200px; top: 448px; left: 50%; transform: translateX(-50%);}
 .bg5 .bx-controls-direction a {display: inline-block; width: 50px; height: 50px; text-indent: -9999px; opacity: .7; transition: all 0.7s;}
 .bg5 .bx-controls-direction a:hover {opacity: 0.9;}
 .bg5 .bx-controls-direction a.bx-prev {background: url(../images/bx-prev.png)}
 .bg5 .bx-controls-direction a.bx-next {position:absolute; right: 0; background: url(../images/bx-next.png)}
-.bg5 .bx-pager {position: absolute; top: 800px; left: 50%; transform: translateX(-50%); text-align: center;}
+.bg5 .bx-pager {position: absolute; top: 875px; left: 50%; transform: translateX(-50%); text-align: center;}
 .bg5 .bx-pager .bx-pager-item {display: inline-block;}
-.bg5 .bx-pager .bx-pager-item a {display: block; width: 12px; height: 12px; border-radius: 6px; margin: 0 6px; background-color: #ffffff; text-indent: -9999px; transition: all 0.7s;}
+.bg5 .bx-pager .bx-pager-item a {display: block; width: 12px; height: 12px; border-radius: 6px; margin: 0 6px; background-color: #ffffff; text-indent: -999999px; transition: all 0.7s;}
 .bg5 .bx-pager .bx-pager-item a.active {background-color: #000000; width: 36px;}
