@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* page */
+#page {position: absolute; width: 100%; height: 100%; overflow: hidden;}
+#page .one {position: absolute; width: 100%; height: 100%; background: url(../images/background_1.jpg) center center; left: 0%;}
+#page .two {position: absolute; width: 100%; height: 100%; background: url(../images/background_2.jpg) center center; left: 100%;}
+#page .three {position: absolute; width: 100%; height: 100%; background: url(../images/background_3.jpg) center center; left: 200%;}
+#page .four {position: absolute; width: 100%; height: 100%; background: url(../images/background_4.jpg) center center; left: 300%;}
+#page .five {position: absolute; width: 100%; height: 100%; background: url(../images/background_5.jpg) center center; left: 400%;}
+/* nav */
+#nav {position: fixed; top: 53px; left: 70px; width: 150px; background-color: #151959;}
+#nav li {height: 50px; line-height: 50px; padding-left: 15px;}
+#nav li a {display: block; text-decoration: none; font-size: 18px; font-weight: bold; color: #ffffff; border-bottom: 1px solid #666666;}
+#nav li:last-child a {border: 0;}
