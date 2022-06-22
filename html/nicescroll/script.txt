@@ -1,0 +1,24 @@
+<script>
+
+$("#page").niceScroll({cursoropacitymax:0, horizrailenabled:true});
+
+//cursoropacitymax 스크롤이 보이게 안보이게 = 0 보이게는 1
+//horizrailenabled true 페이지 스크롤이 되게 , flase 스크롤 안되게
+// 나이스 스크롤은 이게 끝 밑 부터 메뉴 클릭하면 페이지 넘어가는 것
+
+
+$("#nav ul li").click(function(e) {
+	
+	var screenWidth	=	$(window).width() ; //변수이름 screenWidth = 스크린의 가로길이 (마음대로 지정할 수 있다)
+	// window (브라우저 창이 켜졌을 때) 에 있는 width(가로의 길이)의 값을 읽어와라. 
+	// 세로로 한다면 height
+	
+	var slideIndex	= 	$(this).index() ;
+	// slideIndex 슬라이드 인덱스 , 클릭하면 페이지가 나오도록 
+	
+	
+	$('#page').animate({'scrollLeft':screenWidth*slideIndex}, 500);
+});
+//네비가 주는 스크롤 네비 애니메이트 함수 , 대괄호 속성명 : 움직일 변수 이름 
+
+</script>
