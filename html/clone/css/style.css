@@ -15,11 +15,19 @@ header {margin: 0 auto;;}
 .logo .menu_depth1 li  li span {z-index: 999;}
 .logo .menu_depth1>li:nth-of-type(1) {margin-left: 130px;}
 .logo .menu_depth1 li a {font-size: 20px; line-height: 75px;}
+<<<<<<< HEAD
 .logo .menu_depth1 li .menu_depth2 {opacity: 1; display: flex; flex-direction: row; justify-content: space-between;}
 .logo .menu_depth1 li .menu_depth2 div {width: 100%; background-color: #ffffff;}
 .logo .menu_depth1 li .menu_depth2 div:nth-of-type(4) {width: 550px;}
 .logo .menu_depth1 li:hover .menu_depth2 {opacity: 1; z-index: 999; background-color: #ffffff; color: #000000; display: flex; transition: all 0.5s;}
 .logo .menu_depth1 li:hover .menu_depth2 div {font-size: 20px; font-weight: bold; text-align: left; border: 1px solid red;}
+=======
+.logo .menu_depth1 li .menu_depth2 {opacity: 0; display: flex; flex-direction: row; justify-content: space-between;}
+.logo .menu_depth1 li .menu_depth2 div {width: 25%; background-color: #ffffff;}
+.logo .menu_depth1 li .menu_depth2 div:nth-of-type(4) {width: 550px;}
+.logo .menu_depth1 li:hover .menu_depth2 {opacity: 1; z-index: 999; background-color: #ffffff; color: #000000; display: flex; transition: all 0.5s;}
+.logo .menu_depth1 li:hover .menu_depth2 div {font-size: 20px; font-weight: bold;}
+>>>>>>> b9ff88ab5f0f39cd713c85ae276cc1d911e20655
 .logo .menu_depth1 li:hover .menu_depth2 .depth2_image1 {width: 500px; position: relative; top: 50%; transform: translateY(-50%);}
 .logo .menu_depth1 li:hover .menu_depth2 li {opacity: 1; z-index: 999;}
 .logo .menu_depth1 li:hover .menu_depth2 .depth3_icons {display: flex; flex-direction: column; text-align: left;}
