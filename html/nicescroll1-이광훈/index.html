@@ -14,17 +14,13 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-
     </head>
-    <body>
-        <!-- script에 $("#page")라고 되어있었기 때문에, #page에서 작동된다. -->
         <div id="page">
             <div class="one"></div>
             <div class="two"></div>
             <div class="three"></div>
             <div class="four"></div>
             <div class="five"></div>
-            <!-- script에 $("#nav ul li")라고 되어있다. -->
             <div id="nav">
                 <a href="https://www.chanel.com/kr/">
                     CHANEL
@@ -47,7 +43,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="bg1 inner">
+            <div class="bg1">
                 <div class="title">
                     <h1>CHANEL</h1>
                     <p>PARIS</p>
@@ -57,86 +53,58 @@
             <div class="bg2">
                 <div class="profile">
                     <div class="img_wrap">
-                    <img src="images/profile.jpg" alt="">
-                    <p>Coco Chanel by Boris Lipnitzki, Paris, October 1936</p>
-                </div>
+                        <img src="images/profile.jpg" alt="">
+                        <p>Coco Chanel by Boris Lipnitzki, Paris, October 1936</p>
+                    </div>
                     <div class="profile_content">
-                    <strong>1883</strong>
-                    <p>BIRTH OF GABRIELLE CHANEL</p>
-                    <span>Gabrielle Chanel is born in Saumur,<br>
-                        France on August 19th 1883, under the sign of Leo.</span>
+                        <strong>1883</strong>
+                        <p>BIRTH OF GABRIELLE CHANEL</p>
+                        <span>Gabrielle Chanel is born in Saumur,<br>
+                            France on August 19th 1883, under the sign of Leo.</span>
                     </div>
                 </div>
 
             </div>
 
             <div class="bg3">
-                <div class="title_wrap">
-                    <h1>CHANEL WORKS</h1>
+                <div class="worktitle_wrap">
+                    <h1>WORKS</h1>
                 </div>
-            
+
                 <div class="slider">
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work1.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work1.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work2.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work2.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work3.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work3.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work4.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work4.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work5.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work5.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work6.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work6.jpg" alt="">
                         </div>
                     </div>
                     <div class="ani">
-                        <div>
-                            <p>'Chanel Since 1909'</p>
-                            <div class="img">
-                                <img src="images/work7.jpg" alt="">
-                            </div>
-                            <span>History.</span>
+                        <div class="img">
+                            <img src="images/work7.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -144,15 +112,17 @@
 
             <div class="bg4">
                 <div class="video_wrap">
-                <h1>BLEU <span>DE</span> CHANEL</h1>
+                    <h1>BLEU
+                        <span>DE</span>
+                        CHANEL</h1>
                     <iframe
-                    width="960"
-                    height="540"
-                    src="https://www.youtube.com/embed/oG-nnDlnWrA"
-                    title="BLEU de CHANEL, the 2010 film with Gaspard Ulliel – CHANEL Fragrance"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen="allowfullscreen"></iframe>
+                        width="960"
+                        height="540"
+                        src="https://www.youtube.com/embed/oG-nnDlnWrA"
+                        title="BLEU de CHANEL, the 2010 film with Gaspard Ulliel – CHANEL Fragrance"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div>
 
@@ -202,11 +172,10 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
-        <script>
-            $("#page").niceScroll({cursoropacitymax: 0, horizrailenabled: true});
+    <script>
+        $("#page").niceScroll({cursoropacitymax: 0, horizrailenabled: true});
             $("#nav ul li").click(function (e) {
                 var screenWidth = $(window).width();
                 var slideIndex = $(this).index();
@@ -214,15 +183,24 @@
                     'scrollLeft': screenWidth * slideIndex
                 }, 500);
             });
-
-            $(document).ready(function(){
+        
+        $(document).ready(function () {
             $('.slider').bxSlider({
-            auto: true,
-            pause: 1000
+                auto: true,
+                pause: 1500
             });
         });
 
-
-        </script>
-    </body>
+        $(document).ready(function () {
+            $("#nav ul li").click(function () {
+                if ($(this).hasClass('active')) {
+                    $("#nav ul li").removeClass('active');
+                } else {
+                    $("#nav ul li").removeClass('active');
+                    $(this).addClass('active');
+                }
+            })
+        })
+    </script>
+</body>
 </html>
