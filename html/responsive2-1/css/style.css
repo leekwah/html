@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@font-face {font-family: 'InkLipquid'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff'); font-weight: normal; font-style: normal;}
+
+/* common */
+* {font-family: 'InkLipquid' !important;}
+a {text-decoration: none; color: #ffffff; font-family: 'InkLipquid';}
+.inner {padding: 40px 0 0 0;}
+section:nth-of-type(2n) {background-color: #8F8EBF;}
+    /* desktop */
+@media (min-width: 768px) {
+    .inner {max-width: 1300px; margin: 0 auto;}
+}
+/* nav */
+nav {width: 100%; background-color: #ffffff; font-size: 1.2em; font-weight: bold;}
+nav .inner {padding: 0;}
+nav .logo {display: none;}
+nav ul {display: flex; flex-direction: column; display: none;}
+nav ul li {text-align: center; border-bottom: 1px solid #4F4D8C;}
+nav ul li a {display: block; line-height: 50px; color: #4F4D8C}
+nav a#trigger {display: block; background-color: #4F4D8C; padding-left: 15px; line-height: 40px; text-align: center;}
+    /* desktop */
+@media (min-width: 768px) {
+    nav {height: 80px; border-bottom: 2px solid #4F4D8C; background-color: #4F4D8C; box-sizing: border-box;}
+    nav .inner {display: flex; justify-content: space-between; align-items: center;}
+    nav .logo {display: block; font-size: 3em; font-weight: bold; background-color: #4F4D8C;color: #ffffff; line-height: 80px; padding: 0 15px;}
+    nav ul {width: 750px; height: 80px; display: flex !important; flex-direction: row; justify-content: space-between; background-color: #ffffff;}
+    nav ul li {width: 25%; border: 1px solid #4F4D8C;}
+    nav ul li {border-left: 0}
+    nav ul li:last-child {border-left: 1px;}
+    nav ul li a {font-size: 0.9em; line-height: 80px; color: #4F4D8C;}
+    nav a#trigger {display: none;}
+}
+/* profile */
+.profile .title h3 {font-size: 2.5em; font-weight: bold; text-align: center; margin-bottom: 20px; color: #ffffff;}
+.profile .intro {padding: 20px 50px;}
+.profile .intro .text {padding: 0 50px;}
+.profile .intro .text ul {line-height: 1.25; box-sizing: border-box;}
+.profile .intro .text ul li {margin-bottom: 15px; border: 1px solid #4F4D8C; font-size: 1.25em; box-sizing: border-box; color: #ffffff; box-sizing: border-box;}
+.profile .intro .text ul li:last-child {margin-top: 25px;}
+.profile .intro .text ul li span {display: inline-block; width: 80px; margin-right: 15px; color: #ffffff; background-color: #4F4D8C; text-align: center; border: 3px solid #8F8EBF; box-sizing: content-box;}
+.profile .inner .text ul li p {padding: 10px;}
+.profile .inner .img {text-align: center; display: none;}
+    /* desktop */
+@media (min-width: 768px) {
+    .profile .intro {display: flex; align-items: center;}
+    .profile .inner .img {display: block;}
+    .profile .inner .img > img {max-width: 250px;}
+}
+/* about */
+.about {line-height: 1.8; padding: 20px 50px;}
+.msg p {color: #4F4D8C;; font-weight: bold; font-size: 2em; font-style: italic; text-align: center; line-height: 1.8; margin-bottom: 20px;}
+.msg span {font-size: 0.7em; color: #aaaaaa; font-weight: 400;}
+
+/* portfolio */
+.portfolio h3 {font-size: 2.5em; font-weight: bold; text-align: center; margin-bottom: 25px; color: #ffffff;}
+.works_list {padding: 20px 50px;}
+.works_list h4 {font-size: 1.5em; text-align: center; margin-top: 25px; z-index: 99; color: #ffffff;}
+.works {padding:30px; box-sizing: border-box; margin-bottom: 20px; background-color: #4F4D8C; border: 1px solid #4F4D8C; border-radius: 25px;}
+.works img {padding-top: 10px; width: 100%; border-radius: 25px;}
+    /* desktop */
+@media (min-width: 768px){
+    .works_list {display: flex; justify-content: space-between;}
+    .works {flex-basis: 22%;}
+}
+/* contact */
+.contact_wrap {padding: 30px 0; background-color: #262626;}
+.contact_wrap .inner {height: 80px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.contact {color: #ffffff;}
+.contact p {font-size: 1.3em;}
+.sns a {margin-right: 15px;}
+.sns a:last-child {margin-right: 0;}
+    /* desktop */
+@media (min-width: 768px) {
+    .contact_wrap .inner {display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+    
+}
