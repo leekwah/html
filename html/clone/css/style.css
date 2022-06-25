@@ -6,9 +6,18 @@
 .container {width: 100%; margin: 0 auto;}
 a {text-decoration: none; color: #000000;}
 /* header */
-header {margin: 0 auto;;}
-.logo {width: 100%; margin: 0 auto;  height: 75px; display: flex; justify-content: space-evenly;}
-.logo img {position: absolute; width: 150px; left: 15px; top: 15px;}
+header {margin: 0 auto; display: flex; justify-content: center;}
+header {background-color: yellow;}
+header .logo {width: 350px; height: 75px;}
+header .logo img {position: absolute; width: 150px; left: 15px; top: 15px;}
+header .main_depth01 {width: 60%;}
+header .main_depth01 li {display: inline-block;}
+
+
+
+header .menu_cart {width: 20%;}
+header .menu_cart li {display: inline-block;}
+
 /* movingbar */
 .black_navbar {width: 100%; color: #ffffff; font-weight: bold; background-color: #000000; height: 50px; line-height: 50px; text-align: center;}
 .black_navbar span {text-align: center;}
