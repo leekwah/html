@@ -6,26 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>byredo</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <a target="_blank" href="https://icons8.com/icon/3muzEmi4dpD5/france"></a>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         
     </head>
     <body>
-        <header>
+        <header class="header_inner top_container">
 
             <div class="logo">
-                <img src="images/icon/logo.png" alt="">
+                <img src="images/icon/logo.svg" alt="">
             </div>
             <ul class="main_depth">
-                <li id="#hover1"><a href="#">Perfume</a></li>
+                <li><a href="#">Perfume</a></li>
                 <li><a href="#">MakeUp</a></li>
                 <li><a href="#">Home fragrance</a></li>
                 <li><a href="#">Home & body care</a></li>
                 <li><a href="#">Byproduct&trade;</a></li>
             </ul>
-            <div class="inner main_hover1">
+            
+            <div class="inner main_hover1" id="hover1">
                 <ul class="sub_depth">
                     <li><a href="#"><span>Discover</span></a></li>
                     <li><a href="#">Best sellers</a></li>
@@ -34,27 +35,160 @@
                     <li><a href="#">Mister Marvelous</a></li>
                 </ul>
                 <ul class="sub_depth">
-                    <li><a href="#"><span>Discover</span></a></li>
-                    <li><a href="#">Best sellers</a></li>
-                    <li><a href="#">New ariivals</a></li>
-                    <li><a href="#">Gift card</a></li>
-                    <li><a href="#">Mister Marvelous</a></li>
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Perfumes</a></li>
+                    <li><a href="#">Discovery set</a></li>
+                    <li><a href="#">Travel editions</a></li>
+                    <li><a href="#">Perfume extracts</a></li>
+                    <li><a href="#">Hair perfumes</a></li>
                 </ul>
                 <ul class="sub_depth">
-                    <li><a href="#"><span>Discover</span></a></li>
-                    <li><a href="#">Best sellers</a></li>
-                    <li><a href="#">New ariivals</a></li>
-                    <li><a href="#">Gift card</a></li>
-                    <li><a href="#">Mister Marvelous</a></li>
+                    <li><a href="#"><span>Best sellers</span></a></li>
+                    <li><a href="#">Bal d'Afrique</a></li>
+                    <li><a href="#">Mojave Ghost</a></li>
+                    <li><a href="#">Gypsy Water</a></li>
+                    <li><a href="#">Rose of No Man's Land</a></li>
+                    <li><a href="#">Blanche</a></li>
                 </ul>
-                <ul class="sub_depth">
-                    <li><a href="#"><img src="images/nav/MisterMarvelous-2-882x518.jpg" alt=""></a></li>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/1.jpg" alt=""></a></li>
                 </ul>
                 <ul class="sub_depth icons">
-                    <li><a href=""><i class="fa-solid fa-circle-question"></i><span> Help</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-comment-dots"></i><span> Live Chat</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-earth-americas"></i><span> English</span></a></li>
-                    <li><a href=""><img src="https://img.icons8.com/color/48/FFFFFF/france-circular.png" class="france_logo"><span>France</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><strong> Help</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots"></i><strong> Live Chat</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-language"></i><strong> Language</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i><strong> English</strong></a></li>
+                </ul>
+            </div>
+            
+            <div class="inner main_hover2" id="hover2">
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Discover</span></a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">New ariivals</a></li>
+                    <li><a href="#">Gift card</a></li>
+                    <li><a href="#">Mister Marvelous</a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Eyes</a></li>
+                    <li><a href="#">Lips</a></li>
+                    <li><a href="#">Face</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Best sellers</span></a></li>
+                    <li><a href="#">Bal d'Afrique</a></li>
+                    <li><a href="#">Mojave Ghost</a></li>
+                    <li><a href="#">Gypsy Water</a></li>
+                    <li><a href="#">Rose of No Man's Land</a></li>
+                    <li><a href="#">Blanche</a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/2-1.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/2-2.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth icons">
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><strong> Help</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots"></i><strong> Live Chat</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-language"></i><strong> Language</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i><strong> English</strong></a></li>
+                </ul>
+            </div>
+
+            <div class="inner main_hover3" id="hover3">
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Discover</span></a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">New ariivals</a></li>
+                    <li><a href="#">Gift card</a></li>
+                    <li><a href="#">Mister Marvelous</a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Candles</a></li>
+                    <li><a href="#">Home fragrances</a></li>
+                    <li><a href="#">Textile perfume</a></li>
+                    <li><a href="#">Bentgablenits</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/3-1.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/3-2.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li></li>
+                </ul>
+                <ul class="sub_depth icons">
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><strong> Help</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots"></i><strong> Live Chat</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-language"></i><strong> Language</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i><strong> English</strong></a></li>
+                </ul>
+            </div>
+
+            <div class="inner main_hover4" id="hover4">
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Discover</span></a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">New ariivals</a></li>
+                    <li><a href="#">Gift card</a></li>
+                    <li><a href="#">Mister Marvelous</a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Hand care</a></li>
+                    <li><a href="#">Body care</a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/4-1.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/4-2.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li></li>
+                </ul>
+                <ul class="sub_depth icons">
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><strong> Help</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots"></i><strong> Live Chat</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-language"></i><strong> Language</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i><strong> English</strong></a></li>
+                </ul>
+            </div>
+
+            <div class="inner main_hover5" id="hover5">
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Discover</span></a></li>
+                    <li><a href="#">Best sellers</a></li>
+                    <li><a href="#">New ariivals</a></li>
+                    <li><a href="#">Gift card</a></li>
+                    <li><a href="#">Mister Marvelous</a></li>
+                </ul>
+                <ul class="sub_depth">
+                    <li><a href="#"><span>Categories</span></a></li>
+                    <li><a href="#">Shop all</a></li>
+                    <li><a href="#">Eyes</a></li>
+                    <li><a href="#">Lips</a></li>
+                    <li><a href="#">Face</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+                <ul class="sub_depth img_container">
+                    <li><a href="#"><img src="images/nav/5.jpg" alt=""></a></li>
+                </ul>
+                <ul class="sub_depth icons">
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><strong> Help</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment-dots"></i><strong> Live Chat</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-language"></i><strong> Language</strong></a></li>
+                    <li><a href="#"><i class="fa-solid fa-earth-americas"></i><strong> English</strong></a></li>
                 </ul>
             </div>
 
@@ -67,18 +201,29 @@
 
         <section>
             <div class="black_navbar inner">
-                <span>Free shipping & returns. 2 free samples</span>
+                <p>Complimentary Rinse-free Hand Wash with any order containing two makeup products. Free shipping & returns. 2 free samples</p>
             </div>
         </section>
 
 
     </body>
-    <script>
+    <script type="text/javascript">
+        $(window).load(function(){
+        $(function() {
+        $('div.showImage').hide();
+        $('.imgMouseover').hover(function() {
+        $('div.showImage').fadeIn();
+        }, function() {
+        $('div.showImage').fadeOut();
+        });
+        });
+        });
+
         function show(id) {
-          document.getElementById(id).style.visibility = "visible";
+          document.getElementById(id).style.opacity = "1";
         }
         function hide(id) {
-          document.getElementById(id).style.visibility = "hidden";
+          document.getElementById(id).style.opacity = "0";
         }
       </script>
 </html>
