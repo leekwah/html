@@ -42,7 +42,6 @@ header .main_depth li {display: inline-block; font-weight: 900; font-size: 1.125
 header .menu_cart {width: 10%; display: flex; align-items: center; justify-content: space-evenly;}
 header .menu_cart li {display: inline-block; font-size: 25px;}
 header .main_depth li:hover a  {font-weight: bold;}
-.main_depth li.active {background-color: ;}
 
 
 .sub_depth li {margin-left: 15px;}
