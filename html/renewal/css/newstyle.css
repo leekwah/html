@@ -16,7 +16,7 @@ nav {position: relative; max-width: 1920px; text-align: center; background-color
 nav::after {content: ""; position: absolute; left: 0; bottom: 0; z-index: 100; width: 100%; height: 1px; background-color: #ffffff;}
 nav > ul > li {display: inline-block;}
 nav > ul > li > a {display: block; padding: 0 40px; line-height: 75px; font-size: 1.25em; font-weight: 600; color: #000000;}
-nav .sub {position: absolute; left: 0; width: 100%; overflow: hidden; background-color: #ffffff; transition: height 0.25s;}
+nav .sub {position: absolute; left: 0; width: 100%; overflow: hidden; background-color: #ffffff; transition: all 0.1s;}
 nav .sub .sub_contents {margin: 0 auto; width: 100%; text-align: left; display: flex;}
 nav .sub .sub_contents ul {display: inline-block; width: 16%; vertical-align: top;}
 nav .sub .sub_contents li a {display: block; line-height: 2em; font-size: 1em; background-color: #ffffff; color: #000000; box-sizing: border-box;}
@@ -104,17 +104,30 @@ nav .sub .sub_contents li:first-child a {border-top: none;}
 
 .cs {height: 500px; background-color: #F5F5F5; display: flex; flex-direction: row; justify-content: space-around;}
 .cs ul {width: 20%; padding-top: 30px;}
-
-/* li */
-
-/* input */
-.cs ul li select {width: 200px; padding: .8em .5em; border: 1px solid #cccccc; background: url('../images/arrow.png') no-repeat 95% 50%; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: #ffffff;}
+.cs ul li a {color: #000000;}
+.cs ul li {line-height: 1.5; font-size: 0.825em; line-height: 2;}
+.cs ul li strong {font-size: 1.125em;}
+.depth1 {height: 100%;}
+.depth1 li:nth-of-type(2) {margin-top: 5px;}
+.depth1 li .fa-solid {margin-right: 10px;}
+.depth1 li:nth-of-type(3) {margin-top: 10px;}
+.depth2 li:nth-of-type(1) {margin-bottom: 10px;}
+.depth3 li:nth-of-type(1) {list-style: none; margin-bottom: 10px;}
+.depth4 li {line-height: 1;}
+.depth4 li:nth-of-type(1) {margin-bottom: 5px;}
+.depth4 li:nth-of-type(3) {margin: 15px 0 10px;}
+.depth4 li:nth-of-type(4) {line-height: 1.25; margin-bottom: 10px; font-size: 0.7em;}
+.depth4 li:nth-of-type(6) {font-size: 0.7em;}
+.depth4 li:nth-of-type(7) {font-size: 0.625em; line-height: 1.25;}
+.depth4 li em {text-decoration: underline;}
+	/* input */
+select {width: 200px; padding: 0.8em 0.5em; border: 1px solid #cccccc; background: url('../images/arrow.png') no-repeat 95% 50%; border-radius: 0px; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: #ffffff;}
 select::-ms-expand {display: none;}
-.email_box {height: 35px; width: 200px;}
+.email_box {height: 35px; width: 300px;}
 .ok_box {background-color: #000000; color: #ffffff; padding: 10px;}
 
-
+/* footer */
 footer {display: flex; justify-content: space-between; height: 50px; align-items: center;}
 footer address {margin-left: 15px; font-size: 0.875em;}
 .sns_wrap {display: flex; width: 5%; flex-direction: row; justify-content: space-evenly;}
-/* .sns_wrap li {display: inline-block;} */
+.fa-brands {color: #000000;}
