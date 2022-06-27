@@ -13,10 +13,10 @@ header .menu_cart a {color: #000000;}
 header .menu_cart li {display: inline-block; font-size: 25px;}
 header .abs_p {color: #ffffff; text-align: center;}
 /* sidemenu */
-.hamberger {opacity: 0; background-color: #f5f5f5; margin: 0 auto; overflow: hidden; z-index: 9999999;}
+.hamberger {opacity: 0; background-color: #ffffff; margin: 0 auto; overflow: hidden; z-index: 9999999; width: 80%;}
 .open {opacity: 0; position: absolute; left: 0px; top: 0px; cursor: pointer; font-size: 30px; color: #000000; width: 100px; height: 100px; background-color: transparent; text-align: center; line-height: 100px; z-index: 9999999;}
-.hamberger .wrap {opacity: 0; width: 90%; height: 100%; background-color: rgba(0, 0, 0, 0.75); position: absolute; left: -100%; top: 100px;}
-.close {opacity: 0; position: absolute; top: 0px; right: 0px; color: #f5f5f5; cursor: pointer; z-index: 9999999; background-color: transparent; font-size: 1.5em; transform: translate(50%, -50%);}
+.hamberger .wrap {opacity: 0; width: 90%; height: 130%; background-color: rgba(0, 0, 0, 0.75); position: absolute; left: -100%; top: 100px;}
+.close {opacity: 0; position: absolute; top: 0px; right: 0px; color: #ffffff; cursor: pointer; z-index: 9999999; background-color: transparent; font-size: 1.5em; transform: translate(50%, -50%);}
 .hamberger .wrap .close_ul li {opacity: 0; line-height: 80px; border-bottom: 1px dotted #cccccc; padding-left: 30px;}
 .hamberger .wrap .close_ul li a {opacity: 0; text-decoration: none; color: #ffffff;}
 /* nav */
@@ -173,7 +173,7 @@ footer address {margin-left: 15px; font-size: 0.875em;}
 	.email_box {height: 35px; width: 150px;}
 }
 
-/* PC , 테블릿 가로 (해상도 768px ~ 1023px) */
+/* PC , 테블릿 가로 (해상도 1024px ~ 1335px) */
 @media (min-width: 1024px) and (max-width: 1335px) {
 	header .logo {padding: 0;}
 	.inner {max-width: 1335px; width: 100%; margin: 0 auto;}
@@ -200,16 +200,36 @@ footer address {margin-left: 15px; font-size: 0.875em;}
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
 	header .logo {padding: 0;}
-	select {width: 150px;}
-	.email_box {height: 35px; width: 100px;}
-	.ok_box {background-color: #000000; color: #ffffff; width: 100px; height: 35px; box-sizing: border-box;}
-	header .logo {padding: 1;}
 	.hamberger {opacity: 1;}
 	.open {opacity: 1;}
 	.hamberger .wrap {opacity: 1;}
 	.close {opacity: 1;}
 	.hamberger .wrap .close_ul li {opacity: 1;}
 	.hamberger .wrap .close_ul li a {opacity: 1;}
+	.contents_long div p {display: none;}
+	.contents_long div a h2 {display: none;}
+	.contents_row div p {display: none;}
+	.contents_row div a h2 {display: none;}
+	.contents_row div a h3 {display: none;}
+	.contents_longest div p {display: none;}
+	.contents_longest div h2 {display: none;}
+	.contents_row div img {width: 100%; vertical-align: middle;}
+	.contents_long {display: block; width: 100%; overflow: hidden;}
+
+	.nav {display: none;}
+	.contents_long {display: block; width: 100%; overflow: hidden;}
+	.contents_long div:nth-of-type(1) p {position: absolute; right: 0.5%; ;transform: translate(-50% ,-30px); color: #000000; z-index: 9999;}
+	.contents_row {display: block; overflow: hidden;}
+	.contents_row div {width: 50%; float: left;}
+	.contents_row div:nth-of-type(1) p {position: absolute; right: 54%; transform: translate(50%, -30px);}
+	.contents_row div:nth-of-type(3) p {position: absolute; right: 54%; transform: translate(50%, -30px);}
+
+	.cs {height: 300px;}
+	.cs .depth1 {width: 40%;}
+	.cs .depth3 {width: 40%;}
+	.cs .depth2 {display: none;}
+	.cs .depth4 {display: none;}
+	select {width: 150px;}
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px) */
@@ -217,15 +237,27 @@ footer address {margin-left: 15px; font-size: 0.875em;}
 	header .logo {padding: 0;}
 	.hamberger {opacity: 1;}
 	.open {opacity: 1;}
-	.hamberger .wrap {opacity: 1;}
+	.hamberger .wrap {opacity: 1; height: 400%;}
 	.close {opacity: 1;}
 	.hamberger .wrap .close_ul li {opacity: 1;}
 	.hamberger .wrap .close_ul li a {opacity: 1;}
+	.contents_long div p {display: none;}
+	.contents_long div a h2 {display: none;}
+	.contents_row div p {display: none;}
+	.contents_row div a h2 {display: none;}
+	.contents_row div a h3 {display: none;}
+	.contents_longest div p {display: none;}
+	.contents_longest div h2 {display: none;}
+	.contents_row div img {width: 100%; vertical-align: middle;}
+	.contents_long {display: block; width: 100%; overflow: hidden;}
 
-
-
-
-
+	.nav {display: none;}
+	.contents_long {display: block; width: 100%; overflow: hidden;}
+	.contents_long div:nth-of-type(1) p {position: absolute; right: 0.5%; ;transform: translate(-50% ,-30px); color: #000000; z-index: 9999;}
+	.contents_row {display: block; overflow: hidden;}
+	.contents_row div {width: 50%; float: left;}
+	.contents_row div:nth-of-type(1) p {position: absolute; right: 54%; transform: translate(50%, -30px);}
+	.contents_row div:nth-of-type(3) p {position: absolute; right: 54%; transform: translate(50%, -30px);}
 
 	.cs {height: 300px;}
 	.cs .depth1 {width: 40%;}
