@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +9,13 @@
         <link rel="stylesheet" href="css/newstyle.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="css/dd.css">
-        <link rel="stylesheet" href="css/flags.css">
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 <body>
     
     <header class="container">
+        
         <div class="logo">
             <img src="images/icon/logo.svg" alt="">
         </div>
@@ -216,18 +215,27 @@
         </nav>
         <p class="abs_p">Free shipping & returns. 2 free samples</p>
     </div>
+        
         <ul class="menu_cart">
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
         </ul>
     </header>
-    <section>
-        <div class="black_navbar container">
-         
+
+    <section class="hamberger">
+    <div class="open"><i class="fa-solid fa-bars"></i></div>
+    <div class="wrap">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <ul class="close_ul">
+                <li><a href="">Perfume</a></li>
+                <li><a href="">MakeUp</a></li>
+                <li><a href="">Home fragrance</a></li>
+                <li><a href="">Home & body care</a></li>
+                <li><a href="">Byproduct&trade;</a></li>
+            </ul>
         </div>
     </section>
-    
 
     <section>
         <div class="inner contents_long">
@@ -467,6 +475,14 @@
         );
     });
 
+    $(document).ready(function(){
+            $('.open').click(function(){
+                $('.hamberger .wrap').animate({'left' : 0}, 500);
+            });
+            $('.close').click(function(){
+                $('.hamberger .wrap').animate({'left' : '-100%'}, 500);
+            });
+        });
     </script>
 </body>
 </html>
