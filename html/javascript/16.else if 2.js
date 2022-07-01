@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>else if</title>
-</head>
-<body>
-  <script>
-    var price = Number(prompt("구매 금액은 얼마입니까?"));
+var price = Number(prompt("구매 금액은 얼마입니까?"));
 
     if (price < 20000) {
       document.write("현재금액 " + price + "원 입니다. - '주문금액이 부족합니다.'")
@@ -18,9 +8,3 @@
     } else {
       document.write(("현재금액 " + price + "원 입니다. - '무료배송입니다.'")) 
     }
-  </script>
-
-
-    </script>
-</body>
-</html>
