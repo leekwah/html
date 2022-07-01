@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BYREDO</title>
     <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff">
@@ -13,11 +13,14 @@
 
 </head>
 <body>
+    
     <header class="container">
+        
         <div class="logo">
             <img src="images/icon/logo.svg" alt="">
         </div>
-        <div class="container">
+    
+    <div class="container nav_container">
         <nav>
             <ul>
                 <li>
@@ -80,12 +83,14 @@
                                 <li><a href="#">Accessories</a></li>
                             </ul>
                             <ul class="sub_depth">
-                                <li><a href="#"><span>Best sellers</span></a></li>
-                                <li><a href="#">Bal d'Afrique</a></li>
-                                <li><a href="#">Mojave Ghost</a></li>
-                                <li><a href="#">Gypsy Water</a></li>
-                                <li><a href="#">Rose of No Man's Land</a></li>
-                                <li><a href="#">Blanche</a></li>
+                                <li><a href="#"><span>Product</span></a></li>
+                                <li><a href="#">Mascara</a></li>
+                                <li><a href="#">Eyeliner</a></li>
+                                <li><a href="#">Eyeshadow</a></li>
+                                <li><a href="#">Lipstick</a></li>
+                                <li><a href="#">Lip Balm</a></li>
+                                <li><a href="#">Colour Stick</a></li>
+                                <li><a href="#">Pencil</a></li>
                             </ul>
                             <ul class="sub_depth img_container">
                                 <li><a href="#"><img src="images/nav/2-1.jpg" alt=""></a></li>
@@ -208,20 +213,29 @@
                 </li>
             </ul>
         </nav>
+        <p class="abs_p">Free shipping & returns. 2 free samples</p>
     </div>
+        
         <ul class="menu_cart">
             <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
             <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></i></a></li>
         </ul>
-        
     </header>
-    <section>
-        <div class="black_navbar container">
-            <p>Free shipping & returns. 2 free samples</p>
+
+    <section class="hamberger">
+    <div class="open"><i class="fa-solid fa-bars"></i></div>
+    <div class="wrap">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <ul class="close_ul">
+                <li><a href="">Perfume</a></li>
+                <li><a href="">MakeUp</a></li>
+                <li><a href="">Home fragrance</a></li>
+                <li><a href="">Home & body care</a></li>
+                <li><a href="">Byproduct&trade;</a></li>
+            </ul>
         </div>
     </section>
-    
 
     <section>
         <div class="inner contents_long">
@@ -363,7 +377,8 @@
     <section class="cs">
 
         <ul class="depth1">
-            <li><select class="contry">
+            <li>
+                <select class="contry">
                     <option value="United States">United States</option>
                     <option value="Austria">Austria</option>
                     <option value="Belgium">Belgium</option>
@@ -395,9 +410,10 @@
                     <option value="Sweden">Sweden</option>
                     <option value="United Kingdom">United Kingdom</option>
                 </select>
+                <br>
+                <li><a href=""><i class="fa-solid fa-user"></i> My account</a></li>
             </li>
-            <li><a href=""><i class="fa-solid fa-user"></i> My account</a></li>
-            <li><strong>Customer Care</strong></li>
+            <li><a href=""><strong>Customer Care</strong></a></li>
             <li><a href=""><i class="fa-solid fa-envelope"></i> Email customer care</a></li>
             <li><a href=""><i class="fa-solid fa-phone"></i> +1(240) 716-6518</a></li>
             <li><a><a href=""><i class="fa-solid fa-comment-dots"></i> Live chat</a></li>
@@ -435,15 +451,15 @@
                 <input type="submit" value="OK" class="ok_box">
             </li>
             <li>You can unsubscribe any time by using the link in our emails.</li>
-            <li>Please see our <a href=""><em>Privacy Policy</em></a>  for more information about how we handle and use personal information.</li>
+            <li>Please see our <em>Privacy Policy</em> for more information about how we handle and use personal information.</li>
         </ul>
     </section>
 
     <footer>
         <address>&copy; Byredo</address>
         <ul class="sns_wrap">
-            <li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+            <li><i class="fa-brands fa-instagram-square"></i></li>
+            <li><i class="fa-brands fa-facebook-square"></i></li>
         </ul>
     </footer>
 
@@ -451,7 +467,7 @@
     $(function(){
         $("nav > ul > li").hover(
             function(){
-                $(this).find("a").next(".sub").css({hweight:400});
+                $(this).find("a").next(".sub").css({height:400});
             },
             function(){
                 $(this).find("a").next(".sub").css({height:0});
@@ -459,6 +475,14 @@
         );
     });
 
+    $(document).ready(function(){
+            $('.open').click(function(){
+                $('.hamberger .wrap').animate({'left' : 0}, 500);
+            });
+            $('.close').click(function(){
+                $('.hamberger .wrap').animate({'left' : '-100%'}, 500);
+            });
+        });
     </script>
 </body>
 </html>
