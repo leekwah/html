@@ -1,4 +1,4 @@
-$('.hamburger-button').click(function(event){
+$('.hamburger').click(function(event){
   event.preventDefault();
-  $(this).toggleClass('active');
+  $(this).toggleClass('active2');
 });
