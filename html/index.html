@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kwah</title>
-  <link rel="stylesheet" href="css/v2.css">
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="js/didScroll.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kwah</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style_for_index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/fade.js"></script>
+    
 </head>
 <body>
-  <div class="outer-container">
-    <div class="image-container" style="background-image: url('https://images.unsplash.com/photo-1611264327630-8090373c8cef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');">
-      
-      <h2 class="section-title on-dark">
-        <span class="paralax-title">
-          Hello World
-        </span>
-      </h2>
+  <header>
+    <div id="navflex">
+      <a href="#" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </a>
+      <h1 class="title"><a href="index.html">kwah</a></h1>
+      <nav>
+          <ul>
+              <li><a href="#section1">Home</a></li>
+              <li><a href="#section2">About</a></li>
+              <li><a href="#section3">Project</a></li>
+              <li><a href="#section4">Contact</a></li>
+          </ul>
+      </nav>
     </div>
-    
-    <h2 class="section-title">
-      <span class="paralax-title">
-        Hello World
-      </span>
-    </h2>
-  </div>
-  
-</body>
+  </header>
+  <section>
+    <div class="js_textbox">
+      <span class="js_text"></span><span class="blink">/</span>
+    </div>
+  </section>
+  </body>
+  <script src="js/burger.js"></script>
+  <script src="js/typing1.js"></script>
 </html>

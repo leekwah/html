@@ -1,11 +1,11 @@
 $(function(){
   $(document).on('scroll', function(){
     if($(window).scrollTop() > 100){
-        $("#header").removeClass("deactive");
-        $("#header").addClass("active");
+        $("#navflex").removeClass("deactive");
+        $("#navflex").addClass("active");
     }else{
-        $("#header").removeClass("active");
-        $("#header").addClass("deactive");
+        $("#navflex").removeClass("active");
+        $("#navflex").addClass("deactive");
     }
   })
 
