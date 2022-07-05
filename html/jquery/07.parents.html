@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>parents</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+</head>
+<body>
+  <h1 class="선택자"></h1>
+  <section>
+    <div>
+      <p class="txt1">내용</p>
+    </div>
+  </section>
+  <section>
+    <div>
+      <p class="txt2">내용</p>
+    </div>
+  </section>
+
+  <script>
+    $(function(){
+      $(".txt1").parents().css({"border":"2px solid blue"}); // html까지 전부 다 들어감 -> txt의 부모 전부가 들어감
+      $(".txt2").parents("div").css({"border":"10px solid red", "background-color":"#ff00ff"}) // .txt2에서 그 부모 div까지만 스타일 지정
+    });
+  </script>
+</body>
+</html>

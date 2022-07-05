@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event2</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+  <style>
+    /* display none처리가 중요함 */
+    .box {width: 200px; height: 200px; border: 2px solid #000; display: none;} 
+  </style>
+</head>
+<body>
+  <div id="m1">
+    <button>show</button>
+    <button>hide</button>
+    <button>toggle</button>
+    <div class="box">내용1</div>
+  </div>
+  <div id="m2">
+    <button>slideDown</button>
+    <button>slideUp</button>
+    <button>slideToggle</button>
+    <div class="box">내용2</div>
+  </div>
+  <div id="m3">
+    <button>fadeIn</button>
+    <button>fadeOut</button>
+    <button>fadeToggle</button>
+    <div class="box">내용3</div>
+  </div>
+
+  <script>
+    $(function(){
+      //index 값으로 불러옴 -> 0부터 시작 eq로 시작 후 index값(0)
+      $("#m1 button:eq(0)").click(function(){
+        $("#m1 .box").show()
+      });
+      $("#m1 button:eq(1)").click(function(){
+        $("#m1 .box").hide()
+      });
+      $("#m1 button:eq(2)").click(function(){
+        // fast 와 swing을 걸어주면 animation 효과가 생긴다.
+        $("#m1 .box").toggle("fast", "swing")
+      });
+
+      
+    });
+  </script>
+</body>
+</html>

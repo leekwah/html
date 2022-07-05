@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+  <style>
+    div {width: 300px; height: 100px; border: 1px solid #000000;}
+    .test {background-color: #23F772;}
+  </style>
+</head>
+<body>
+  <div class="add">클래스 추가</div>
+  <div class="remove test">클래스 삭제</div>
+  <div class="toggle">토글 클래스</div>
+
+  <script>
+    $(function(){
+      $(".add").click(funtion(){
+        $(this)addClass("test");
+      });
+      $(".add").click(funtion(){
+        $(this)removeClass("test");
+      });
+    })
+    
+    // $(function(){
+    //   $(".add").click(function(){
+      //     // this는 앞서 지정한 .add를 의미하는 것
+      //     // addClass는 Class가 지정되어 있기에, class
+      //     $(this).addClass("test");
+      //   });
+      //   $(".add").click(function(){
+        //     $(this).removeClass("test");
+        //   });
+        //   $(".toggle").click(function(){
+          //     $(this).toggleClass("test");
+          //   });
+          // });
+  </script>
+</body>
+</html>
