@@ -8,12 +8,15 @@ h1.shadow {text-shadow: 5px 5px 0 #fabc01, -1px -1px 0 #fabc01; text-align: cent
 
 /* headedr */
 header {background: linear-gradient(to bottom, #ffffff, #ffffff 220px, #fabc01 220px, #fabc01); text-align: center; padding-top: 10px;}
+header.bg {background: linear-gradient(to bottom, #ffffff, #ffffff 220px, #ffffff 220px, #ffffff); text-align: center; padding-top: 10px;}
+header.bg ul li a, a:visited {display: block; height: 50px; line-height: 50px; color: #000000; border-right: 1px solid #000000; background-color: #ffffff;}
 header ul {width: 1200px; margin: 10px auto 0; overflow: hidden;}
 header ul li {float: left; width: 20%;}
 header ul li a, a:visited {display: block; height: 50px; line-height: 50px; color: #000000; border-right: 1px solid #000000; background-color: #fabc01;}
 header ul li:nth-of-type(5) a {border-right: 0;}
 header ul li a:hover {color: #e5293b; font-size: 17px; font-weight: bold;}
-
+#quick {width: 100px; height: 400px; background-color: #fabc01; position: absolute; right: 100%; top: 350px; margin-right: -100px; z-index: 99999; color: #ffffff; writing-mode: vertical-rl; font-size: 35px; font-weight: bold; opacity: 0.8;}
+#quick.on {position: fixed; top: 50px;}
 /* sidebar */
 .open {z-index: 1; position: absolute; right: 20px; top: 20px; cursor: pointer; font-size: 30px; color: #ffffff; width: 50px; height: 50px; background-color: #fabc01; text-align: center; line-height: 50px;}
 .container {position: relative; height: 100%;}

@@ -49,8 +49,9 @@
                 </ul>
             </nav>
         </header>
+        <div id="quick">QUICK</div>
         <div class="visual_area">
-            <ul class="slider1">>
+            <ul class="slider1">
                 <li class="slide_01">
                     <h1>HALA MADRID</h1>
                     <p>
@@ -163,6 +164,28 @@
                 // controls: false, pager: false
             });
         });
+        $(document).ready(function(){
+        if($(this).width() < 960) {
+          $("header").addClass("bg");
+        } else {
+          $("header").removeClass("bg");
+        }
+        $(window).scroll(function(){
+          if($(this).scrollTop() > $("header").height()){
+            $("#quick").addClass("on");
+          } else {
+            $("#quick").removeClass("on");
+          }
+        })
+    });
+
+    $(window).resize(function (){
+        if($(this).width() < 960) {
+            $("header").addClass("bg")
+        } else {
+            $("header").removeClass("bg")
+        }
+    });
     </script>
 
 </body>
