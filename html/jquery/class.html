@@ -18,27 +18,18 @@
 
   <script>
     $(function(){
-      $(".add").click(funtion(){
-        $(this)addClass("test");
+      $(".add").click(function(){
+        // this는 앞서 지정한 .add를 의미하는 것
+        // addClass는 Class가 지정되어 있기에, class
+        $(this).addClass("test");
       });
-      $(".add").click(funtion(){
-        $(this)removeClass("test");
+      $(".remove").click(function(){
+        $(this).removeClass("test");
       });
-    })
-    
-    // $(function(){
-    //   $(".add").click(function(){
-      //     // this는 앞서 지정한 .add를 의미하는 것
-      //     // addClass는 Class가 지정되어 있기에, class
-      //     $(this).addClass("test");
-      //   });
-      //   $(".add").click(function(){
-        //     $(this).removeClass("test");
-        //   });
-        //   $(".toggle").click(function(){
-          //     $(this).toggleClass("test");
-          //   });
-          // });
+      $(".toggle").click(function(){
+        $(this).toggleClass("test");
+      });
+    });
   </script>
 </body>
 </html>

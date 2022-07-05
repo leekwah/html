@@ -22,11 +22,13 @@
 
   <script>
     $(function(){
-      $(".wrap1").mouseover(funtion(){
-        $(".display").append("<strong>마우스오버</strong>")});
-      $(".wrap2")mouseenter(funtion(){
-        $(".display").append("<em>마우스오버</em>");});
+      $(".wrap").mouseover(function(){
+        $(".display").append("<strong>마우스오버</strong>")
       });
+      $(".wrap").mouseenter(function(){
+        $(".display").append("<em>마우스오버</em>")
+      });
+    });
   </script>
 </body>
 </html>
