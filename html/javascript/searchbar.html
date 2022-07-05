@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>searchbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+  <style>
+    * {margin: 0; padding: 0;}
+    a {color: #000;}
+    ul li {list-style: none; margin: 30px;}
+    ul li:hover {cursor: pointer;}
+    ul {height: 50px; display: flex; align-items: center; justify-content: space-between; background-color: #faebd7;}
+    .nav {margin: 20px auto 0; width: 700px;}
+    .searchdiv {width: 600px; padding: 50px; background-color: #e2e2e2; display: none;}
+    .searchdiv p {text-align: right; background-color: white; padding: 10px;}
+    .searchdiv p strong {text-align: right; background-color: #ff8888; padding: 3px; font-weight: 500; color: #fff;}
+    
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li><i class="fa-solid fa-bars"></i></li>
+      <li><h1>LOGO</h1></li>
+      <li id="search"><i class="fa-solid fa-magnifying-glass"></i></li>
+    </ul>
+    <div class="searchdiv">
+      <p>
+        <strong>검색</strong>
+      </p>
+    </div>
+  </div>
+
+  <script>
+   $(function(){
+    $("#search").click(function(){
+      $(".searchdiv").slideToggle(500)
+    });
+   });
+  //  $(function(){
+  //     //index 값으로 불러옴 -> 0부터 시작 eq로 시작 후 index값(0)
+  //     $("#m1 button:eq(0)").click(function(){
+  //       $("#m1 .box").show()
+  //     });
+  //   });
+  </script>
+</body>
+</html>

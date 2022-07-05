@@ -44,8 +44,38 @@
         // fast 와 swing을 걸어주면 animation 효과가 생긴다.
         $("#m1 .box").toggle("fast", "swing")
       });
-
-      
+      $("#m2 button:eq(0)").click(function(){
+        $("#m2 .box").slideDown("fast", "swing")
+      });
+      $("#m2 button:eq(1)").click(function(){
+        $("#m2 .box").slideUp("slow", "swing")
+      });
+      $("#m2 button:eq(2)").click(function(){
+        // animation처럼 숫자와 linear 등으로도 쓸 수 있다.
+        $("#m2 .box").slideToggle("250", "linear")
+      });
+      // 마지막 매개 변수로 callback 함수를 쓸 수 있다.
+      $("#m3 button:eq(0)").click(function(){
+        $("#m3 .box").fadeIn("fast", "swing", function(){
+          // 안의 글자를 바꾸게 된다.
+          $(this).text("jQuery");
+        });
+      });
+      $("#m3 button:eq(1)").click(function(){
+        $("#m3 .box").fadeOut("fast", "swing", function(){
+          $(this).text("내용3")
+        });
+      });
+      $("#m3 button:eq(2)").click(function(){
+        $("#m3 .box").fadeToggle("fast", "swing", function(){
+          // 만약 박스가 none이면 내용3이고, 아니면 jQuery로
+          if($(this).css("display") == "none"){
+            $(this).text("내용3")
+          } else {
+            $(this).text("jQuery");
+          }
+        });
+      });
     });
   </script>
 </body>
