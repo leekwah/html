@@ -32,5 +32,18 @@
 						</ul>      									     
 			</div>
 		</div>
+		<script>
+			var now = new Date(); // 현재날짜
+			var firstDay = new Date("2021-07-23"); // 처음 만난 날
+
+			var toNow = now.getTime(); // 오늘까지 흐른 밀리초
+			var toFirst = firstDay.getTime(); // 처음에서 지금까지 흐른 밀리초
+			var passedTime = toNow - toFirst; // 지금에서 첫날
+			// 하루에 해당하는 밀리초로 나눠야함
+			var passedDay = Math.round(passedTime / (24 * 60 * 60 * 1000)) // 1초는 1000 밀리초이기 때문에 1000을 곱한다.
+			// 밀리초는 나누면 소수가 나오기 때문에, 반올림을 해야한다.
+			document.querySelector("#accent").innerText = passedDay + "일"
+			
+		</script>
 	</body>
 	</html>
