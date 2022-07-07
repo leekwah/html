@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>test1</title>
+  <title>test2-1</title>
   <script>
-    var average = (1200 + 1300 + 1000) / 3;
-    var fourth = prompt("4분기 판매량은?", "");
-    var result =  fourth >= average ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+    var price1 = 3000;
+    var price2 = 6000;
+    var price3 = 3000;
+
+    var total = price1 + price2 + price3;
+    var result = total > 10000 ? total - 10000 + "원 초과" : "돈 관리 잘 했어요!";
     document.write(result);
   </script>
 </head>
