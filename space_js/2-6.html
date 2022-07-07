@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2-6</title>
+  <script>
+    var a = 10;
+    var b = 20;
+    var c = 10;
+    var f = "20";
+    var result;
+
+    result = a > b;
+    document.write(result,"<br>"); // false
+
+    result = a < b;
+    document.write(result,"<br>"); // true
+
+    result = a <= b;
+    document.write(result,"<br>"); // true
+    
+    result = b == f;
+    document.write(result,"<br>"); // ==는 typeof가 동일하지 않아도 true
+    
+    result = a != b;
+    document.write(result,"<br>"); // true
+
+    result = b === f;
+    document.write(result,"<br>"); // typeof가 동일하지 않기 때문에 false
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
