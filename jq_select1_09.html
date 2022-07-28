@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_select1_09</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // $("#wrap h1").css({"border":"2px dashed #f00"});
+            $("#wrap > h1").css({"border":"2px dashed #f00"}); // 바로 인접해있는 자식까지만 가게 된다.
+            // $("#wrap section").css({"background-color":"yellow",
+            //                         "border":"2px solid #f00"}); // #wrap 밑의 section이 바뀐다.
+            // $("#wrap > section").css({"background-color":"yellow",
+            //                        "border":"2px solid #f00"}); // 위에 주석처리한 것과 동일하다. 이유는 하나밖에 없기 떄문이다.
+            $("#wrap > section").children().css({"background-color":"yellow",
+                                    "border":"2px solid #f00"}); // section의 children인 h1과 p에 css가 적용된다.4
+        })
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <section>
+            <h1>하위 요소 선택자</h1>
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+</html>
