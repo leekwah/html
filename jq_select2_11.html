@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>target css</title>
     <script src="js/jquery.js"></script>
     <script>
         $(function(){
-           $("#wrap a[target]").css({"color":"#f00"}); //target이 있는것
+           $("#wrap a[target]").css({"color":"#f00"}); // target이 있는것
            $("#wrap a[href^=https]").css({"color":"#0f0"}); // https로 시작하는것
-           $("#wrap a[href$=net]").css({"color":"#00f"}); //net으로 끝나는 것
-           $("#wrap a[href*=google]").css({"color":"#000"}); //google를 포함하는것
-           $("#member_f :text").css({"background":"#ff0"}); //속성값이 text가 있는것
-           $("#member_f :password").css({"background":"#0ff"}); //속성값이 password가 있는것
+           $("#wrap a[href$=net]").css({"color":"#00f"}); // net으로 끝나는 것
+           $("#wrap a[href*=google]").css({"color":"#000"}); // google를 포함하는것
+           $("#member_f :text").css({"background":"#ff0"}); // 속성값이 text가 있는것
+           $("#member_f :password").css({"background":"#0ff"}); // 속성값이 password가 있는것
         });
     </script>
 </head>
