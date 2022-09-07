@@ -1,0 +1,27 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kwah
+  Date: 2022/08/10
+  Time: 5:15 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>base</title>
+</head>
+<body>
+    <%!
+       String name = "홍길동";
+    %>
+    <%
+        String addr = "서울시 송파구 석촌동";
+    %>
+    이름 : <%=name%> <%-- 식(expression)을 이용해서 출력 --%>
+    <br>
+    주소 : <% out.println(addr); %> <%-- 식(expression)을 이용해서 출력 --%>
+    <br>
+    <%-- age.jsp 파일을 추가 (여러가지 파일들을 프로젝트 등을 할 때 유용하다.) --%>
+    <jsp:include page="age.jsp"></jsp:include>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<%@ page import="java.util.Date, java.lang.Math" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>page</title>
+</head>
+<body>
+<% Date day = new java.util.Date();%>
+현재 날짜 : <%= day %><br>
+<%--  바로출력시에는 new Date()로 해도 된다.  --%>
+현재 날짜2 : <%= new Date()%><br>
+5의 제곱 : <%= Math.pow(5,2) %>
+</body>
+</html>
