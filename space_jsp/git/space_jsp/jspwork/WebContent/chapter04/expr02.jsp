@@ -1,0 +1,28 @@
+<%-- import시에, page가 붙는다. --%>
+<%@ page import="java.util.Calendar" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>expr02</title>
+</head>
+<body>
+<%!
+    public String calDate(){
+        Calendar cal = Calendar.getInstance();
+        String days = "";
+        String month = "";
+        String year = "";
+
+        cal.add(Calendar.DATE, 1);
+
+        days = String.valueOf(cal.get(Calendar.DATE));
+        month = String.valueOf(cal.get(Calendar.MONTH + 1));
+        year = String.valueOf(cal.get(Calendar.YEAR));
+
+        return year + " - " + month + " - " + days;
+    }
+%>
+내일 = <%=calDate()%>
+<%-- 메소드 호출시에는 세미콜론을 쓰지 않는다. (계속 주의해야 한다.) --%>
+</body>
+</html>
