@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_select1_10</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            var style_1={
+                "background-color" : "#0ff",
+                "border" : "2px solid #f00"
+            }
+            var style_2={
+                "background-color" : "#ff0",
+                "border" : "2px dashed #f00"
+            }
+            // $(".txt").css(style_1); // 변수를 이용해서 css를 넣음
+            $(".txt").prev().css(style_1); // prev()는 형을 바꿔줌
+            // $(".txt").next().css(style_2); // next()는 동생을 바꿔줌
+            $(".txt + p").css(style_2); // next()와 동일해진다.
+            $(".txt").next().next().css(style_2); // next()는 여러번 사용할 수 있음 2번의 next()를 2번 썼기에 4번째 형제가 바뀜
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_select1_15</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // $('.txt1').parents().css({"border":"2px solid #f00"}); // parents()를 풀어쓰면 아래와 같다.
+            $('.txt1').closest("div").css({"border":"2px solid #f00"}); // 가장 가까운 div에 css가 적용
+            // $('.txt1').parents("div").css({"border":"2px solid #f00"}); // div 부모는 2개이다. 그래서 굵어보임
+            // $('.txt1').parents("body").css({"border":"2px solid #f00"}); // body는 1개, 그리고 div와 영역은 달라지게 된다.
+            // $('.txt1').parents("html").css({"border":"2px solid #f00"}); // html은 완전 끝 영역이다.
+        });
+    </script>
+</head>
+<body>
+    <h1 class="title">선택자</h1>
+    <div>
+        <div>
+            <p class="txt1">내용</p>
+        </div>
+    </div>
+</body>
+</html>
