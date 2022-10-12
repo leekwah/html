@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab menu</title>
+    <style>
+        .tab_content {
+            text-align: center;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+        /* label은 inline 속성이기 때문에, block으로 바꿔야함 */
+        label {
+            display: block;
+            float: left;
+            width: 33.3333%;
+            padding: 15px;
+            background-color: #cccccc;
+            color: #999999;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        /* radio가 체크되면, 하는 행동 */
+        input[type="radio"]:checked+label {
+            background-color: red;
+            color: #ffffff;
+        }
+        /* 튀어나오는 것들을 없애기 위해서는 height를 안잡아주면 된다. 하지만 안잡으면, 너무 작기 때문에, min-height를 적는다.*/
+        .conbox{
+            /* height: 200px; 고정용 */
+            /* 유동적일 때는 min-height */
+            min-height: 200px; 
+            background-color: #aaaaaa;
+            display: none;
+        }
+        /* 체크됐을 때, 각각의 class와 radio의 id를 같이 연동시켜서 (~ 사용) */
+        input[id="tab01"]:checked~.con1 {
+            display: block;
+            background-color: yellow;
+        }
+        input[id="tab02"]:checked~.con2 {
+            display: block;
+            background-color: tomato;
+        }
+        input[id="tab03"]:checked~.con3 {
+            display: block;
+            background-color: teal;
+        }
+        .content{
+            width: 960px;
+            margin: 50px auto 0;
+            background-color: skyblue;
+            height: 1500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab_content">
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">탭 버튼 01</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">탭 버튼 02</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03">탭 버튼 03</label>
+        
+        <div class="conbox con1">탭버튼 1의 내용입니다.</div>
+        <div class="conbox con2">탭버튼 2의 내용입니다.</div>
+        <div class="conbox con3">탭버튼 3의 내용입니다.</div>
+    </div>
+    <div class="content"></div>
+</body>
+</html>

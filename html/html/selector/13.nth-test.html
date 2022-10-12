@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13. nth-test</title>
+    <style>
+        p:nth-child(1) {
+            color: red;
+        }
+
+        p:nth-of-type(1) {
+            color: violet;
+
+        }
+
+        .brother p:nth-of-type(2) {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>형제 테스트</h1>
+    <p>형제1</p>
+    <p>형제2</p>
+    <p>형제3</p>
+    <p>형제4</p>
+    <div class="brother">
+        <h1>형제 테스트</h1>
+        <div>
+            <p>형제test</p>
+        </div>
+        <p>형제1</p>
+        <p>형제2</p>
+        <p>형제3</p>
+        <p>형제4</p>
+    </div>
+
+</body>
+
+</html>

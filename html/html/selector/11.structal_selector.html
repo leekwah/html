@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. structual selector</title>
+    <style>
+        li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: lavender;
+        }
+
+        li:nth-child(2n) {
+            background-color: lightgoldenrodyellow;
+        }
+
+        li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        li:hover {
+            background-color: lightgray;
+            color: white;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        li:active {
+            background: lightpink;
+        }
+
+        li:first-child>a {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="">First</a></li>
+        <li><a href="">Second</a></li>
+        <li><a href="">Third</a></li>
+        <li><a href="">Forth</a></li>
+        <li><a href="">Fifth</a></li>
+        <li><a href="">Sixth</a></li>
+        <li><a href="">Seventh</a></li>
+    </ul>
+</body>
+
+</html>

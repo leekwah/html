@@ -1,0 +1,251 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+/* font-family: 'Limelight', cursive; */
+
+a, a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.container {
+    width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* header */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 12px;
+    z-index: 10;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+header .logo {
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 100px;
+    vertical-align: middle;
+}
+header #topMenu {
+    float: right;
+    /* display: inline-block; */
+    line-height: 80px;
+    padding-right: 100px;
+    text-align: right;
+}
+header #topMenu li {
+    right: 0;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* bg1 */
+
+.main {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.main img:nth-child(1) {
+    position: absolute;
+    width: 100%;
+}
+.main img:nth-child(2) {
+    position: absolute;
+    opacity: 0.3;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+}
+/* bg2 */
+.bg2 {
+    background-color: #000000;
+}
+
+.bg2 .container2 {
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.bg2_textimage {
+    z-index: 1;
+    position: relative;
+    height: 300px;
+}
+.container2 .bg2_textimage > img:nth-of-type(1) {
+    position: absolute;
+    left: -850px;
+    top: 200px;
+    opacity: 0.2;
+    z-index: 1;
+}
+.container2 .bg2_textimage > img:nth-of-type(2) {
+    position: absolute;
+    right: -1200px;
+    top: 180px;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.profile {
+    float: left;
+    position: relative;
+    height: 85%;
+}
+
+.profile_describ {
+    width: 1085px;
+    margin-left: 15px;
+    padding-top: 100px;
+    font-size: 30px;
+    font-weight: 700;
+    float: right;
+    box-sizing: border-box;
+}
+.profile_describ p:nth-of-type(2) {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 100;
+}
+.profile_describ ul li:nth-child(1) {
+    margin-top: 30px;
+}
+.profile_describ ul li {
+    font-size: 16px;
+    margin-left: 15px;
+    font-weight: 100;
+    line-height: 2.5em;
+}
+.profile_ul_depth2 {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #ffffff;
+}
+.profile_ul_depth2 a {
+    color: #ffffff;
+}
+.profile_ul_depth2 a:hover {
+    cursor: pointer;
+}
+
+/* bg3 */
+.bg3 .container {
+    width: 1700px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.bg3 .container>p {
+    position: absolute;
+    color: #000000;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+.beauty1 {
+    padding-top: 250px;
+}
+.beauty2 {
+    padding-top: 50px;
+}
+
+.bg3 .beauty1 a {
+    padding-right: 40px;
+}
+.bg3 .beauty2 a {
+    padding-right: 40px;
+}
+.bg3 .beauty1 a:last-of-type {
+    padding: 0;
+}
+    .bg3 .beauty2 a:last-of-type {
+    padding: 0;
+}
+/* bg4 */
+.bg4 .container {
+    width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.bg4 .container>p {
+    position: absolute;
+    color: #000000;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+.bg4 .container .press a {
+    font-size: 0;
+}
+.bg4 .container .press a img {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.bg4 .container .press {
+    padding-top: 250px;
+    flex-basis: 1500px;
+    font-size: 0;
+}
+
+/* bg5 */
+.bg5 {
+    height: auto !important;
+    text-align: center;
+}
+.bg5 .fp-tableCell {
+    height: 500px !important
+}
+
+.bg5 .container {
+    padding-top: 50px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.bg5 .container .banners a img {
+    width: 150px;
+    box-sizing: border-box;
+}
+
+.container .banners {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.copyright {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 100px;
+    left: 0;
+    bottom: 15px;
+}
+
+/* menu */
+#topMenu > .active a {
+    border-bottom: 1px solid #000000;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 1200px;
+            background-color: lightgray;
+            margin: 30px auto;
+        }
+
+        .box01 {
+            background-color: aquamarine;
+        }
+
+        .box02 {
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        .box03 {
+            background-color: white;
+            margin: 100px auto;
+            padding: 100px
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="box box01">Lorem, ipsum dolor sit</div>
+    <div class="box box02">Lorem, ipsum dolor sit</div>
+    <div class="box box03">Lorem, ipsum dolor sit</div>
+</body>
+<br>
+<a href="../index.html">메인페이지로 가기</a>
+
+</html>
+<!-- *는 모든 박스들을 한번에 조정할 수 있게 함 -->
+<!-- CSS에 있는 건 밑이 우선권을 갖음 -->
+<!-- DIV의 마진은 큰 걸 따른다. box2와 box3의 마진이 각각 40과 100이여도, 140이 아닌 100만 마진을 갖게됨. (상하만, 좌우는 아님)-->
+<!-- border-box : 패딩을 박스의 크기에 상쇄시킴 -->

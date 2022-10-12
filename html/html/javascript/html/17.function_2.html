@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function 2</title>
+</head>
+<body id="theBody">
+  <button onclick="changeColor();">배경색 바꾸기</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sint. Quod possimus sequi adipisci at. Nobis, incidunt! Neque, atque sapiente eveniet non sint, sed aperiam unde repellendus, voluptatum in recusandae.</p>
+  <script>
+    // 배열을 사용하면, 여러가지를 사용가능하다.
+    var color = ["white", "yellow", "aqua", "purple"]
+    var i = 0;
+    
+    function changeColor(){
+      i++;
+      if(i >= color.length){
+        i = 0;
+        // i의 값이 4 이상이면 i에 0을 대입 -> 0번째로 돌아감.
+      }
+      var bodyTag = document.getElementById("theBody"); //요소를 불러오는 것
+      bodyTag.style.backgroundColor = color[i]
+      console.log(i);
+    }
+  </script>
+</body>
+</html>

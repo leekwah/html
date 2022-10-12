@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_ex review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            position: static;
+            width: 100%;
+            height: 50px;
+            background-color: aquamarine;
+        }
+
+        .background00 {
+            position: static;
+            width: 100%;
+            height: 500px;
+            background-color: beige;
+        }
+
+        .background01 {
+            position: relative;
+            width: 1400px;
+            height: 400px;
+            background-color: red;
+            margin: 0 auto;
+        }
+
+        .product1 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: aliceblue;
+        }
+
+        .product2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: aliceblue;
+        }
+
+        .product3 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: aliceblue;
+        }
+
+        .move2 {
+            left: 500px;
+        }
+
+        .move3 {
+            left: 1000px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">헤더</div>
+    <div class="background00">
+        <div class="background01">
+            <div class="product1">제품1</div>
+            <div class="product2 move2">제품2</div>
+            <div class="product3 move3">제품3</div>
+        </div>
+    </div>
+    <div class="header">푸터</div>
+
+
+</body>
+
+</html>

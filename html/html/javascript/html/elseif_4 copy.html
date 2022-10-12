@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORONA</title>
+</head>
+<body>
+  <script>
+    var cold = prompt('기침이 있으신가요? (y/n)');
+    var temp = prompt('체온은 몇 도인가요?');
+    if (temp >= 38.5 && cold == 'y' || cold == 'Y') {
+      document.write('독감일 수 있습니다.')
+    } else {
+      document.write('독감이 아닙니다.')
+    }
+
+  </script>
+</body>
+</html>

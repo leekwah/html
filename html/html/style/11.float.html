@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        img {
+            float: left;
+        }
+
+        p {
+            /* width를 줘야지 float를 적용했을 때, p의 시작점이 변경이 된다. */
+            width: 300px;
+            /* float: left; */
+            /* margin-left: 50px; */
+            float: right;
+            border: 1px solid red;
+        }
+
+        /* .box {
+            clear: both;
+        } */
+        .wrap {
+            overflow: hidden;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="../images/brackets.png" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quae sunt minus aliquam libero totam alias
+            ab
+            quod, eligendi dolores sequi rem? Quasi corporis sapiente id ab, incidunt dolorum quia?</p>
+    </div>
+    <div class="box">float</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제3</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        #mainfieldset {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <fieldset id="mainfieldset">
+        <header id="main_header">
+            <h2>프런트엔드 개발자 지원서</h2>
+            HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+        </header>
+        <hr>
+        <article id="main_article">
+            <h5>개인정보</h5>
+            <form action="submit">
+                <form action="reset">
+                    <ul>
+                        <li>이름&nbsp; &nbsp;&nbsp;<input class="name" type="text" placeholder="공백없이 입력하세요"
+                            >
+                        </li>
+                        <li> 연락처&nbsp;<input class="tel" type="tel" style="vertical-align: middle;"></li>
+                    </ul>
+                    <ul>
+                        <li>
+                        </li>
+
+                    </ul>
+                    <h5>지원 분야</h5>
+                    <ul>
+                        <li> <label for="webpublish"><input type="radio" name="list" id="webpublish"> 웹 퍼블리싱</label>
+                        </li>
+                        <li> <label for="webappdevelop"><input type="radio" name="list" id="webappdevelop"> 웹 애플리케이션
+                                개발</label></li>
+                        <li> <label for="developmentimporvement"><input type="radio" name="list"
+                                    id="developmentimporvement"> 개발 환경 개선</label></li>
+                    </ul>
+                    <h5>지원 동기</h5>
+                    <textarea name="지원동기" id="motive" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+                    <br>
+                    <input type="submit" value="접수하기"> <input type="reset" value="다시 쓰기">
+                </form>
+            </form>
+        </article>
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.animation-ex1</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: tan;
+            animation-timing-function: linear;
+        }
+
+        #box1 {
+            background-color: aquamarine;
+            animation-direction: normal;
+            animation: lmove 2.5s infinite;
+        }
+
+        #box2 {
+            /* box1과 반대방향으로 오기 때문에 reverse를 걸어야한다. */
+            animation-direction: reverse;
+            animation: rmove 2.5s infinite;
+        }
+
+        @keyframes lmove {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            100% {
+                left: 0;
+            }
+
+        }
+
+        @keyframes rmove {
+            0% {
+                left: 400px;
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            100% {
+                left: 400px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+</body>
+
+</html>

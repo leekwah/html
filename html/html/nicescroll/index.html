@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>scroll</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <style>
+        .two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 애니메이션 적용될 클래스 시작 */
+        .indexTest {
+            width: 100px; 
+            height: 100px; 
+            background-color: tomato;
+        }
+        .ani {animation: opacity 5s;}
+        @keyframes opacity {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        /* 애니메이션 적용될 클래스 끝 */
+    </style>
+</head>
+
+<body>
+
+    <div id="page">
+        <div class="one"></div>
+        <div class="two">
+            <!-- 애니메이션 적용될 클래스 시작 -->
+            <div class="indexTest"></div>
+            <!-- 애니메이션 적용될 클래스 끝 -->
+        </div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+
+        <!--nav start #page 내부에 있어야 정상 작동함.-->
+        <div id="nav">
+            <a href="index.html"><img src="images/nav_logo_03.png"></a>
+            <ul>
+               <!--li a링크 없이 글자만 넣으면 #nav ul li 여서 잘 작동하지만 a를 넣어줄 경우에는 #를 꼭 넣어줘야 함.-->
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </div>
+        <!--nav end-->
+    </div>
+
+
+    <script>
+        $("#page").niceScroll({
+            cursoropacitymax: 0,
+            horizrailenabled: true
+        });
+
+        //cursoropacitymax 스크롤이 보이게 안보이게 = 0 보이게는 1
+        //horizrailenabled true 페이지 스크롤이 되게 , flase 스크롤 안되게
+        // 나이스 스크롤은 이게 끝 밑 부터 메뉴 클릭하면 페이지 넘어가는 것
+
+
+        $("#nav ul li").click(function(e) {
+
+            var screenWidth = $(window).width(); //변수이름 screenWidth = 스크린의 가로길이 (마음대로 지정할 수 있다)
+            // window (브라우저 창이 켜졌을 때) 에 있는 width(가로의 길이)의 값을 읽어와라. 
+            // 세로로 한다면 height
+
+            var slideIndex = $(this).index();
+            // slideIndex 슬라이드 인덱스 , 클릭하면 페이지가 나오도록 
+
+            //**************인덱스 번호로 페이지 인식해서 애니메이션 실행하기 시작
+            console.log(slideIndex);
+            if (slideIndex === 1) {
+                $('.indexTest').addClass('ani');
+            } else {
+                $('.indexTest').removeClass('ani');
+            }
+            //**************인덱스 번호로 페이지 인식해서 애니메이션 실행하기 끝
+
+            $('#page').animate({
+                'scrollLeft': screenWidth * slideIndex
+            }, 500);
+        });
+        //네비가 주는 스크롤 네비 애니메이트 함수 , 대괄호 속성명 : 움직일 변수 이름 
+    </script>
+</body>
+
+</html>

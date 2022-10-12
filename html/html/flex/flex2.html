@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+        .flex_container {
+            background-color: #333333;
+            height: 200px;
+            padding: 20px;
+            /* display:flex를 하면, height가 일단 stretch 된다. */
+            display: flex;
+            justify-content: space-between;
+            /* 높이가 없기 때문에 align-items를 설정하면, 크기가 줄어들게 된다. */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            /* align-items: baseline;을 적용해도, 현재는 text의 크기가 다 같기 때문에 알 수 없음. */
+            /* 밑에 text 크기를 준 뒤엔, 제일 큰 3번에 baseline에 따라서 적용되어진다. */
+            align-items: baseline;
+        }
+        .flex_item {
+            width: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+        .flex_container .flex_item:nth-child(1) {
+            height: 50px;
+            font-size: 2em;
+        }
+        .flex_container .flex_item:nth-child(2) {
+            height: 150px;
+            font-size: 3em;
+        }
+        .flex_container .flex_item:nth-child(3) {
+            height: 100px;
+            font-size: 5em;
+        }
+        .flex_container .flex_item:nth-child(4) {
+            height: 180px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+        <div class="flex_item">4</div>
+    </div>
+</body>
+</html>

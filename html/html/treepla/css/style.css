@@ -1,0 +1,406 @@
+@charset "UTF-8";
+:root {
+    --blue: #05a0f3;
+    --green: #84bd3a;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+.inner_container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* header */
+header .logo {
+    margin: 30px 0;
+    display: inline-block;
+}
+    /* 이렇게 하면 header에 있는 ul 둘 다 해당되는 것임 */
+header ul li {
+    display: inline-block;
+    margin-left: 24px;
+}
+header ul li a {
+    color: var(--blue);
+}
+    /* header_menu는 ul.top_menu를 감고 있는 div이다. */
+header .header_menu {
+    /* 먼저 float right로 오른쪽으로 옮긴다. */
+    float: right;
+    /* 이후, margin-top으로 상단에서 30px정도 띄워준다. */
+    margin-top: 30px;
+}
+    /* .top_menu인 ul 설정 */
+header .header_menu .top_menu {
+    font-size: 14px;
+    /* 글자를 오른쪽으로 옮겨야하기 때문에 text-align를 적용한다. */
+    text-align: right;
+    margin-bottom: 20px;
+}
+    /* hover시에 a의 컬러가 바뀌게 하는 것 */
+header .header_menu .top_menu li:hover a {
+    color: var(--green);
+    border-bottom: 1px solid var(--green);
+    padding-bottom: 3px;
+}
+/* ul.bottom_menu를 설정하는 것 */
+header .header_menu .bottom_menu {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+header .header_menu .bottom_menu li:hover a {
+    color: var(--green);
+    }
+
+/* main */
+#main {
+    height: 960px;
+    background-color: var(--blue);
+    position: relative;
+}
+
+#main .leaf_top {
+    position: absolute;
+    top: -30px;
+}
+
+#main .leaf_bottom {
+    position: absolute;
+    bottom: -140px;
+    right: 0;
+}
+    /* 이미지와 글자가 적혀있는 div*/
+#main .main_text {
+    float: right;
+    margin-top: 80px;
+}
+#main .main_text p {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+#main ul {
+    /* ul을 padding-top으로 거리를 띄운다. */
+    padding-top: 450px;
+}
+#main ul li {
+    /* li를 inline-block으로 설정한다. */
+    display: inline-block;
+    /* 이후에, width를 줘서, 거리를 띄운다. */
+    width: 460px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#main ul li span {
+    font-size: 80px;
+    font-weight: bold;
+}
+#main ul li p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+
+/* shop */
+#shop {
+    height: 960px;
+}
+    /* 여기서의 슬라이더의 경우에는 3번째 부분이 조금 짤려 있기 때문에 overflow: hidden;을 적용한다. */
+#shop .inner_container {
+    overflow: hidden;
+}
+#shop h2 {
+    color: var(--blue);
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 110px;
+}
+#shop p {
+    color: var(--blue);
+    font-size: 20px;
+    line-height: 27px;
+    margin: 36px 0 90px;
+}
+    /* width의 크기가 조금 부족해도, slider를 적용할 것이기에 괜찮다. 그리고 slider 때문에 overflow: hidden을 적용한다.*/
+#shop .slider {
+    width: 1510px;
+    height: 470px;
+    overflow: hidden;
+}
+#shop ul li {
+    width: 470px;
+    float: left;
+    margin-right: 50px;
+    cursor: pointer;
+}
+#shop ul li:last-child {
+    margin: 0;
+}
+    /* li안의 img에 transition을 넣는다. */
+#shop ul li img {
+    transition: all 0.5s;
+}
+    /* li에 hover시 img의 border가 바뀐다. */
+#shop ul li:hover img {
+    border-radius: 20px;
+}
+
+/* newsletter */
+    /* 뉴스레터의 경우, h1은 그라데이션처럼 서서히 다시 나타나게 된다. 그리고, 뉴스레터 구독에 hover를 하게 되면, 아이콘 색상이 바뀌게 된다.*/
+#newsletter {
+    height: 500px;
+    background-image: url(../images/news_background.jpg);;
+}
+#newsletter h1 {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+}
+
+#newsletter p {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 55px;
+    letter-spacing: -1px;
+    margin-right: 90px;
+}
+
+    /* 애니메이션 효과지정  */
+#newsletter h1 {
+    background: linear-gradient(90deg, #ffffff, #ffffff, #05a0f3);
+    /* 한 번 하고  */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* animation의 이름은 animate로 지정한 것이다. */
+    animation: animate 4s linear infinite;
+    /* background clip을 text로 하겠다는 말이다. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+    /* animation의 이름은 animate로 지정한 것이다. */
+@keyframes animate {
+    0% {
+        background-position: -2000px;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+#newsletter a {
+    color: white;
+    /* a를 relative로 하는 이유는 icon을 absoulte로 겹칠 것이기 때문이다. */
+    position: relative;
+    transition: all 0.5s;
+}
+#newsletter a img {
+    position: absolute;
+    /* 글자와 겹쳐지기 때문에 left와 top을 조절해준다. */
+    left: -70px;
+    top: 10px;
+    transition: 0.5s;
+}
+    /* icon을 겹치면, 주황색이 먼저 나오게 된다. 그러므로 opacity를 0으로 조절한다. */
+#newsletter a img:last-of-type {
+    opacity: 0;
+}
+#newsletter a:hover {
+    color: #e95437;
+}
+#newsletter a:hover img:first-of-type {
+    opacity: 0;
+}
+#newsletter a:hover img:last-of-type {
+    opacity: 1;
+}
+    /* icon들도 같이 움직이게 된다. */
+#newsletter p:last-child {
+    margin-top: 30px;
+}
+
+/* certification */
+#certification {
+    height: 700px;
+}
+#certification article {
+    /* total width가 1400px이기에 반반씩 700px로 지정한다. */
+    width: 700px;
+    float: left;
+    text-align: center;
+    padding-top: 120px;
+}
+#certification article h2 {
+    color: #a4b3bb;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 70px 0 40px;
+}
+#certification article p {
+    color: #a4b3bb;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+/* partner */
+#partner {
+    min-width: 1900px;
+    overflow: hidden;
+}
+    /* 첫번째 article */
+#partner .b_green {
+    width: 950px;
+    height: 1080px;
+    background-image: url(../images/partner_1.jpg);
+    background-repeat: no-repeat;
+    float: left;
+}
+    /* 두번째 article */
+#partner .classroom {
+    width: 950px;
+    /* height는 첫번째 article의 절반 */
+    height: 540px;
+    background-image: url(../images/partner_2.jpg);
+    background-repeat: no-repeat;
+    float: left;
+}
+    /* 세번째 article */
+#partner .coffee {
+    width: 950px;
+    height: 540px;
+    background-image: url(../images/partner_3.jpg);
+    background-repeat: no-repeat;
+    float: left;
+}
+#partner .partner_hover h1 {
+    color: #ffffff;
+    font-size: 150px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+#partner .partner_hover h2 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 20px 0 0 20px;
+}
+
+#partner .partner_hover .white_back {
+    height: 50px;
+    background-color: #ffffff;
+    margin-top: 70px;
+    width: 1px;
+    transition-duration: 0.7s;
+}
+
+#partner .partner_hover p {
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px;
+    transition-duration: 1s;
+    /* 위에 white_back이 실행된 뒤에 진행되게 한다. */
+    transition-delay: 0.7s;
+    opacity: 0;
+}
+
+#partner .b_green .partner_hover p {
+    color: #83bc92;
+}
+#partner .classroom .partner_hover p {
+    color: #e8b837;
+}
+#partner .coffee .partner_hover p {
+    color: #059ff2;
+}
+
+#partner .b_green .partner_hover {
+    background-color: rgba(132, 189, 58, 0.8);
+    height: 1080px;
+}
+
+#partner .classroom .partner_hover {
+    background-color: rgba(233, 185, 55, 0.8);
+    height: 540px;
+}
+#partner .coffee .partner_hover {
+    background-color: rgba(5, 160, 243, 0.8);
+    height: 540px;
+}
+#partner .partner_hover {
+    transition: 0.3s;
+    opacity: 0;
+}
+#partner article:hover .partner_hover {
+    opacity: 1;
+}
+#partner article:hover p {
+    opacity: 1;
+}
+#partner article:hover .white_back {
+    width: 100%;
+}
+#partner article {
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    height: 400px;
+    text-align: center;
+}
+footer ul li {
+    /* li를 가로로 하기 위해서 inline-block을 해준다.*/
+    display: inline-block;
+}
+footer ul:first-of-type li {
+    margin: 116px 10px 0;
+    /* li 밑에 있는 a에게 absoulte를 걸기 위해서 relative를 준다. */
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+footer ul:first-of-type li img {
+    position: absolute;
+}
+footer ul:first-of-type li img:last-of-type {
+    display: none;
+}
+footer ul:first-of-type li:hover img:last-of-type {
+    display: inline;
+}
+footer ul:last-of-type {
+    color: #7f7f7f;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px 0 50px;
+}
+footer ul:last-of-type a {
+    color: #7f7f7f;
+}
+footer ul:last-of-type li:hover a {
+    color: var(--blue);
+}
+footer p {
+    font-size: 14px;
+    line-height: 20px;
+}
+footer p a {
+    border-bottom: 1px solid grey;
+}

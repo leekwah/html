@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>burger</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+  <style>
+    * {margin: 0; padding: 0;}
+    ul li {list-style: none;}
+    .backimg {margin: 0 auto; height:1000px; width: 600px; background: url(https://images.unsplash.com/photo-1602498456745-e9503b30470b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);}
+    .backimg h1 {margin-left: 25px; color: #ffffff;}
+    .menubtn {display: block; width: 50px; height: 50px; position: absolute; top: 2.5%; right: 35%; transform: translateY(-50%); cursor: pointer; z-index: 100;}
+    .menubtn span {display: block; position: absolute; width: 80%; height: 4px; border-radius: 2px; background-color: #222222; transition: all 0.3s;}
+    .menubtn span:nth-child(1) {top: 20%; left: 50%; transform: translateX(-50%);}
+    .menubtn span:nth-child(2) {top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    .menubtn span:nth-child(3) {bottom: 20%; left: 50%; transform: translateX(-50%);}
+    .menubtn span {background-color: #ffffff;}
+    .close span:nth-child(1) {top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(135deg);}
+    .close span:nth-child(2) {opacity: 0;}
+    .close span:nth-child(3) {bottom: 50%; left: 50%; transform: translate(-50%, 50%) rotate(-135deg);}
+    .slidediv {background-color: plum; position: absolute; width: 600px; top: 0; display: none; z-index: 90;}
+    .slidediv ul {display: flex; flex-direction: column; justify-content: space-evenly; height: 500px; color: aliceblue;}
+    .slidediv ul li {font-size:20px; font-weight:bold; text-align: center;}
+    #burger:hover {cursor: pointer;}
+
+  </style>
+</head>
+
+<body>
+  <div class="backimg">
+    <h1>LOGO</h1>
+        <div id="burger" class="menubtn">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </nav>
+    <div class="slidediv">
+      <ul>
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+        <li>menu05</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      $("#burger").on("click", function(){
+        $(".slidediv").slideToggle().animate({"height":"750px"}, 100, "linear");
+      });
+      $("#burger").on("click", function(){
+        $(this).toggleClass("close");
+      });
+    });
+  </script>
+</body>
+</html>

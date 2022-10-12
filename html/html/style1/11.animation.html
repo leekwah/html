@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.animation</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: tan;
+            position: relative;
+            /* 속성에 애니메이션 이름을 적어주고, 시간을 적어준다. */
+            /* 현재 반복횟수는 infinite는 무한,
+            alternate는 반복, */
+            animation: move 3s linear infinite alternate;
+        }
+
+        /* 애니메이션의 속성자는 @keyframs이다. */
+        /* 특징으로는 중괄호가 중첩된다. */
+        /* from {} to{}로 */
+        @keyframes move {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>animation box</div>
+</body>
+
+</html>

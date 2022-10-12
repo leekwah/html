@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09.transition-property</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: lavender;
+            /* transition-property: width, background-color, color;
+            transition-duration: 3s, 1s, 5s;
+            transition-delay: 1s, 0.5s, 0.5s; */
+            /* transition: all 1s 0.25s; */
+            transition: 5s;
+        }
+
+        div:hover {
+            width: 400px;
+            color: white;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>마우스를 올리면 여러 속성 변경</div>
+</body>
+
+</html>

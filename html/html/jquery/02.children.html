@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>children</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"/></script>
+</head>
+<body>
+  <div id="wrap">
+    <h1>인접관계 선택자</h1>
+    <p>내용1</p>
+    <section>
+      <h1>자식 요소 선택자</h1>
+      <p>내용2</p>
+    </section>
+  </div>
+
+  <script>
+    $(function(){
+      $("#wrap > h1").css("border", "2px solid #ff0000");
+      $("#wrap > section").children()
+      // css를 2개 이상 쓸 때는 중괄호로 묶는다. 그리고, 속성을 지정 후 콜론으로 속성값을 입력 한다. 이후에 쉼표로 구분한다.
+      .css({"background-color":"yellow", "border":"2px solid #000000"})
+
+    });
+  </script>
+</body>
+</html>

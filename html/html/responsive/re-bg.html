@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resposive background</title>
+    <style>
+        body {background-color: #FEBE10; color: #ffffff;}
+        /* ::before 와 ::after는 앞 뒤로 글자를 넣는 것이다. 연속 공백은 하나밖에 안된다. */
+        h1::before {content: '1. '}
+        h1::after {content: ' - 기본';}
+        /* 0 ~ 1280px : desktop */
+        @media (max-width: 1280px) {
+            body {background-color: #E53233;}
+            
+            h1::before {content: '2. '}
+            h1::after {content: ' - max-width:1280px (1025px - 1280px) : 1025px 이상 1280px 이하일 때';}
+        }
+        /* 0 ~ 1024px : desktop */
+        @media (max-width: 1024px) {
+            body {background-color: #B1B3B6;}
+            h1::before {content: '3. '}
+            h1::after {content: ' - max-width:1024px (961px - 1024px) : 961px이상 1024px 이하일 때';}
+        }
+        /* 0 ~ 960px : tablet */
+        @media (max-width: 960px) {
+            body {background-color: #000000;}
+            h1::before {content: '4. '}
+            h1::after {content: ' - max-width:960px (769px - 960px) : 960px 이하일 때';}
+        }
+        @media (max-width: 768px) {
+            body {background-color: #D2122E;}
+            h1::before {content: '5. '}
+            h1::after {content: ' - max-width:768px (481px - 768px) : 768px 이하일 때';}
+        }
+        @media (max-width: 480px) {
+            body {background-color: #00529F;}
+            h1::before {content: '6. '}
+            h1::after {content: ' - max-width:480px (0px - 480px) : 480px 이하일 때';}
+        }
+        /* 이외의 디바이스 종류
+        0 ~ 768px
+        0 ~ 540px
+        0 ~ 480px
+        0 ~ 360px
+        */
+    </style>
+</head>
+<body>
+    <h1>미디어쿼리(MediaQuery)</h1>
+    <p>미디어 쿼리는 설정된 '내가 설정한' 분기점 (화면너비)에 웹브라우저의 창 크기가 일치하면 반응하여 각기 다른 화면을 보여주는 기술입니다.</p>
+    <ul>
+        <li>@media : 미디어쿼리를 시작하는 속성</li>
+        <li>only : only 다음에 나오는 미디어 유형에만 적용 (반대: not) (생략 가능)</li>
+        <li>all : 미디어 유형 구분 (화면, 프린터, TV 등) (생략 가능)</li>
+        <li>(조건문) : 조건설정</li>
+        <li>{실행문} : 괄호 안의 CSS 실행</li>
+    </ul>
+</body>
+</html>

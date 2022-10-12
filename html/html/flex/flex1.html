@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex1</title>
+    <style>
+        /* 대표 속성: jsutify-content - 주축 정렬 */
+        .flex_container {
+            background-color: #cccccc;
+            height: 300px;
+            /* display: flex; 이전에는 부모의 높이보다 자식의 합의 높이가 더 커도, 그냥 튀어나온다. */
+            /* display: flex;를 하게 되면, 선언과 동시에 정렬된다. */
+            display: flex;
+            /* justify-content: flex-start;를 해도 변화 없음 */
+            /* 시작위치 */
+            justify-content: flex-start; 
+            /* justify-content: flex-end;를 하면, 전체 오른쪽으로 간다. */
+            /* 끝 위치 */
+            justify-content: flex-end;
+            /* justify-content: center;를 하면, 중앙정렬이 된다. */
+            justify-content: center;
+            /* margin: 10px 때문에 띄워져있지만, justify-content: space-between;시에 끝에 다 붙는다. */
+            justify-content: space-between;
+            /* justify-content: space-around;시에 좌우에 같은 여백으로 띄워진다. */
+            justify-content: space-around;
+            /* justify-content: space-evenly;시에 모두 같은 여백으로 띄워진다. */
+            justify-content: space-evenly; 
+        }
+        .flex_item {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="flex_item">1</div>
+        <div class="flex_item">2</div>
+        <div class="flex_item">3</div>
+        <div class="flex_item">4</div>
+    </div>
+</body>
+</html>

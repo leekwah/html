@@ -1,0 +1,77 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+a {color: #ffffff; text-decoration: none;}
+section:nth-of-type(even) {background-color: #f3f3f3;}
+/* mobile version */
+.title {margin: 30px 0 50px;}
+.title h3 {font-size: 2em; text-align: center;}
+.inner {padding: 40px 0;}
+
+@media (min-width: 768px) {
+    .inner {max-width: 1300px; margin: 0 auto;}
+}
+
+/* nav */
+    /* mobile version  */
+nav {width: 100%; background-color: #333333; font-size: 1.2em; font-weight: bold;}
+nav .inner {padding: 0;}
+    /* display none 되있는 걸 보여주면서 실행하는 것이기 때문에 */
+nav .logo {display: none;}
+nav ul {display: flex; flex-direction: column; display: none;}
+nav ul li {text-align: center; border-bottom: 1px solid #cccccc;}
+nav ul li a {display: block; line-height: 50px;}
+nav a#trigger {display: block; background-color: #5f5f5f; padding-left: 15px; line-height: 40px;}
+
+/* pc로 가는 사이즈 */
+@media (min-width: 768px) {
+    nav {height: 80px; border-bottom: 2px solid #6f6f6f;}
+    nav .inner {display: flex; justify-content: space-between; align-items: center;}
+        /* 안보이던 로고를 다시 보이게처리 */
+    nav .logo {display: block; font-size: 48px; font-weight: bold; color: #ffffff;}
+    nav ul {width: 750px; height: 80px; display: flex; flex-direction: row; justify-content: space-between;}
+    nav ul li {width: 25%; border-bottom: 0; border-right: 1px solid #7a7a7a;}
+    nav ul li:last-child {border-right: 0;}
+    nav ul li a {font-size: 17px; line-height: 80px;}
+    nav a#trigger {display: none;}
+}
+
+.intro {padding: 20px 50px;}
+.text {padding: 0 50px;}
+.text ul {line-height: 1.5;}
+.text ul li:last-child {margin-top: 22px;}
+.text ul li span {display: inline-block; width: 80px; font-weight: bold; margin-right: 15px; letter-spacing: 5px;}
+.img {text-align: center; display: none;}
+
+    /* desktop */
+@media (min-width: 768px) {
+    .intro {display: flex; align-items: center;}
+    .img {display: block;}
+    .img > img {max-width: 250px;}
+}
+
+.about {line-height: 1.8; padding: 20px 50px;}
+.msg p {color: #ff6600; font-family: 'Covered By Your Grace', cursive; font-weight: 400; font-size: 2em; font-style: italic; text-align: center; line-height: 1.8; margin-bottom: 20px;}
+.msg span {font-size: 0.9em; color: #aaaaaa;}
+
+.works_list {padding: 20px 50px;}
+.works_list h4 {font-size: 1.3em; margin-bottom: 20px;}
+.works {padding:30px; box-sizing: border-box; margin-bottom: 20px; background-color: #ffffff; border: 1px solid #aaaaaa;}
+.works img {width: 100%;}
+
+@media (min-width: 768px){
+    .works_list {display: flex; justify-content: space-between;}
+    /* .works {width: 22%;} 혹은 flex-basis: 22%나 같은 것이다. */
+    .works {flex-basis: 22%;}
+}
+
+.contact_wrap {padding: 30px 0; background-color: #34495e;}
+.contact_wrap .inner {height: 80px; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+.contact {color: #ffffff;}
+.sns a {margin-right: 15px;}
+.sns a:last-child {margin-right: 0;}
+
+@media (min-width: 768px) {
+    .contact_wrap .inner {display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+    
+}

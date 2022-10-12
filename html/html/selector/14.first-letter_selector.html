@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. first letter selector</title>
+    <style>
+        p::first-letter {
+            font-size: 3em;
+        }
+
+        p::first-line {
+            color: red;
+        }
+
+        p::selection {
+            background-color: slategray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p><span class="larger">L</span>orem ipsum, dolor sit amet consectetur adipisicing elit. Officiis repellendus sed
+        inventore, nostrum aspernatur
+        unde tenetur, modi optio sapiente doloremque vero suscipit similique eveniet mollitia. Ut culpa pariatur modi
+        atque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolores culpa suscipit. Totam reiciendis,
+        distinctio quasi iusto provident incidunt tempora eum optio, similique neque exercitationem illo obcaecati,
+        inventore cupiditate dolorum.</p>
+</body>
+
+</html>

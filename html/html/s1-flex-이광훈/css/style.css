@@ -1,0 +1,649 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 공통 */
+    /* :root와 cost let 같은 것은 전역 변수를 선언하는 것이다 */
+:root {
+--dblue: #143395
+}
+
+* {
+    box-sizing: border-box;
+}
+a, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.inner {
+    width: 1400px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+/* 헤더 */
+header .cons {
+    height: 298px;
+    background-color: #293896;
+    display: flex;
+    align-items: center;
+}
+header .cons .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .cons .title {
+    /* float: left; */
+    height: 196px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 53px;
+    font-weight: 700;
+    color: white;
+    line-height: 60px;
+    /* padding-top: 56px; */
+    /* 자간을 조정해주는 것 */
+    letter-spacing: -4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .cons .title p {
+    /* height: 63px; */
+    font-size: 72px;
+    /* margin-top: 15px; */
+}
+header .cons_form {
+    /* width: 710px; */
+    /* float: right; */
+    /* margin-top: 75px; */
+    display: flex;
+    align-items: center;
+}
+header .cons .cons_form form {
+    width: 710px;
+    display: flex;
+    justify-content: space-between;
+}
+.cons_form form>div {
+    /* float: left; */
+    width: 463px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cons_form form>div input {
+    /* float: left; */
+    height: 60px;
+    /* padding-left: 15px; */
+    /* margin: 0 21px 25px 0; */
+    margin-bottom: 23px;
+    border: 1px solid #333333;
+    font-size: 24px;
+    color: #666666;
+}
+.cons_form form>div input:nth-of-type(1) {
+    width: 155px;
+}
+.cons_form form>div input:nth-of-type(2) {
+    width: 284px;
+}
+
+.cons_form form>div input:nth-of-type(3) {
+    width: 460px;
+    margin: 0;
+}
+
+.cons_form form > input {
+    /* float: right; */
+    width: 218px;
+    height: 144px;
+    margin: 0;
+    font-size: 36px;
+    color: #293896;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+/* GNB */
+header .inner {
+    display: flex;
+    justify-content: space-between;
+}
+/* header .gnb_logo {
+    float: left;
+} */
+header ul.main_gnb {
+    /* float: right; */
+    width: 820px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 118px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* header ul.main_gnb li {
+    display: inline-block;
+    오른쪽으로 정렬이 되어야하기 때문에, margin-left를 준다.
+    margin-left: 20px;
+} */
+
+/* 비주얼영역 */
+.visual_area {
+    position: relative;
+    /* min-width는 요소의 최소너비를 의미함 */
+    min-width: 1400px;
+    height: 850px;
+    /* 여러가지 속성을 한번에 쓸 때는, 대표속성이 오면 된다. */
+    background: url(../images/img_mainbg.png) left center no-repeat #c7dbfc;
+    margin-bottom: 97px;
+}
+.visual_area .title_wrap {
+    position: absolute;
+    top: 94px;
+    /* calc을 쓸 때는 반드시 띄워쓰기를 해야함 */
+    left: calc(50% + 14px);
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+.visual_area .title_wrap p {
+    margin: 40px 0;
+    font-size: 58px;
+    color: var(--dblue);
+    line-height: 1.2;
+}
+.visual_area .title_wrap p span {
+    color: #ff0000;
+}
+.visual_area .title_wrap ul {
+    font-size: 30px;
+    color: #222222;
+    line-height: 57px;
+}
+.visual_area .title_wrap ul li {
+    margin-bottom: 30px;
+}
+.visual_area .title_wrap ul li img {
+    margin-right: 15px;
+    /* 수직 정렬을 해야지 이미지들이 제대로 정렬이 되기 때문에, vertical-align을 사용한다. 텍스트는 바로 잡히지만, 나머지 인라인들은 vertical-align으로 잡아줘야함*/
+    vertical-align: middle;
+}
+.visual_area .title_wrap ul li span {
+    color: var(--dblue);
+}
+.visual_area .title_wrap ul span em{
+    color: #ff0000;
+}
+
+/* 컨텐츠 영역 */
+.con_area {
+    margin-bottom: 165px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con_area .news {
+    /* float: left; */
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.con_area .news h2 {
+    font-size: 55px;
+    color: var(--dblue);
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 40px;
+}
+
+.con_area .news ul li {
+    margin-bottom: 22px;
+}
+
+.con_area ul.con_box {
+    /* float: right; */
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 720px;
+    margin-top: 5px;
+}
+
+.con_area ul.con_box li {
+    /* float: left; */
+    /* width: 33.33333%; */
+    width: 30%;
+    height: 86px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.con_area ul.con_box li img {
+    /* vertical-align: middle; */
+    margin-right: 15px;
+}
+
+/* 기업서비스 */
+.service_corp {
+    margin-bottom: 225px;
+}
+.service_corp ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service_corp ul li {
+    /* float: left; */
+    position: relative;
+    width: 320px;
+    height: 395px;
+    background-color: #293896;
+    /* margin-right: 40px; */
+    overflow: hidden;
+    cursor: pointer;
+}
+.service_corp ul li img {
+    transition: all 0.7s ;
+}
+
+    /* width로 늘리면, 꼭지점이 늘어나버림, 그렇기에 transform으로 늘려야함 */
+.service_corp ul li:hover img {
+    transform: scale(1.1);
+}
+
+    /* 사이 공간 때문에 떨어진 맨 밑에 있는 그림을 위로 올리기 위해서 margin을 0으로 설정한다.*/
+.service_corp ul li:last-child {
+    margin: 0;
+}
+
+    /* absoulte로 선언하는 순간, width, height가 0으로 된다. */
+.service_corp ul li > div {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 0 #000000;
+}
+.service_corp ul li:first-child>div {
+    top: 60px;
+    left: 40px;
+    text-shadow: none;
+}
+
+    /* strong은원래 볼드처리해주는 것임. 하지만, 여기서는 인라인 계열로 폰트를 지정할 때 사용함 */
+.service_corp ul li > div strong {
+    font-size: 40px;
+    font-weight: 500
+}
+
+.service_corp ul li > div p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 16px;
+}
+.service_corp ul li:first-child > div strong {
+    font-size: 48px;
+    /* font-weight: 500 */
+}
+
+.service_corp ul li:first-child > div p {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 118px;
+    line-height: 1.8;
+}
+.service_corp ul li:hover div {
+    color: aquamarine
+}
+
+/* 매장 서비스 */
+.service_shop {
+    margin-bottom: 270px;
+    font-weight: 500;
+    text-align: center;
+}
+.service_shop h2 {
+    font-size: 60px;
+    color: var(--dblue);
+    margin-bottom: 65px;
+}
+.service_shop p {
+    font-size: 26px;
+    margin-bottom: 87px;
+}
+.service_shop ul {
+    width: 1352px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.service_shop ul li {
+    /* float: left; */
+    /* line-height: 360px; */
+    /* margin-right: 136px; */
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_shop ul li:nth-of-type(1) {
+    background: url(../images/service_shop_01.jpg) center;
+}
+.service_shop ul li:nth-of-type(2) {
+    background: url(../images/service_shop_02.jpg) center;
+}
+.service_shop ul li:nth-of-type(3) {
+        background: url(../images/service_shop_03.jpg) center;
+        margin: 0;
+    }
+
+.service_shop ul li dl {
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    line-height: 1.5;
+    color: #ffffff;
+}
+.service_shop ul li dl dt {
+    color: #ffffff;
+    font-size: 40px;
+    text-shadow: 2px 2px 0 black;
+}
+.service_shop ul li dl dd {
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 2px 1px 0 black;
+}
+
+/* 바로가기 */
+.shortcuts {
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+.shortcuts ul {
+    /*NEW*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shortcuts ul li {
+    position: relative;
+    /*float: left;*/
+    width: 628px;
+    height: 316px;
+    /*margin: 0 144px 112px 0;*/
+    /*NEW*/
+    margin-bottom: 112px;
+}
+/*.shortcuts ul li:nth-of-type(even) {
+    margin: 0 0 112px 0;
+}*/
+.shortcuts ul li:nth-of-type(1) {
+    background: url(../images/img_short01.png);
+}
+.shortcuts ul li:nth-of-type(2) {
+    background: url(../images/img_short02.png);
+}
+.shortcuts ul li:nth-of-type(3) {
+    background: url(../images/img_short03.png);
+}
+.shortcuts ul li:nth-of-type(4) {
+    background: url(../images/img_short04.png);
+}
+.shortcuts ul li > div {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shortcuts ul li:first-child > div {
+    position: absolute;
+    left: auto; /* 위에서 전체 div의 위치를 삭제 */
+    top: auto; /* 위에서 전체 div의 위치를 삭제 */
+    right: 37px;
+    bottom: 30px;
+    transform: translateY(0);
+    text-align: left;
+    color: white;
+    text-shadow: 1px 1px 0 black;
+}
+.shortcuts ul li > div strong {
+    font-size: 36px;
+}
+.shortcuts ul li > div p {
+    font-size: 20px;
+}
+/* 푸터 */
+footer {
+    font-size: 20px;
+    text-align: center;
+}
+    /*찾아보기 - justify-content는 아이템 정렬하는 방식이다. flex옆에 있는 버튼을 눌리면, 개발자 도구에서 바로 바꿀 수 있다. 균등하게 레이아웃을 정렬할 수 있게 한다.*/
+footer ul.banner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+footer > div:nth-of-type(1) {
+    height: 79px;
+    line-height: 79px;
+    background-color: #cccccc;
+}
+    /* li를 inline-block으로 설정한 뒤에, padding을 가로밀어주면, 가로메뉴처럼 정렬이 된다. */
+    footer {
+        font-size: 20px;
+        text-align: center;
+    }
+    footer ul.banner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    
+    footer  > div:nth-of-type(1) { /* first-child로 안잡힘 설명 */
+        height: 79px;
+        line-height: 79px;
+        background-color: #ccc;
+    }
+    /*footer  > div ul {
+        text-align: center;
+    }*/
+    footer  > div ul {
+        /*NEW*/
+        width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    /*footer  > div ul li {
+        display: inline-block;
+        padding: 0 5px;
+    }*/
+    footer > div ul li a {
+        color: #666;
+    }
+    footer  > div:nth-of-type(2) {
+        /*padding: 63px 0;*/
+        line-height: 1.8;
+        color: #888;
+        /*NEW*/
+        height: 234px;
+        display: flex;
+        justify-content: center; /*플렉스 내부에서 text-align: center;안됨*/
+        align-items: center;
+    }
+
+/* 문의하세요 */
+
+.footer_bottom {
+    background: #222222;
+    color: #ffffff;
+}
+.footer_bottom .s1_cs{
+    letter-spacing: -2px;
+    padding: 78px;
+    box-sizing: border-box;
+    height: 300px;
+    line-height: 1.8;
+}
+
+.s1_cs ul {
+    position:relative;
+ }
+
+.s1_cs ul li {
+    display: block;
+    width:45%;
+    float:left;
+    margin-right: 10%;
+
+}
+.s1_cs ul li:nth-of-type(2) {
+    margin-right: 0%;
+}
+
+.s1_cs ul li strong {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.s1_cs ul li em {
+    font-size: 23px;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+.s1_cs ul li:nth-of-type(1) p{
+    padding-top: 20px;
+    display: block;
+}
+.s1_cs ul li:nth-of-type(2) p{
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 50px;
+    color: #888888;
+    font-weight: 700;
+}
+
+.s1_cs ul li input {
+    height: 60px;
+    width: 175px;
+    margin-left: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    border-radius: 5%;
+}
+.s1_cs ul li .button .gray {
+    margin-left: 0;
+    background-color: #888888;
+    border: #888888;
+}
+.s1_cs ul li .button .blue {
+    background-color: #293896;
+    border: #293896;
+}
+.s1_cs ul li:hover .button input {
+    cursor: pointer;
+}
+
+
+/* 비디오 */
+
+.video_wrap {
+    margin-bottom: 270px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.video_wrap h2 {
+    font-size: 60px;
+    color: var(--dblue);
+    margin-bottom: 65px;
+}
+.video_wrap .video {
+    width: 1400px;
+    margin: 0 auto 270px;
+}
+
+/* 도와줘요 에스원 */
+
+.help_s1 {
+    margin-bottom: 350px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.help_s1 ul {
+    position: relative;
+    display: flex;
+}
+
+.help_s1 ul li {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: auto 5%;
+    /* float:left; */
+    height: 300px;
+    line-height: 1.8;
+    transition: all 0.5s
+}
+
+.help_s1 li:nth-of-type(1) {
+    color: #ffffff;
+    background: url(../images/img_main_banner01.png) right no-repeat #999999;
+}
+.help_s1 li:nth-of-type(2) {
+    color: #ffffff;
+    background: url(../images/img_main_banner02.png) left no-repeat #999999;
+    margin: 0;
+}
+.help_s1 .help li p {
+    margin: 50px 0 20px 0;
+    font-size: 35px;
+    text-shadow: 2px 1px 0 #000000;
+}
+.help_s1 .help li span {
+    font-size: 15px;
+    text-shadow: 2px 1px 0 #000000;
+}
+
+.help_s1 ul li:nth-of-type(1):hover {
+    background: url(../images/img_main_banner01_ov.png) right no-repeat #293896;
+}
+
+.help_s1 ul li:nth-of-type(2):hover {
+    background: url(../images/img_main_banner02_ov.png) left no-repeat #293896;
+}
+
+.help_s1 ul li:hover {
+    cursor: pointer;
+    color: #000000;
+    text-shadow: 2px 1px 0 #ffffff;
+}
+.help_s1 ul li:hover p {
+    color: #222222;
+    text-shadow: 2px 1px 0 #c7dbfc;
+}
+.help_s1 ul li:hover p+span {
+    color: #222222;
+    text-shadow: 2px 1px 0 #c7dbfc;
+}
