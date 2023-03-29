@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms demo</title>
+</head>
+
+<body>
+    <h1>Forms Demo</h1>
+
+    <form action="/tacos">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <input type="color">
+        <input type="tel" placeholder="enter your number">
+        <input type="month">
+        <input type="number">
+        <input type="radio">
+        <input type="range">
+        <input type="time">
+    </form>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" id="username" minlength="5" maxlength="20" required>
+        </p>
+
+        <p>
+            <input type="email" required>
+            <input type="url" required>
+            <input type="tel" required>
+        </p>
+
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
